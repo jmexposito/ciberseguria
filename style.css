@@ -14,14 +14,30 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.logo {
-    width: 140px;
-    margin-bottom: 1.5em;
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
 }
 
-h1 {
-    margin: 0.2em 0;
-    font-size: 2.2em;
+.logo.grande {
+    width: 180px;
+    height: auto;
+}
+
+.icono-ia {
+    width: 64px;
+    height: 64px;
+    opacity: 0.9;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
 }
 
 main {
@@ -131,8 +147,8 @@ footer a:hover {
         padding: 1.5em 1.2em;
     }
 
-    .logo {
-        width: 120px;
+    .logo.grande {
+        width: 140px;
     }
 
     h1 {
@@ -144,23 +160,10 @@ footer a:hover {
     }
 }
 
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    flex-wrap: wrap;
-}
-
-.icono-ia {
-    width: 64px;
-    height: 64px;
-    opacity: 0.9;
-    animation: pulse 3s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.9; }
+.imagen-charla,
+.imagen-blog {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 1.5em;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
