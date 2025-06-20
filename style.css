@@ -1,3 +1,4 @@
+
 /* Tipografía y base */
 body {
   margin: 0;
@@ -8,7 +9,7 @@ body {
 }
 
 header {
-  background: #3b82f6; /* Azul más claro */
+  background: #3b82f6; /* azul claro */
   color: white;
   text-align: center;
   padding: 2em 1em;
@@ -41,17 +42,131 @@ header {
 header p {
   margin-top: 1em;
   font-size: 1.1em;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.5;
 }
 
-/* Disposición en dos columnas */
+/* Estructura general del contenido */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2em;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.card-somos {
+  background: #f3f4f6;
+  margin-bottom: 2em;
+}
+
 .grid-2cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
-  max-width: 1200px;
-  margin: 0 auto;
-  p
+}
 
+/* Estilo de imágenes */
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.2em 0;
+}
+
+/* Bloques destacados */
+.highlight {
+  border-left: 6px solid #3b82f6;
+}
+
+blockquote {
+  margin: 1em 0;
+  font-style: italic;
+  color: #4b5563;
+  border-left: 4px solid #2563eb;
+  padding-left: 1em;
+}
+
+/* Botones */
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: #2563eb;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+.button.alt {
+  background: #10b981;
+}
+
+.button.alt:hover {
+  background: #059669;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background: #f3f4f6;
+  font-size: 0.9em;
+}
+
+/* Animaciones */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-2cols {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    max-width: 100%;
+  }
+
+  .logo.grande {
+    width: 80px;
+  }
+
+  .icono-ia {
+    width: 36px;
+  }
+}
