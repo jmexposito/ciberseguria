@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background: #111827;
+  background: #3b82f6; /* Azul más claro */
   color: white;
   text-align: center;
   padding: 2em 1em;
@@ -46,43 +46,12 @@ header p {
   margin-right: auto;
 }
 
-main {
-  padding: 2em 1em;
-}
-
+/* Disposición en dos columnas */
 .grid-2cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 2em;
-}
-
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 2em;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-}
-
-.card h2 {
-  margin-top: 0;
-  color: #111827;
-}
-
-.card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 12px;
-  margin: 1.2em 0;
-}
-
-blockquote {
-  margin: 1em 0;
-  fo
+  max-width: 1200px;
+  margin: 0 auto;
+  p
 
