@@ -270,12 +270,6 @@ header {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra difusa */
 }
 
-/* PEQUEÑO EFECTO NEÓN EN EL LOGO (OPCIONAL) */
-.icono-ia {
-  width: 60px;
-  height: auto;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* Mantén el brillo si te gustó */
-}
 
 /* TEXTO CON DEGRADADO PARA TÍTULOS */
 h2 {
@@ -323,4 +317,16 @@ h2 {
 ::selection {
   background: #1e3a8a; /* Fondo azul oscuro */
   color: #ffffff; /* Texto blanco brillante */
+}
+
+/* FUENTE "TECH" PARA TÍTULOS Y BOTONES */
+h1, h2, h3, .button, .logo-text {
+  font-family: 'Space Grotesk', sans-serif !important;
+  letter-spacing: -0.04em; /* Las letras un poco más juntas (muy moderno) */
+  font-weight: 700; /* Bien negrita */
+}
+
+/* Dejamos el cuerpo del texto con la fuente normal para que se lea fácil */
+p, li, blockquote {
+  font-family: 'Inter', sans-serif; 
 }
