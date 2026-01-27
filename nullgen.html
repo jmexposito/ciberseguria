@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NULL GEN STANDARD · Garantía Libre de GenAI</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header style="padding: 2em 1em; min-height: auto; background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);">
+    <div class="logo-wrapper">
+      <a href="index.html" style="text-decoration: none; border: none;">
+        <img src="logociberseguria.png" alt="Logo CibersegurIA" class="logo grande" style="width: 80px;" />
+      </a>
+    </div>
+    <h1 style="margin-top: 20px; font-size: 2.5em; color: white;">NULL GEN STANDARD</h1>
+    <p style="opacity: 0.9; color: #cbd5e1;">Marco de Control para Entornos Libres de IA Generativa</p>
+  </header>
+
+  <main>
+    <div style="margin-bottom: 2em;">
+      <a href="index.html" style="text-decoration: none; color: #3b82f6; font-weight: bold;">← Volver al inicio</a>
+    </div>
+
+    <section class="card" style="text-align: left; padding: 3em;">
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center; margin-bottom: 3em;">
+        <div style="flex: 2; min-width: 300px;">
+          <h2 style="color: #1e3a8a; margin-top: 0;">Objetivo del Estándar</h2>
+          <p class="lead" style="font-size: 1.2em; color: #4b5563;">
+            Garantizar que los procesos certificados utilizan exclusivamente <strong>lógica determinista o IA analítica/discriminativa</strong>, excluyendo cualquier componente de IA Generativa (LLMs, Difusión, GANs).
+          </p>
+        </div>
+        <div style="flex: 1; text-align: center; min-width: 200px;">
+          <img src="nullgen.png" alt="Certificado NULL GEN" style="max-width: 100%; width: 250px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;">
+        </div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 3em 0;">
+
+      <h3 style="text-align: center; margin-bottom: 2em; font-size: 1.8em;">🛡️ Marco de Control</h3>
+
+      <div style="margin-bottom: 2.5em;">
+        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 1: Inventario y Clasificación (Asset Management)</h4>
+        <p><strong>Descripción:</strong> Inventario actualizado de todo el software y herramientas de procesamiento de datos.</p>
+        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
+          <li style="margin-bottom: 10px;"><strong>Requisito:</strong> Si se utiliza IA, debe documentarse su naturaleza (ej. Machine Learning Supervisado).</li>
+          <li style="margin-bottom: 10px;"><strong>Exclusión:</strong> Prohibido el uso de modelos generativos (GPT, Claude, DALL-E) salvo deshabilitación técnica probada.</li>
+          <li><strong>Evidencia:</strong> Matriz de software con columna "Tipo de Tecnología".</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 2.5em;">
+        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 2: Trazabilidad del Dato y Determinismo (Data Integrity)</h4>
+        <p><strong>Descripción:</strong> Trazabilidad clara entre input y output. Capacidad de explicar decisiones ("Linaje del Dato").</p>
+        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
+          <li style="margin-bottom: 10px;"><strong>Prueba de Ácido:</strong> Ante dos entradas idénticas, el sistema debe producir resultados idénticos (Determinismo). Cero alucinaciones.</li>
+          <li><strong>Evidencia:</strong> Diagramas de flujo y logs que demuestren transformación lógica sin APIs generativas.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 2.5em;">
+        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 3: Gestión de Terceros y "Shadow AI" (Supply Chain)</h4>
+        <p><strong>Descripción:</strong> Control sobre herramientas SaaS y proveedores.</p>
+        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
+          <li style="margin-bottom: 10px;"><strong>Bloqueo Técnico:</strong> Firewall/DNS filtering para bloquear dominios de GenAI (OpenAI, Midjourney, etc.) desde el entorno certificado.</li>
+          <li><strong>Evidencia:</strong> Cláusulas contractuales y configuración de firewall/proxy.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 2.5em;">
+        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 4: Política de "Human in the Loop" (Governance)</h4>
+        <p><strong>Descripción:</strong> Responsabilidad final sobre el entregable.</p>
+        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
+          <li style="margin-bottom: 10px;"><strong>Requisito:</strong> Validación final por persona física identificada. Prohibida la entrega automatizada sin supervisión.</li>
+          <li><strong>Evidencia:</strong> Procedimiento documentado de revisión y aprobación.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 3em 0;">
+
+      <h3 style="text-align: center; margin-bottom: 1.5em; font-size: 1.8em;">📊 Matriz de Madurez</h3>
+      
+      <div style="display: grid; gap: 15px;">
+        <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.5em; border-radius: 8px; display: flex; gap: 15px; align-items: center;">
+          <div style="font-size: 2em;">🔴</div>
+          <div>
+            <h4 style="margin: 0; color: #991b1b;">Nivel 0 (No conforme)</h4>
+            <p style="margin: 5px 0 0 0; color: #7f1d1d;">Uso de ChatGPT/Copilot sin control ni supervisión.</p>
+          </div>
+        </div>
+
+        <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5em; border-radius: 8px; display: flex; gap: 15px; align-items: center;">
+          <div style="font-size: 2em;">🟡</div>
+          <div>
+            <h4 style="margin: 0; color: #92400e;">Nivel 1 (Gestionado)</h4>
+            <p style="margin: 5px 0 0 0; color: #78350f;">Existen políticas definidas, pero faltan controles técnicos (bloqueos) efectivos.</p>
+          </div>
+        </div>
+
+        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1.5em; border-radius: 8px; display: flex; gap: 15px; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          <div style="font-size: 2em;">🟢</div>
+          <div>
+            <h4 style="margin: 0; color: #166534;">Nivel 2 (Asegurado - NULL GEN CERTIFIED)</h4>
+            <p style="margin: 5px 0 0 0; color: #14532d;">Políticas activas, bloqueos técnicos implementados, inventario al día y trazabilidad demostrable.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer style="background: #0f172a; color: white; padding: 3em 1em; text-align: center; margin-top: 4em;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <p style="opacity: 0.7; font-size: 0.9em;">© 2026 CibersegurIA.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
