@@ -144,22 +144,37 @@ main {
   background: #059669;
 }
 
-/* Cita estilo tarjeta */
+/* NUEVO ESTILO CITAS: "Documento Oficial" */
 blockquote {
-  background: #f9fafb;
-  border-left: 6px solid #3b82f6;
-  padding: 1.2em 1.5em;
-  margin: 1.5em 0;
-  border-radius: 12px;
+  border-left: 5px solid #3b82f6; /* Línea lateral azul corporativo */
+  background: #eff6ff; /* Fondo azul muy pálido (más técnico) */
+  color: #1e3a8a; /* Texto azul oscuro */
+  padding: 2em 2em 2em 3em; /* Espacio extra a la izquierda para las comillas */
+  margin: 2em 0;
+  border-radius: 0 16px 16px 0; /* Redondeado solo a la derecha */
   font-style: italic;
-  color: #334155;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Outfit', sans-serif; /* Tu nueva fuente moderna */
+  position: relative;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1); /* Sombra azulada suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Las comillas gigantes decorativas */
+blockquote::before {
+  content: '"';
+  font-size: 5em;
+  color: rgba(59, 130, 246, 0.2); /* Azul transparente */
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-family: serif;
+  line-height: 1;
+}
+
+/* Mantenemos tu efecto de movimiento al pasar el ratón */
 blockquote:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
 }
 
 /* Footer */
@@ -257,7 +272,9 @@ header {
 
 /* PEQUEÑO EFECTO NEÓN EN EL LOGO (OPCIONAL) */
 .icono-ia {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  width: 60px;
+  height: auto;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* Mantén el brillo si te gustó */
 }
 
 /* TEXTO CON DEGRADADO PARA TÍTULOS */
@@ -276,4 +293,34 @@ h2 {
   background: rgba(255, 255, 255, 0.8); /* Fondo ligeramente translúcido */
   backdrop-filter: blur(10px); /* Efecto difuminado detrás (si el fondo tiene patrón) */
   box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08); /* Sombra muy suave y dispersa */
+}
+
+/* BARRA DE SCROLL PERSONALIZADA */
+/* Ancho de la barra */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* El fondo de la barra (el carril) */
+::-webkit-scrollbar-track {
+  background: #f1f5f9; 
+}
+
+/* La parte que se mueve (el pulgar) */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* Gris suave por defecto */
+  border-radius: 5px;
+  border: 2px solid #f1f5f9; /* Borde para que parezca flotante */
+}
+
+/* Cuando pasas el ratón por encima de la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6; /* Se pone azul al usarla */
+}
+
+
+/* COLOR DE SELECCIÓN DE TEXTO */
+::selection {
+  background: #1e3a8a; /* Fondo azul oscuro */
+  color: #ffffff; /* Texto blanco brillante */
 }
