@@ -2,9 +2,12 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f1f5f9; /* fondo gris claro moderno */
   color: #1f2937;
   line-height: 1.6;
+  /* CAMBIO CLAVE AQUÍ ABAJO: */
+  background-color: #f8fafc;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 30px 30px; /* Tamaño de la cuadrícula */
 }
 
 /* Encabezado */
@@ -233,4 +236,10 @@ ul li {
 }
 ul li:last-child {
     border-bottom: none; /* Quitamos la línea del último elemento */
+}
+
+/* FUENTE MODERNA PARA TÍTULOS */
+h1, h2, h3, .button {
+  font-family: 'Outfit', sans-serif; /* Cambio de fuente */
+  letter-spacing: -0.5px; /* Las letras un pelín más juntas quedan más modernas */
 }
