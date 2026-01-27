@@ -330,3 +330,29 @@ h1, h2, h3, .button, .logo-text {
 p, li, blockquote {
   font-family: 'Inter', sans-serif; 
 }
+
+/* TÍTULOS DE SECCIÓN ESTILO PREMIUM */
+.nullgen-section-title {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.nullgen-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3b82f6;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
