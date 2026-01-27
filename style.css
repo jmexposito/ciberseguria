@@ -243,3 +243,37 @@ h1, h2, h3, .button {
   font-family: 'Outfit', sans-serif; /* Cambio de fuente */
   letter-spacing: -0.5px; /* Las letras un pelín más juntas quedan más modernas */
 }
+
+/* FORZAR QUE TODOS LOS TÍTULOS DE LAS TARJETAS ESTÉN CENTRADOS */
+.card h2, .card h3 {
+  text-align: center;
+}
+
+/* BORDE LUMINOSO EN EL HEADER */
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra difusa */
+}
+
+/* PEQUEÑO EFECTO NEÓN EN EL LOGO (OPCIONAL) */
+.icono-ia {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* TEXTO CON DEGRADADO PARA TÍTULOS */
+h2 {
+  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block; /* Necesario para que el degradado se ajuste al texto */
+}
+
+/* TARJETAS MÁS ELEGANTES */
+.card {
+  border-radius: 16px; /* Bordes más redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+  background: rgba(255, 255, 255, 0.8); /* Fondo ligeramente translúcido */
+  backdrop-filter: blur(10px); /* Efecto difuminado detrás (si el fondo tiene patrón) */
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08); /* Sombra muy suave y dispersa */
+}
