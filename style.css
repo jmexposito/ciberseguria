@@ -200,3 +200,37 @@ footer {
     max-width: 100%;
   }
 }
+/* --- NUEVOS ESTILOS (Añadidos para mejorar diseño) --- */
+
+/* 1. Tarjetas con efecto 'levitación' al pasar el ratón */
+.feature-card {
+  transition: all 0.3s ease; /* Movimiento suave */
+  border: 1px solid rgba(0,0,0,0.05); /* Borde casi invisible por defecto */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px); /* Se levanta 10 píxeles */
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.15); /* Sombra azulada elegante */
+  border-color: #3b82f6; /* Borde azul al activar */
+}
+
+/* 2. Botones más profesionales y serios */
+.button {
+  border-radius: 8px !important; /* Quitamos el estilo 'pastilla' para ser más corporativo */
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); /* Degradado moderno */
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.02); /* Efecto de pulsación */
+  box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* 3. Listas de recursos más limpias y separadas */
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e2e8f0; /* Línea separadora sutil */
+}
+ul li:last-child {
+    border-bottom: none; /* Quitamos la línea del último elemento */
+}
