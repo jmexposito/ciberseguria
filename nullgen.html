@@ -1,151 +1,463 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NULL GEN STANDARD · Garantía Libre de GenAI</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html class="dark" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4d4354",
+                        "tertiary-fixed-dim": "#3cdcd1",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#2c0051",
+                        "background": "#0B0C10",
+                        "surface-container-high": "#292a2e",
+                        "inverse-primary": "#842bd2",
+                        "on-primary-fixed-variant": "#6900b3",
+                        "surface-container": "#1f1f24",
+                        "secondary-fixed-dim": "#2ae500",
+                        "on-secondary-fixed": "#022100",
+                        "tertiary-container": "#00a29a",
+                        "surface-dim": "#121317",
+                        "on-background": "#e3e2e8",
+                        "inverse-surface": "#e3e2e8",
+                        "secondary-fixed": "#79ff5b",
+                        "on-surface": "#e3e2e8",
+                        "on-surface-variant": "#cfc2d6",
+                        "on-tertiary": "#003734",
+                        "on-secondary-fixed-variant": "#095300",
+                        "surface-container-low": "#1a1b20",
+                        "primary": "#ddb7ff",
+                        "surface-bright": "#38393e",
+                        "on-tertiary-fixed": "#00201e",
+                        "primary-fixed": "#f0dbff",
+                        "error": "#ffb4ab",
+                        "tertiary": "#3cdcd1",
+                        "surface-container-lowest": "#0d0e12",
+                        "on-secondary": "#053900",
+                        "secondary": "#d7ffc5",
+                        "on-primary": "#490080",
+                        "surface": "#1F2833",
+                        "surface-variant": "#343439",
+                        "tertiary-fixed": "#62f9ee",
+                        "on-tertiary-fixed-variant": "#00504b",
+                        "primary-container": "#b76dff",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#0f6d00",
+                        "primary-fixed-dim": "#ddb7ff",
+                        "secondary-container": "#2ff801",
+                        "on-primary-container": "#400071",
+                        "inverse-on-surface": "#2f3035",
+                        "surface-tint": "#ddb7ff",
+                        "surface-container-highest": "#343439",
+                        "outline": "#988d9f",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#00302d",
+                        "neon-violet": "#A855F7",
+                        "neon-green": "#39FF14"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "margin-desktop": "64px",
+                        "base": "4px",
+                        "xl": "48px",
+                        "sm": "8px",
+                        "gutter": "20px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0B0C10;
+            color: #e3e2e8;
+            overflow-x: hidden;
+        }
+        .brutalist-border {
+            border: 1px solid #4d4354;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .brutalist-border:hover {
+            border-color: #A855F7;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+        }
+        .success-glow {
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+        canvas#starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(168, 85, 247, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 50;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: -2%; }
+            100% { top: 100%; }
+        }
+        .vibrate:hover {
+            animation: vibrate 0.1s linear infinite;
+        }
+        @keyframes vibrate {
+            0% { transform: translate(0); }
+            20% { transform: translate(-1px, 1px); }
+            40% { transform: translate(-1px, -1px); }
+            60% { transform: translate(1px, 1px); }
+            80% { transform: translate(1px, -1px); }
+            100% { transform: translate(0); }
+        }
+        .grid-bg {
+            background-image: linear-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } } 
+        .shake-hover:hover { animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) infinite; box-shadow: 0 0 15px #A855F7; }
+    </style>
 </head>
-
-<body>
-
-  <header style="padding: 2em 1em; min-height: auto; background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);">
-    <div class="logo-wrapper">
-      <a href="index.html" style="text-decoration: none; border: none;">
-        <img src="logociberseguria.png" alt="Logo CibersegurIA" class="logo grande" style="width: 80px;" />
-      </a>
-    </div>
-    <h1 style="margin-top: 20px; font-size: 2.5em; color: white;">NULL GEN STANDARD</h1>
-    <p style="opacity: 0.9; color: #cbd5e1;">Marco de Control para Entornos Libres de IA Generativa</p>
-  </header>
-
-  <main>
-    <div style="margin-bottom: 2em;">
-      <a href="index.html" style="text-decoration: none; color: #3b82f6; font-weight: bold;">← Volver al inicio</a>
-    </div>
-
-    <section class="card" style="text-align: left; padding: 3em;">
-      
-      <div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center; margin-bottom: 3em;">
-        <div style="flex: 2; min-width: 300px;">
-          <h2 style="color: #1e3a8a; margin-top: 0;">Objetivo del Estándar</h2>
-          <p class="lead" style="font-size: 1.2em; color: #4b5563;">
-            Garantizar que los procesos certificados utilizan exclusivamente <strong>lógica determinista o IA analítica/discriminativa</strong>, excluyendo cualquier componente de IA Generativa (LLMs, Difusión, GANs).
-          </p>
-        </div>
-        <div style="flex: 1; text-align: center; min-width: 200px;">
-          <img src="nullgen.png" alt="Certificado NULL GEN" style="max-width: 100%; width: 250px;">
-        </div>
-      </div>
-
-      <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 3em 0;">
-
-      <h3 class="nullgen-section-title animate">🛡️ Marco de Control</h3>
-
-      <div style="margin-bottom: 2.5em;">
-        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 1: Inventario y Clasificación (Asset Management)</h4>
-        <p><strong>Descripción:</strong> Inventario actualizado de todo el software y herramientas de procesamiento de datos.</p>
-        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
-          <li style="margin-bottom: 10px;"><strong>Requisito:</strong> Si se utiliza IA, debe documentarse su naturaleza (ej. Machine Learning Supervisado).</li>
-          <li style="margin-bottom: 10px;"><strong>Exclusión:</strong> Prohibido el uso de modelos generativos (GPT, Claude, DALL-E) salvo deshabilitación técnica probada.</li>
-          <li><strong>Evidencia:</strong> Matriz de software con columna "Tipo de Tecnología".</li>
-        </ul>
-      </div>
-
-      <div style="margin-bottom: 2.5em;">
-        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 2: Trazabilidad del Dato y Determinismo (Data Integrity)</h4>
-        <p><strong>Descripción:</strong> Trazabilidad clara entre input y output. Capacidad de explicar decisiones ("Linaje del Dato").</p>
-        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
-          <li style="margin-bottom: 10px;"><strong>Prueba de Ácido:</strong> Ante dos entradas idénticas, el sistema debe producir resultados idénticos (Determinismo). Cero alucinaciones.</li>
-          <li><strong>Evidencia:</strong> Diagramas de flujo y logs que demuestren transformación lógica sin APIs generativas.</li>
-        </ul>
-      </div>
-
-      <div style="margin-bottom: 2.5em;">
-        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 3: Gestión de Terceros y "Shadow AI" (Supply Chain)</h4>
-        <p><strong>Descripción:</strong> Control sobre herramientas SaaS y proveedores.</p>
-        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
-          <li style="margin-bottom: 10px;"><strong>Bloqueo Técnico:</strong> Firewall/DNS filtering para bloquear dominios de GenAI (OpenAI, Midjourney, etc.) desde el entorno certificado.</li>
-          <li><strong>Evidencia:</strong> Cláusulas contractuales y configuración de firewall/proxy.</li>
-        </ul>
-      </div>
-
-      <div style="margin-bottom: 2.5em;">
-        <h4 style="color: #2563eb; font-size: 1.3em; margin-bottom: 0.5em;">Control 4: Política de "Human in the Loop" (Governance)</h4>
-        <p><strong>Descripción:</strong> Responsabilidad final sobre el entregable.</p>
-        <ul style="background: #f8fafc; padding: 1.5em 2em; border-radius: 8px; border-left: 4px solid #2563eb;">
-          <li style="margin-bottom: 10px;"><strong>Requisito:</strong> Validación final por persona física identificada. Prohibida la entrega automatizada sin supervisión.</li>
-          <li><strong>Evidencia:</strong> Procedimiento documentado de revisión y aprobación.</li>
-        </ul>
-      </div>
-
-      <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 3em 0;">
-
-      <h3 class="nullgen-section-title">📊 Matriz de Madurez</h3>
-	  
-      <div style="text-align: center; margin-bottom: 30px;">
-        <img src="nullgenResumen.png" alt="Resumen Matriz NULL GEN" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-      </div>
-	  
-	  
-      <div style="display: grid; gap: 15px;">
-        <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.5em; border-radius: 8px; display: flex; gap: 15px; align-items: center;">
-          <div style="font-size: 2em;">🔴</div>
-          <div>
-            <h4 style="margin: 0; color: #991b1b;">Nivel 0 (No conforme)</h4>
-            <p style="margin: 5px 0 0 0; color: #7f1d1d;">Uso de ChatGPT/Copilot sin control ni supervisión.</p>
-          </div>
-        </div>
-
-        <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5em; border-radius: 8px; display: flex; gap: 15px; align-items: center;">
-          <div style="font-size: 2em;">🟡</div>
-          <div>
-            <h4 style="margin: 0; color: #92400e;">Nivel 1 (Gestionado)</h4>
-            <p style="margin: 5px 0 0 0; color: #78350f;">Existen políticas definidas, pero faltan controles técnicos (bloqueos) efectivos.</p>
-          </div>
-        </div>
-
-        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1.5em; border-radius: 8px; display: flex; gap: 15px; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-          <div style="font-size: 2em;">🟢</div>
-          <div>
-            <h4 style="margin: 0; color: #166534;">Nivel 2 (Asegurado - NULL GEN CERTIFIED)</h4>
-            <p style="margin: 5px 0 0 0; color: #14532d;">Políticas activas, bloqueos técnicos implementados, inventario al día y trazabilidad demostrable.</p>
-          </div>
-        </div>
-      </div>
-
-    </section>
-	
-	<section class="card animate" style="margin-top: 4em; text-align: center; padding: 4em 2em; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0;">
-    
-    <div style="font-size: 3em; margin-bottom: 0.5em;">📩</div>
-    
-    <h2 class="nullgen-section-title">¿Hablamos de tu caso?</h2>
-    
-    <p style="max-width: 600px; margin: 0 auto 2em; color: #4b5563; font-size: 1.1em;">
-        Si quieres saber cómo implementar el estándar <strong>NULL GEN</strong> en tu organización o necesitas una auditoría técnica para certificar tus procesos, estamos aquí para ayudarte.
-    </p>
-
-    <div class="button-wrapper">
-        <a class="button" href="mailto:ciberseguria@gmail.com?subject=Consulta sobre Certificación NULL GEN&body=Hola, me gustaría recibir más información sobre el estándar de control NULL GEN para mi empresa.">
-            Solicitar más información
-        </a>
-    </div>
-    
+<body class="font-body-md selection:bg-neon-violet selection:text-black">
+<canvas height="3584" id="starfield" width="1280"></canvas>
+<div class="scanline"></div>
+<!-- Header Navigation -->
+<nav class="w-full top-0 sticky z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="h-12">
+<img alt="CibersegurIA Logo" class="h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJlIDTp4Nsx5fkt9lvVIge8upznPzomWEHvG24UGw1xdYolrJ1pXpNhFeCeyJRDQ9k4Z-3SgFms4mOdekvD2E5-PMsgNIJhU2OSaPu-2LKF5lcAtk4vz8W3U3urArliHglsQMllZipWFNicrpGYPK1hqeaoZS1y2iw0nDFYeWw7kf3NvXPHAGY8Y0WAMdpO0W_2SMvvW3Op33o4b6C0C0y9BSO0HsW8vkS1rStcBd0Z1piPcFgXpW8gy_pGTqItYM30B2-4M8CbxiV">
+</div>
+<div class="hidden md:flex space-x-lg items-center">
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://www.ciberseguria.com/#servicios">Servicios</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://www.ciberseguria.com/#tecnologia">Tecnología</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://www.ciberseguria.com/#recursos">Recursos</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[60vh] flex flex-col justify-center items-center text-center px-margin-mobile py-xl grid-bg overflow-hidden">
+<div class="relative z-10 max-w-5xl mx-auto">
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-surface mb-md tracking-tighter leading-none">
+                Estándar NullGEN: <span class="text-neon-violet block md:inline">Entornos Libres de IA Generativa</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mb-xl opacity-90">
+                Garantizar que los procesos certificados utilizan exclusivamente lógica determinista o IA analítica/discriminativa, excluyendo cualquier componente de IA Generativa (LLMs, Difusión, GANs).
+            </p>
+<div class="flex flex-col md:flex-row gap-md justify-center">
+<a href="mailto:ciberseguria@gmail.com?subject=[CIBERSEGURIA][AUDITORIA]" class="bg-neon-violet text-black font-bold py-md px-xl uppercase tracking-tighter hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all shake-hover inline-block">Solicitar Auditoria</a>
+</div>
+</div>
+<!-- Background Data Streams -->
+<div class="absolute inset-0 opacity-10 pointer-events-none flex justify-around overflow-hidden">
+<div class="w-px h-full bg-gradient-to-b from-transparent via-neon-violet to-transparent animate-pulse"></div>
+<div class="w-px h-full bg-gradient-to-b from-transparent via-neon-violet to-transparent animate-pulse delay-75"></div>
+<div class="w-px h-full bg-gradient-to-b from-transparent via-neon-violet to-transparent animate-pulse delay-150"></div>
+<div class="w-px h-full bg-gradient-to-b from-transparent via-neon-violet to-transparent animate-pulse delay-300"></div>
+</div>
+</header>
+<!-- Marco de Control / Objetivo del Estándar -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="flex items-center gap-md mb-md">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-center">Objetivo del Estándar</h2>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<div class="text-center mb-xl">
+<span class="font-label-sm text-label-sm text-neon-violet uppercase tracking-[0.3em] font-bold">Marco de Control:</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Control 1 -->
+<div class="bg-surface p-xl brutalist-border relative group">
+<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-neon-violet" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<div class="font-label-sm text-label-sm text-neon-violet mb-xs uppercase font-bold">Control 1</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md uppercase">Inventario y Clasificación (Asset Management)</h3>
+<div class="space-y-md text-body-md text-on-surface-variant">
+<p class=""><strong class="text-on-surface">Descripción:</strong> Inventario actualizado de todo el software y herramientas de procesamiento de datos.</p>
+<p class=""><strong class="text-on-surface">Requisito:</strong> Si se utiliza IA, debe documentarse su naturaleza (ej. Machine Learning Supervisado).</p>
+<p class=""><strong class="text-on-surface">Exclusión:</strong> Prohibido el uso de modelos generativos (GPT, Claude, DALL-E) salvo deshabilitación técnica probada.</p>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-neon-green uppercase flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> Evidencia: Matriz de software con columna "Tipo de Tecnología"
+                    </span>
+</div>
+</div>
+<!-- Control 2 -->
+<div class="bg-surface p-xl brutalist-border relative group">
+<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-neon-violet" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<div class="font-label-sm text-label-sm text-neon-violet mb-xs uppercase font-bold">Control 2</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md uppercase">Trazabilidad del Dato y Determinismo (Data Integrity)</h3>
+<div class="space-y-md text-body-md text-on-surface-variant">
+<p class=""><strong class="text-on-surface">Descripción:</strong> Trazabilidad clara entre input y output. Capacidad de explicar decisiones ("Linaje del Dato").</p>
+<p class=""><strong class="text-on-surface">Prueba de Ácido:</strong> Ante dos entradas idénticas, el sistema debe producir resultados idénticos (Determinismo). Cero alucinaciones.</p>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-neon-green uppercase flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> Evidencia: Diagramas de flujo y logs que demuestren transformación lógica sin APIs generativas
+                    </span>
+</div>
+</div>
+<!-- Control 3 -->
+<div class="bg-surface p-xl brutalist-border relative group">
+<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-neon-violet" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div class="font-label-sm text-label-sm text-neon-violet mb-xs uppercase font-bold">Control 3</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md uppercase">Gestión de Terceros y "Shadow AI" (Supply Chain)</h3>
+<div class="space-y-md text-body-md text-on-surface-variant">
+<p class=""><strong class="text-on-surface">Descripción:</strong> Control sobre herramientas SaaS y proveedores.</p>
+<p class=""><strong class="text-on-surface">Bloqueo Técnico:</strong> Firewall/DNS filtering para bloquear dominios de GenAI (OpenAI, Midjourney, etc.) desde el entorno certificado.</p>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-neon-green uppercase flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> Evidencia: Cláusulas contractuales y configuración de firewall/proxy
+                    </span>
+</div>
+</div>
+<!-- Control 4 -->
+<div class="bg-surface p-xl brutalist-border relative group">
+<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-neon-violet" style="font-variation-settings: 'FILL' 1;">policy</span>
+</div>
+<div class="font-label-sm text-label-sm text-neon-violet mb-xs uppercase font-bold">Control 4</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md uppercase">Política de "Human in the Loop" (Governance)</h3>
+<div class="space-y-md text-body-md text-on-surface-variant">
+<p class=""><strong class="text-on-surface">Descripción:</strong> Responsabilidad final sobre el entregable.</p>
+<p class=""><strong class="text-on-surface">Requisito:</strong> Validación final por persona física identificada. Prohibida la entrega automatizada sin supervisión.</p>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-neon-green uppercase flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> Evidencia: Procedimiento documentado de revisión y aprobación
+                    </span>
+</div>
+</div>
+</div>
 </section>
-	
-  </main>
+<!-- Matriz de Madurez Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="flex items-center gap-md mb-md">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-center">Matriz de Madurez</h2>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<div class="mb-xl brutalist-border p-sm bg-surface-container-low overflow-hidden">
+<img alt="Matriz de Madurez NullGEN" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6lJiCJExAfIyY7KDzzFkioWflTOOvmnLPMsrEN44L9BX36iy4M9tQk4vjw3-Xd2PtDLFDrg8SLdBofdqLN--aQsAIj8NFu2mnkjaDjP9cYyMc5MHkjDXhQ0QC9pW2eWTdyaWNe-GKAV1Ck1YMzwBg-eqhfWzhm1dIH_tEXMxmHLvuag5EQMXSrBHFF8KeNr1Yx8jseD-OPEfT67CGPCt9ubAySKHSmIhjK3r4RG3NxAGrUHUQJKSwnZCvgZfE4H4ditsH4JrwXb_e">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Nivel 0 -->
+<div class="p-lg bg-surface border-l-4 border-error/50 brutalist-border">
+<div class="flex items-center gap-sm mb-md">
+<span class="text-2xl">🔴</span>
+<h4 class="font-headline-md text-on-surface">Nivel 0</h4>
+</div>
+<div class="font-label-sm text-label-sm text-error uppercase mb-sm font-bold">No Conforme</div>
+<p class="font-body-md text-on-surface-variant">Uso de ChatGPT/Copilot sin control ni supervisión. IA Generativa operando en la sombra.</p>
+</div>
+<!-- Nivel 1 -->
+<div class="p-lg bg-surface border-l-4 border-amber-500/50 brutalist-border">
+<div class="flex items-center gap-sm mb-md">
+<span class="text-2xl">🟡</span>
+<h4 class="font-headline-md text-on-surface">Nivel 1</h4>
+</div>
+<div class="font-label-sm text-label-sm text-amber-500 uppercase mb-sm font-bold">Gestionado</div>
+<p class="font-body-md text-on-surface-variant">Existen políticas definidas, pero faltan controles técnicos (bloqueos) efectivos. Riesgo residual alto.</p>
+</div>
+<!-- Nivel 2 -->
+<div class="p-lg bg-surface border-l-4 border-neon-green/50 brutalist-border">
+<div class="flex items-center gap-sm mb-md">
+<span class="text-2xl">🟢</span>
+<h4 class="font-headline-md text-on-surface">Nivel 2</h4>
+</div>
+<div class="font-label-sm text-label-sm text-neon-green uppercase mb-sm font-bold">Asegurado</div>
+<p class="font-body-md text-on-surface-variant">NULL GEN CERTIFIED: Políticas activas, bloqueos técnicos implementados, inventario al día y trazabilidad demostrable.</p>
+</div>
+</div>
+</section>
+<!-- Certificación y Sello -->
+<section class="py-xl bg-surface-container-lowest border-y border-outline-variant">
+<div class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-xl">
+<div class="w-full md:w-1/3 flex justify-center">
+<div class="relative p-xl border-2 border-neon-green/30">
+<img alt="Sello NullGEN" class="w-64 h-64 object-contain filter drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2rfDO2XtO9XvSEIrv4SGa4GkeAsDGHmtwK3EMlCAM6zMetQULrCnyFF5SDPcRlPmkOxNqrNmocRnFUlni47igS9HIebJw-dtG4J_aotF_egnILLLdY43B5YHBruICPIbajVLmJOemh553H9PnhzAvu165B78wwGC8k49mMy0uo2Cpg_KTcgFhuRNSHlv-RPQ6ffrRKpljAfuLLdQgMNbg7-G0oMqF_giijH6FBzJOIp3PUdeVZ4sWGl05-fL4K8gP-WKcymHCNvSM">
+<div class="absolute -top-4 -left-4 bg-neon-green text-black font-label-sm text-label-sm px-2 py-1 font-bold">CERTIFIED</div>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<h2 class="font-headline-lg text-headline-lg mb-md text-on-surface uppercase">Sello de Certificación NullGEN</h2>
+<div class="bg-neon-violet/5 border-l-4 border-neon-violet p-lg mb-lg">
+<p class="font-body-lg text-body-lg text-on-surface italic">
+                        "En un ecosistema digital saturado de incertidumbre generativa, el sello NullGEN representa el estándar de oro para la integridad de datos corporativos."
+                    </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl">
+                    Nuestro proceso de auditoría técnica evalúa rigurosamente la arquitectura de software, los flujos de datos y los modelos algorítmicos para garantizar la total exclusión de procesos generativos no controlados. Analizamos los vectores de inferencia y aseguramos que el determinismo sea la base fundamental de su infraestructura.
+                </p>
+<div class="grid grid-cols-2 gap-md">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-neon-green">verified_user</span>
+<div>
+<span class="font-label-sm text-label-sm block text-on-surface uppercase font-bold">Auditoría de Sistemas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Revisión de procesos</span>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-neon-green">monitoring</span>
+<div>
+<span class="font-label-sm text-label-sm block text-on-surface uppercase font-bold">Monitorización Real</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Flujos de datos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation/Return (FAB) -->
+<div class="fixed bottom-margin-mobile right-margin-mobile z-50">
+<a class="vibrate bg-neon-violet text-black flex items-center gap-sm p-4 md:px-lg font-bold uppercase tracking-tighter shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all group shake-hover" href="https://www.ciberseguria.com">
+<span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+<span class="hidden md:inline">Volver a CibersegurIA principal</span>
+</a>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md px-margin-mobile md:px-margin-desktop py-xl max-w-[1440px] mx-auto items-center opacity-80 hover:opacity-100 transition-all duration-200">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface mb-sm">CibersegurIA</div>
+<p class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">© 2024 CibersegurIA.</p>
+</div>
+<div class="flex flex-wrap gap-md md:justify-end">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="#">Privacidad</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="#">Términos</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="mailto:ciberseguria@gmail.com?subject=[CIBERSEGURIA][INFO]">Soporte</a>
+</div>
+</div>
+</footer>
+<script>
+        // Starfield & Shooting Stars logic for brand continuity
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let width, height, stars = [];
 
-  <footer style="background: #0f172a; color: white; padding: 3em 1em; text-align: center; margin-top: 4em;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <p style="opacity: 0.7; font-size: 0.9em;">© 2026 CibersegurIA.</p>
-    </div>
-  </footer>
+        function init() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            stars = [];
+            for (let i = 0; i < 150; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    size: Math.random() * 1.5,
+                    opacity: Math.random(),
+                    speed: Math.random() * 0.05
+                });
+            }
+        }
 
-</body>
-</html>
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.fillStyle = '#A855F7';
+            stars.forEach(star => {
+                ctx.globalAlpha = star.opacity;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Subtle twinkling
+                star.opacity += (Math.random() - 0.5) * 0.1;
+                if (star.opacity < 0) star.opacity = 0;
+                if (star.opacity > 1) star.opacity = 1;
+            });
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        draw();
+
+        // Add periodic shooting star effect
+        setInterval(() => {
+            const startX = Math.random() * width;
+            const startY = Math.random() * (height / 2);
+            const shootingStar = document.createElement('div');
+            shootingStar.style.position = 'fixed';
+            shootingStar.style.left = startX + 'px';
+            shootingStar.style.top = startY + 'px';
+            shootingStar.style.width = '2px';
+            shootingStar.style.height = '100px';
+            shootingStar.style.background = 'linear-gradient(to top, rgba(168,85,247,0), rgba(168,85,247,0.8))';
+            shootingStar.style.transform = 'rotate(-45deg)';
+            shootingStar.style.pointerEvents = 'none';
+            shootingStar.style.zIndex = '-1';
+            shootingStar.style.transition = 'all 1s linear';
+            document.body.appendChild(shootingStar);
+
+            setTimeout(() => {
+                shootingStar.style.transform = 'rotate(-45deg) translateY(-1000px)';
+                shootingStar.style.opacity = '0';
+            }, 50);
+
+            setTimeout(() => {
+                shootingStar.remove();
+            }, 1000);
+        }, 3000);
+    </script>
+
+
+<div style="position: fixed; left: 847.772px; top: 1492.69px; width: 2px; height: 100px; background: linear-gradient(to top, rgba(168, 85, 247, 0), rgba(168, 85, 247, 0.8)); transform: rotate(-45deg); pointer-events: none; z-index: -1; transition: 1s linear;"></div>
+
+
+
+</body></html>
