@@ -1,569 +1,370 @@
-<!DOCTYPE html><html class="dark" lang="es" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>CibersegurIA | Legislación, Ciberseguridad y Cumplimiento en IA</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<style>
-        :root { 
-            --cyber-violet: #A855F7; 
-            --neon-acid-green: #39FF14; 
-            --dark-graphite: #1F2833; 
-            --pure-black: #0d0e12; 
-            --virus-red: #ff4d4d;
-            --neon-blue: #00f2ff;
-        } 
-        body { 
-            background-color: var(--pure-black); 
-            color: #e3e2e8; 
-            font-family: 'Space Grotesk', sans-serif; 
-            overflow-x: hidden; 
-        } 
-        .bg-grid-pattern { 
-            background-image: radial-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 0); 
-            background-size: 40px 40px; 
-        } 
-
-        /* Cyberspace Background Styles */
-        .digital-fog {
-            position: fixed;
-            inset: 0;
-            background: radial-gradient(circle at 50% 50%, transparent 0%, var(--pure-black) 90%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .virus-particle { 
-            position: absolute; 
-            background: var(--virus-red); 
-            box-shadow: 0 0 5px var(--virus-red);
-            opacity: 0.6; 
-            animation: glitch-pulse var(--duration) infinite ease-in-out;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 20% 50%, 20% 20%, 50% 20%, 50% 50%, 0% 50%);
-        } 
-        @keyframes glitch-pulse { 
-            0%, 100% { opacity: 0.3; transform: scale(1) translate(0, 0); } 
-            33% { transform: scale(1.2) translate(2px, -1px); opacity: 0.8; }
-            66% { transform: scale(0.8) translate(-2px, 1px); opacity: 0.4; }
-            50% { opacity: 1; } 
-        } 
-
-        .interceptor-streak {
-            position: absolute;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--cyber-violet), var(--neon-blue));
-            pointer-events: none;
-            z-index: 2;
-            animation: streak-move var(--speed) ease-out forwards;
-        }
-
-        @keyframes streak-move {
-            0% { width: 0; opacity: 1; }
-            50% { width: 100px; opacity: 1; }
-            100% { width: 200px; opacity: 0; transform: translateX(100px); }
-        }
-
-        .binary-fragment {
-            position: absolute;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: var(--neon-blue);
-            pointer-events: none;
-            z-index: 2;
-            animation: fragment-float 0.8s ease-out forwards;
-        }
-
-        @keyframes fragment-float {
-            0% { transform: translate(0, 0) scale(1); opacity: 1; }
-            100% { transform: translate(var(--ex), var(--ey)) scale(0); opacity: 0; }
-        }
-
-        .hero-glow { background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, transparent 70%); } 
-        .glass-card { 
-            background: rgba(31, 40, 51, 0.6); 
-            border: 1px solid rgba(168, 85, 247, 0.2); 
-            backdrop-filter: blur(8px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-        } 
-        .glass-card:hover { transform: translateY(-4px); border-color: var(--cyber-violet); box-shadow: 0 0 15px rgba(168, 85, 247, 0.2); } 
-        .btn-vibrate:hover { animation: vibrate 0.3s linear infinite; box-shadow: 0 0 20px var(--cyber-violet); } 
-        @keyframes vibrate { 0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); } } 
-
-        .madrid-skyline { 
-            mask-image: linear-gradient(to top, black 60%, transparent 100%); 
-            fill: #2D2438; 
-            filter: drop-shadow(0 -5px 15px rgba(168, 85, 247, 0.3));
-            opacity: 0.6;
-        } 
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; } 
-        .terminal-cursor { display: inline-block; width: 10px; height: 20px; background-color: var(--neon-acid-green); animation: blink 1s step-end infinite; } 
-        @keyframes blink { 50% { opacity: 0; } }
-    </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary": "#A855F7",
-                        "on-primary": "#ffffff",
-                        "secondary": "#39FF14",
-                        "background": "#0d0e12",
-                        "surface": "#1F2833",
-                        "on-surface": "#e3e2e8",
-                        "on-surface-variant": "#cfc2d6",
-                        "outline": "#4d4354",
-                        "surface-container": "#121317",
-                        "surface-container-low": "#1a1b20",
-                        "surface-container-high": "#292a2e",
-                        "surface-container-highest": "#343439"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-mobile": "16px",
-                        "sm": "16px",
-                        "gutter": "24px",
-                        "md": "24px",
-                        "lg": "32px",
-                        "xs": "8px",
-                        "xl": "48px",
-                        "margin-desktop": "64px"
-                    },
-                    "fontFamily": {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CibersegurIA | Recursos públicos para una IA ética y segura</title>
+  <meta name="description" content="Recursos gratuitos sobre IA ética, despliegue seguro, cumplimiento, soberanía digital europea y administración pública.">
+  <meta name="theme-color" content="#064bae">
+  <meta property="og:title" content="CibersegurIA | IA ética y segura">
+  <meta property="og:description" content="Conocimiento abierto para desplegar inteligencia artificial con garantías.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciberseguria.com/">
+  <meta property="og:image" content="https://ciberseguria.com/logociberseguria.png">
+  <link rel="canonical" href="https://ciberseguria.com/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body class="bg-grid-pattern relative">
-<!-- Cyberspace Container -->
-<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="cyberspace-container"><div class="virus-particle" style="width: 6.03047px; height: 6.03047px; left: 78.0926%; top: 42.4028%; --duration: 1.4545215526975765s;"></div><div class="virus-particle" style="width: 3.21619px; height: 3.21619px; left: 86.6281%; top: 63.0962%; --duration: 1.7625474018663383s;"></div><div class="virus-particle" style="width: 5.3596px; height: 5.3596px; left: 38.2679%; top: 26.9595%; --duration: 1.4380102874264942s;"></div><div class="virus-particle" style="width: 6.23436px; height: 6.23436px; left: 21.5436%; top: 55.456%; --duration: 2.598478174091867s;"></div><div class="virus-particle" style="width: 6.91542px; height: 6.91542px; left: 74.0675%; top: 57.0487%; --duration: 2.4573909919520407s;"></div><div class="virus-particle" style="width: 4.57742px; height: 4.57742px; left: 72.6035%; top: 56.7923%; --duration: 2.641867136219688s;"></div><div class="virus-particle" style="width: 6.67803px; height: 6.67803px; left: 63.7466%; top: 75.4344%; --duration: 1.6799808229625852s;"></div><div class="virus-particle" style="width: 4.5634px; height: 4.5634px; left: 79.1359%; top: 44.1473%; --duration: 2.983037390374818s;"></div><div class="virus-particle" style="width: 5.75008px; height: 5.75008px; left: 22.726%; top: 50.5838%; --duration: 1.3745143640736215s;"></div><div class="virus-particle" style="width: 5.30235px; height: 5.30235px; left: 13.1172%; top: 16.4108%; --duration: 1.128752239003316s;"></div><div class="virus-particle" style="width: 6.07223px; height: 6.07223px; left: 94.3375%; top: 48.9397%; --duration: 2.4284974716744934s;"></div><div class="virus-particle" style="width: 6.21489px; height: 6.21489px; left: 57.9041%; top: 27.8543%; --duration: 1.9756510318824503s;"></div><div class="virus-particle" style="width: 3.98723px; height: 3.98723px; left: 39.0377%; top: 80.619%; --duration: 2.6666873589407105s;"></div><div class="virus-particle" style="width: 4.72067px; height: 4.72067px; left: 96.4328%; top: 93.4931%; --duration: 1.6130170617322739s;"></div><div class="virus-particle" style="width: 4.63144px; height: 4.63144px; left: 61.3133%; top: 92.1723%; --duration: 2.869334369685146s;"></div><div class="virus-particle" style="width: 6.87549px; height: 6.87549px; left: 63.3456%; top: 32.3044%; --duration: 2.9282149953760177s;"></div><div class="virus-particle" style="width: 6.52398px; height: 6.52398px; left: 41.9398%; top: 45.3619%; --duration: 1.5210971141363352s;"></div><div class="virus-particle" style="width: 4.22434px; height: 4.22434px; left: 27.6722%; top: 1.36074%; --duration: 1.738108070719502s;"></div><div class="virus-particle" style="width: 3.43177px; height: 3.43177px; left: 96.5519%; top: 3.24088%; --duration: 2.7492688463511596s;"></div><div class="virus-particle" style="width: 5.67854px; height: 5.67854px; left: 78.5693%; top: 25.4837%; --duration: 2.8796466658740845s;"></div><div class="virus-particle" style="width: 3.94703px; height: 3.94703px; left: 72.8727%; top: 41.2573%; --duration: 1.1416141567161584s;"></div><div class="virus-particle" style="width: 6.59339px; height: 6.59339px; left: 16.2622%; top: 96.3018%; --duration: 2.5937588243590532s;"></div><div class="virus-particle" style="width: 3.55129px; height: 3.55129px; left: 19.7809%; top: 24.1568%; --duration: 2.140150432541009s;"></div><div class="virus-particle" style="width: 3.16153px; height: 3.16153px; left: 67.1156%; top: 82.2294%; --duration: 1.4957626240653061s;"></div><div class="virus-particle" style="width: 3.95452px; height: 3.95452px; left: 60.7775%; top: 30.2927%; --duration: 1.8724058628044344s;"></div><div class="virus-particle" style="width: 5.19004px; height: 5.19004px; left: 25.8273%; top: 68.4051%; --duration: 2.7443080931190607s;"></div><div class="virus-particle" style="width: 3.6065px; height: 3.6065px; left: 29.0418%; top: 65.5379%; --duration: 2.483903736296675s;"></div><div class="virus-particle" style="width: 5.54089px; height: 5.54089px; left: 29.1228%; top: 73.8847%; --duration: 2.8172928149792607s;"></div><div class="virus-particle" style="width: 4.34947px; height: 4.34947px; left: 24.703%; top: 60.2975%; --duration: 1.1282029670633982s;"></div><div class="virus-particle" style="width: 3.27553px; height: 3.27553px; left: 39.1763%; top: 64.9675%; --duration: 2.4303125133223453s;"></div><div class="virus-particle" style="width: 3.85683px; height: 3.85683px; left: 32.5406%; top: 35.7871%; --duration: 1.0761752103625388s;"></div><div class="virus-particle" style="width: 5.84885px; height: 5.84885px; left: 15.1298%; top: 61.682%; --duration: 2.635385552100524s;"></div><div class="virus-particle" style="width: 3.97049px; height: 3.97049px; left: 81.13%; top: 30.5499%; --duration: 2.750934752168164s;"></div><div class="virus-particle" style="width: 5.61711px; height: 5.61711px; left: 58.723%; top: 46.5227%; --duration: 1.5424980938706905s;"></div><div class="virus-particle" style="width: 6.40643px; height: 6.40643px; left: 67.6944%; top: 39.7158%; --duration: 1.8661138317437707s;"></div><div class="virus-particle" style="width: 3.55398px; height: 3.55398px; left: 2.24957%; top: 72.8182%; --duration: 2.4041895837599885s;"></div><div class="virus-particle" style="width: 5.10549px; height: 5.10549px; left: 8.572%; top: 22.8282%; --duration: 1.1904542417115929s;"></div><div class="virus-particle" style="width: 4.08022px; height: 4.08022px; left: 27.0756%; top: 79.9368%; --duration: 1.5388390399378424s;"></div><div class="virus-particle" style="width: 6.3307px; height: 6.3307px; left: 11.9086%; top: 50.8467%; --duration: 2.934365372914308s;"></div><div class="virus-particle" style="width: 6.00679px; height: 6.00679px; left: 85.33%; top: 97.619%; --duration: 1.9845341645690349s;"></div><div class="virus-particle" style="width: 3.95992px; height: 3.95992px; left: 94.5889%; top: 74.7066%; --duration: 1.1183932367040468s;"></div><div class="virus-particle" style="width: 5.76003px; height: 5.76003px; left: 96.9434%; top: 21.906%; --duration: 2.958470036479193s;"></div><div class="virus-particle" style="width: 6.23035px; height: 6.23035px; left: 60.9222%; top: 79.4491%; --duration: 1.8563995900901005s;"></div><div class="virus-particle" style="width: 4.4341px; height: 4.4341px; left: 91.564%; top: 10.5806%; --duration: 1.9880355450897396s;"></div><div class="virus-particle" style="width: 6.05914px; height: 6.05914px; left: 12.8255%; top: 52.8678%; --duration: 1.3298849451593333s;"></div><div class="virus-particle" style="width: 5.43713px; height: 5.43713px; left: 58.5619%; top: 37.922%; --duration: 1.3386050163894176s;"></div><div class="virus-particle" style="width: 4.26776px; height: 4.26776px; left: 61.8225%; top: 52.5919%; --duration: 1.1017257697776552s;"></div><div class="virus-particle" style="width: 3.36876px; height: 3.36876px; left: 70.032%; top: 63.7465%; --duration: 1.2700638962826485s;"></div><div class="virus-particle" style="width: 6.75644px; height: 6.75644px; left: 43.0453%; top: 34.2801%; --duration: 1.2202150941616765s;"></div><div class="virus-particle" style="width: 4.23833px; height: 4.23833px; left: 62.4078%; top: 74.8812%; --duration: 1.4481087683054061s;"></div><div class="virus-particle" style="width: 5.9707px; height: 5.9707px; left: 90.1575%; top: 5.72484%; --duration: 1.6387470286850148s;"></div><div class="virus-particle" style="width: 5.10935px; height: 5.10935px; left: 16.3999%; top: 16.3362%; --duration: 2.0389741800799603s;"></div><div class="virus-particle" style="width: 4.61725px; height: 4.61725px; left: 85.6694%; top: 1.56468%; --duration: 1.5756676485771621s;"></div><div class="virus-particle" style="width: 3.0678px; height: 3.0678px; left: 28.2095%; top: 70.0304%; --duration: 2.1114259098999084s;"></div><div class="virus-particle" style="width: 5.67914px; height: 5.67914px; left: 79.524%; top: 64.3386%; --duration: 1.32510344357061s;"></div><div class="virus-particle" style="width: 4.71206px; height: 4.71206px; left: 95.4018%; top: 52.9751%; --duration: 1.351112687660987s;"></div><div class="virus-particle" style="width: 3.83672px; height: 3.83672px; left: 12.6135%; top: 49.6358%; --duration: 2.4659101095596867s;"></div><div class="virus-particle" style="width: 5.10853px; height: 5.10853px; left: 3.00791%; top: 9.80925%; --duration: 1.6374526622834789s;"></div><div class="interceptor-streak" style="left: 272.059px; top: 2879.38px; --speed: 0.4s;"></div><div class="virus-particle" style="width: 5.17853px; height: 5.17853px; left: 99.6565%; top: 86.7613%; --duration: 2.6895839632813088s;"></div></div>
-<div class="digital-fog"></div>
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 h-20">
-<div class="flex justify-between items-center max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop h-full">
-<div class="flex items-center gap-2">
-<img alt="CibersegurIA Logo" class="h-10 w-auto filter brightness-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtr0sDYrK6as7qxbk2q3XPyOe8oDpmmJyzeW5CzxGr3pFg6fx0Sx4k__-tWBBG_cZkWcHW5b5vjPoecEal9ulORmh13Opwj_D4FWAkJ6GqfjNMwyWWc9ao3UqQHBYovFdlAZpRDXI8zD6eGECWCsO8PB_poySEzScG1pSi7DtzOAhUCYLtckciJ1JN16kVl5QxWK9A18TpW4BkeObxZH3RwEfnTKb2RKgaPQlge96NANOG6zgyMS9SEDZo_CGTJxCAyYzYli-5joKj">
-<a class="font-display text-xl text-primary font-bold tracking-tighter uppercase" href="https://substack.com/@ciberseguria">BLOG SUBSTACK</a>
-</div>
-<nav class="hidden md:flex items-center gap-lg">
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-medium uppercase text-xs tracking-widest" href="#servicios">Servicios</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-medium uppercase text-xs tracking-widest" href="#tecnologia">Tecnología</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-medium uppercase text-xs tracking-widest" href="#recursos">Recursos</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-medium uppercase text-xs tracking-widest" href="mailto:ciberseguria@gmail.com?subject=%5BCIBERSEGURIA%5D%5BINFO%5D">Contacto</a>
-</nav>
-</div>
-</header>
-<main class="relative z-10 pt-20">
-<!-- Hero Section -->
-<section class="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-margin-mobile py-xl overflow-hidden">
-<div class="hero-glow absolute inset-0 -z-10"></div>
-<div class="max-w-4xl mx-auto space-y-md">
-<h1 class="font-display text-4xl md:text-6xl lg:text-7xl text-on-surface font-bold uppercase tracking-tighter leading-none">
-                Legislación, Ciberseguridad y <br class="hidden md:block"> <span class="text-primary italic">Cumplimiento en IA</span>
-</h1>
-<p class="font-body text-body-base md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed border-l-2 border-primary/30 pl-4">
-                Gobernanza, Autonomía soberana, Guías, Seguridad y Cumplimiento Normativo en la Era de la IA.
-            </p>
-<div class="flex flex-col md:flex-row gap-md justify-center items-center pt-md">
-<a href="mailto:ciberseguria@gmail.com?subject=%5BCIBERSEGURIA%5D%5BAUDITORIA%5D" class="btn-vibrate bg-primary text-white px-lg py-4 font-bold text-sm uppercase tracking-widest min-w-[220px] flex items-center justify-center gap-2">
-                    Solicitar Informacion
-                    <span class="material-symbols-outlined text-xl">security</span>
-</a>
-<a href="#recursos" class="border-2 border-primary text-primary px-lg py-4 font-bold text-sm uppercase tracking-widest min-w-[220px] flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                    Ver Recursos
-                </a>
-</div>
-</div>
-<!-- Terminal Widget -->
-<div class="mt-20 w-full max-w-3xl mx-auto px-4">
-<div class="glass-card overflow-hidden shadow-[0_0_50px_rgba(168,85,247,0.1)]">
-<div class="bg-[#121317] px-4 py-2 flex items-center justify-between border-b border-primary/20">
-<div class="flex items-center gap-2">
-<div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-<div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-<div class="w-3 h-3 rounded-full bg-secondary/50"></div>
-</div>
-<span class="text-[10px] text-primary/60 font-mono uppercase tracking-widest">system_diagnostic.sh</span>
-</div>
-<div class="p-8 font-mono text-left space-y-3 text-xs md:text-sm bg-black/40">
-<p class="text-primary">$ <span id="terminal-text-1" class="">SECURE_KERNEL_INIT... [OK]</span></p>
-<p class="text-secondary font-bold" id="terminal-text-2">EU_AI_ACT_MODULE: ACTIVE</p>
-<p class="text-secondary font-bold" id="terminal-text-3">ENS_LEVEL_HIGH: COMPLIANT</p>
-<p class="text-on-surface" id="terminal-text-4">SOVEREIGN_SYSTEM_READY &gt;_<span class="terminal-cursor"></span></p>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-xl max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-xl items-center">
-<div class="space-y-md">
-<div class="flex items-center gap-2 text-primary">
-<span class="h-[2px] w-12 bg-primary"></span>
-<span class="font-bold uppercase text-xs tracking-[0.2em]">Identidad</span>
-</div>
-<h2 class="font-display text-4xl text-on-surface font-bold uppercase tracking-tighter">¿Quiénes somos?</h2>
-<div class="space-y-6 text-on-surface-variant font-body text-lg leading-relaxed">
-<p class="">
-                    Somos un grupo de trabajo independiente comprometido con la excelencia técnica soberana en el territorio español. Nuestra misión es garantizar que el despliegue de la Inteligencia Artificial se realice bajo los más estrictos estándares de seguridad y ética.
-                </p>
-<p class="border-l-4 border-primary pl-6 py-2 italic text-on-surface">
-                    Nuestra arquitectura de pensamiento se basa en la autonomía técnica y el cumplimiento riguroso del Esquema Nacional de Seguridad (ENS), proporcionando un marco de confianza para entidades públicas y privadas.
-                </p>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute inset-0 bg-primary/20 blur-[100px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
-<div class="p-1 bg-gradient-to-br from-primary/40 to-transparent">
-<img alt="Cybersecurity Operations" class="relative z-10 w-full object-cover aspect-video filter grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV7A_Lknzj5KTgIMv_LT6U-Mi6N4dbASy7jbPVpKEaADANitp7xvOI1EYrpKxfBxsLYhFHO6myAnTiyMPTuwzGss4z72hxkawMcr9qhJDFNqxQY2wnkGIM9AluBg8mGN8tIUkhFAI6l-RP9otDdToixdLCw2jcvBBSjMUZ0u5qt54llXc4_Fm0MjoJtM3hI11VWO68kNtO4PxBDd3QsN2JBiTYbs8tvkRQEFgd_Mbi5wS6jAtojNiMKA6W2IFXUfwyuGfQrR1QSbl3">
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-xl bg-[#0d0e12]/80" id="servicios">
-<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop space-y-xl">
-<div class="text-center space-y-sm">
-<h2 class="font-display text-4xl text-on-surface font-bold uppercase tracking-tighter">Servicios de Élite</h2>
-<p class="font-body text-on-surface-variant max-w-xl mx-auto uppercase text-xs tracking-widest">Soluciones integrales para la gobernanza y seguridad de sistemas de inteligencia artificial.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Service Card 1 -->
-<div class="glass-card p-lg flex flex-col justify-between h-full group">
-<div class="space-y-md">
-<span class="material-symbols-outlined text-5xl text-primary">policy</span>
-<h3 class="font-display text-xl text-on-surface font-bold uppercase tracking-tight">Auditorías de Alineamiento Ético</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Evaluación técnica y ética exhaustiva para garantizar que sus modelos de IA respeten los valores y normativas vigentes.</p>
-</div>
-<a class="mt-lg flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all" href="#">
-                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Service Card 2 -->
-<div class="glass-card p-lg flex flex-col justify-between h-full">
-<div class="space-y-md">
-<span class="material-symbols-outlined text-5xl text-primary">terminal</span>
-<h3 class="font-display text-xl text-on-surface font-bold uppercase tracking-tight">Desarrollo de LLMs Soberanos</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Construcción y fine-tuning de modelos de lenguaje de gran tamaño (LLM) en infraestructuras locales bajo control nacional.</p>
-</div>
-<a class="mt-lg flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all" href="#">
-                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Service Card 3 -->
-<div class="glass-card p-lg flex flex-col justify-between h-full">
-<div class="space-y-md">
-<span class="material-symbols-outlined text-5xl text-primary">school</span>
-<h3 class="font-display text-xl text-on-surface font-bold uppercase tracking-tight">Charlas de Concienciación</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Formación especializada en cumplimiento del ENS (Real Decreto 311/2022) y el Reglamento Europeo de IA para directivos y técnicos.</p>
-</div>
-<a class="mt-lg flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all" href="#">
-                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Certification Section -->
-<section class="py-xl px-margin-mobile">
-<div class="max-w-[1200px] mx-auto glass-card p-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-xl border-secondary/30">
-<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary/5 blur-[100px] rounded-full"></div>
-<div class="flex-shrink-0">
-<div class="relative w-40 h-40 flex items-center justify-center border-2 border-secondary/20">
-<div class="absolute inset-0 bg-secondary/10 animate-pulse"></div>
-<span class="material-symbols-outlined text-7xl text-secondary">verified_user</span>
-</div>
-</div>
-<div class="flex-grow space-y-md text-center md:text-left relative z-10">
-<h2 class="font-display text-4xl text-on-surface font-bold uppercase tracking-tighter">Estándar <span class="text-secondary italic">NullGEN</span></h2>
-<p class="font-body text-on-surface-variant max-w-2xl text-lg leading-relaxed">Certificación de <strong>entornos libres de IA Generativa</strong>. Garantía de determinismo, trazabilidad y ausencia de alucinaciones en procesos críticos.</p>
-</div>
-<div class="flex-shrink-0 relative z-10">
-<a href="https://ciberseguria.com/nullgen.html" target="_blank" class="bg-secondary text-black px-lg py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform flex items-center gap-2">
-                    Ver Certificado
-                    <span class="material-symbols-outlined">description</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Resources Section -->
-<section class="py-xl max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid lg:grid-cols-12 gap-xl" id="recursos">
-<!-- Left: Substack Opinion -->
-<div class="lg:col-span-5 space-y-lg">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined text-3xl">article</span>
-<h2 class="font-display text-3xl text-on-surface font-bold uppercase tracking-tighter">Últimos Artículos</h2>
-</div>
-<div class="space-y-gutter">
-<div class="p-gutter glass-card border-l-4 border-l-primary bg-primary/5">
-<span class="font-bold text-primary/70 text-[10px] uppercase tracking-widest mb-2 block">Publicado en Substack</span>
-<h4 class="font-display text-xl text-on-surface font-bold uppercase tracking-tight mb-3">LLM: el sistema más crítico de tu organización</h4>
-<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">El LLM corporativo es el activo que más daño puede hacer si cae en manos equivocadas.</p>
-<a class="text-primary text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-2" href="https://ciberseguria.substack.com/p/llm-el-sistema-mas-critico-de-tu" target="_blank">Leer artículo <span class="material-symbols-outlined text-xs">open_in_new</span></a>
-</div>
-<div class="p-gutter glass-card border-l-4 border-l-primary">
-<span class="font-bold text-primary/70 text-[10px] uppercase tracking-widest mb-2 block">Opinión</span>
-<h4 class="font-display text-xl text-on-surface font-bold uppercase tracking-tight mb-3">GPT-5.5-Cyber: Riesgo de dependencia</h4>
-<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Debate sobre la soberanía digital europea frente a la necesidad de tecnología avanzada.</p>
-<a class="text-primary text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-2" href="https://ciberseguria.substack.com/p/gpt-55-cyber-entre-la-necesidad-operativa" target="_blank">Leer artículo <span class="material-symbols-outlined text-xs">open_in_new</span></a>
-</div>
-</div>
-</div>
-<!-- Right: Practical Resources -->
-<div class="lg:col-span-7 space-y-lg">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined text-3xl">folder_open</span>
-<h2 class="font-display text-3xl text-on-surface font-bold uppercase tracking-tighter">Recursos Prácticos</h2>
-</div>
-<ul class="grid sm:grid-cols-1 gap-3">
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Procedimiento Gestión Ciclo de Vida LLM (Alto Riesgo)</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Documento Técnico</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/1eXiimTqXWFPWmSr9HdlonwfPdP9aoFdA/edit" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">description</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Modelo de Documento Técnico LLM (Alto Riesgo)</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Plantilla PDF</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://drive.google.com/file/d/1cq2Xw1Fk4AOFyIXjrYoxTp6CTQDm8uPf/view" target="_blank">
-<span class="material-symbols-outlined text-xl">download</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Guía Implantación LLM conforme AI Act (Ago 2025)</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Guía Regulatoria</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/1xk42r-Ae0G5LMkTuUCeXqhubycnVYuN-/" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">admin_panel_settings</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Manual Política de Uso de LLM para Empleados</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Compliance Interno</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/18KpaBO-408AL-Nb0NeKBhybMH5i13Kui/" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">emergency</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Conéctate35: Respuesta ante Apagón Digital</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Plan de Contingencia</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/1OcVWwLa618jA0rfTL1zIhgUtOqctl409/edit?usp=drive_link" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">fact_check</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Checklist Evaluación de Riesgo IA (AI Act)</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Herramienta de Auditoría</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/1Dai0gp6JuF6e0t0dZhpUdyZsEwoHdjbY/edit" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Modelo Evaluación de Impacto Algorítmico (AIA)</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">EIA Algorítmica</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/1kDWLJ1p4r5XUcPxftpPwi0NEs9UvrW3P/edit" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">gavel</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Cláusulas Tipo para Licitaciones Públicas IA</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Legal &amp; Gov</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/1YyW43XIcTVPov4Vn8ujNpCLqKQ-iK3hY/edit" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-<li class="glass-card p-4 flex items-center justify-between group hover:bg-primary/10 transition-colors">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">folder_shared</span>
-<div>
-<span class="font-bold text-on-surface uppercase tracking-tight text-xs md:text-sm block">Expediente Técnico-Jurídico de Proyecto IA</span>
-<span class="text-[9px] text-primary/60 font-mono uppercase">Dossier Completo</span>
-</div>
-</div>
-<a class="p-2 border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" href="https://docs.google.com/document/d/12SFLsUOAxlk9QzOdz5egm3luEiiZhg7g/edit" target="_blank">
-<span class="material-symbols-outlined text-xl">open_in_new</span>
-</a>
-</li>
-</ul>
-</div>
-</section>
-<!-- Madrid Skyline Divider -->
-<div class="relative w-full h-48 overflow-hidden mt-xl">
-<svg class="absolute bottom-0 w-full madrid-skyline" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,200 L1440,200 L1440,150 L1420,150 L1420,120 L1380,120 L1380,150 L1350,150 L1350,80 L1320,80 L1320,150 L1300,150 L1300,130 L1260,130 L1260,150 L1220,150 L1220,50 L1200,50 L1200,30 L1180,50 L1160,50 L1160,150 L1100,150 L1100,20 L1080,20 L1080,150 L1060,150 L1060,30 L1040,30 L1040,150 L1020,150 L1020,25 L1000,25 L1000,150 L980,150 L980,40 L960,40 L960,150 L940,150 L940,100 L900,100 L900,150 L850,150 L850,110 L800,110 L800,150 L750,150 L750,120 L720,120 L720,150 L680,150 L680,10 L675,0 L670,10 L670,150 L640,150 L640,115 L600,115 L600,150 L550,150 L550,100 L510,100 L510,150 L450,150 L450,130 L400,130 L400,150 L350,150 L350,40 L310,40 L310,150 L280,150 L280,110 L240,110 L240,150 L200,150 L200,90 L160,90 L160,150 L100,150 L100,120 L60,120 L60,150 L0,150 Z"></path>
-</svg>
-</div>
-</main>
-<footer class="bg-black w-full py-xl border-t border-primary/20 relative z-10">
-<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md">
-<div class="flex flex-col items-center md:items-start gap-4">
-<div class="flex items-center gap-2">
-<img alt="CibersegurIA Logo" class="h-8 w-auto filter brightness-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtr0sDYrK6as7qxbk2q3XPyOe8oDpmmJyzeW5CzxGr3pFg6fx0Sx4k__-tWBBG_cZkWcHW5b5vjPoecEal9ulORmh13Opwj_D4FWAkJ6GqfjNMwyWWc9ao3UqQHBYovFdlAZpRDXI8zD6eGECWCsO8PB_poySEzScG1pSi7DtzOAhUCYLtckciJ1JN16kVl5QxWK9A18TpW4BkeObxZH3RwEfnTKb2RKgaPQlge96NANOG6zgyMS9SEDZo_CGTJxCAyYzYli-5joKj">
-<span class="font-display font-bold text-on-surface uppercase tracking-widest">CibersegurIA</span>
-</div>
-<p class="text-primary/60 font-body text-xs uppercase tracking-widest">© 2024 CibersegurIA. Excelencia Técnica Soberana.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-lg">
-<a class="text-on-surface-variant hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest" href="#">Privacidad</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest" href="#">Términos</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest" href="#">Soporte</a>
-<span class="text-primary font-bold text-xs uppercase tracking-widest">Madrid, España</span>
-</div>
-</div>
-</footer>
-<script>
-    // Cyberspace Generator
-    const cyberspace = document.getElementById('cyberspace-container');
-    const virusCount = 60;
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    // Create persistent virus particles
-    for (let i = 0; i < virusCount; i++) {
-        createVirus();
-    }
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="CibersegurIA, inicio">
+        <img src="logociberseguria.png" alt="CibersegurIA">
+      </a>
 
-    function createVirus() {
-        const virus = document.createElement('div');
-        virus.className = 'virus-particle';
-        const size = Math.random() * 4 + 3;
-        virus.style.width = `${size}px`;
-        virus.style.height = `${size}px`;
-        virus.style.left = `${Math.random() * 100}%`;
-        virus.style.top = `${Math.random() * 100}%`;
-        virus.style.setProperty('--duration', `${Math.random() * 2 + 1}s`);
-        cyberspace.appendChild(virus);
-        return virus;
-    }
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir navegación</span>
+      </button>
 
-    // Interception logic
-    function spawnInterception() {
-        // Target a random virus
-        const viruses = document.querySelectorAll('.virus-particle');
-        if (viruses.length === 0) return;
-        
-        const targetIndex = Math.floor(Math.random() * viruses.length);
-        const targetVirus = viruses[targetIndex];
-        const rect = targetVirus.getBoundingClientRect();
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="#agentes">Agentes de IA</a>
+        <a href="#areas">Áreas</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#articulos">Artículos</a>
+        <a href="#licencia">Licencia</a>
+      </nav>
 
-        // Create interceptor streak
-        const streak = document.createElement('div');
-        streak.className = 'interceptor-streak';
-        streak.style.left = `${rect.left - 100}px`;
-        streak.style.top = `${rect.top}px`;
-        streak.style.setProperty('--speed', '0.4s');
-        cyberspace.appendChild(streak);
+      <a class="header-action" href="#recursos">Explorar recursos</a>
+    </div>
+  </header>
 
-        setTimeout(() => {
-            // "Hit" the virus
-            triggerExplosion(rect.left, rect.top);
-            targetVirus.remove();
-            streak.remove();
-            
-            // Respawn a new virus after a while to keep the density
-            setTimeout(createVirus, 2000);
-        }, 300);
-    }
+  <main id="contenido">
+    <section id="inicio" class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Biblioteca pública de IA responsable</p>
+          <h1>IA Ética.<br><em>Safety by Design.</em><br>Segura para desplegar.</h1>
+          <p class="hero-lead">Guías, modelos y herramientas gratuitas para personas, organizaciones y administraciones que quieren aplicar inteligencia artificial con garantías.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#recursos">Consultar la biblioteca</a>
+            <a class="button button-text" href="#proposito">Por qué existe este proyecto <span aria-hidden="true">↓</span></a>
+          </div>
+          <ul class="hero-principles" aria-label="Principios del proyecto">
+            <li>Acceso gratuito</li>
+            <li>Aplicación práctica</li>
+            <li>Perspectiva europea</li>
+          </ul>
+        </div>
 
-    function triggerExplosion(x, y) {
-        for (let i = 0; i < 6; i++) {
-            const fragment = document.createElement('div');
-            fragment.className = 'binary-fragment';
-            fragment.innerText = Math.random() > 0.5 ? '1' : '0';
-            fragment.style.left = `${x}px`;
-            fragment.style.top = `${y}px`;
-            
-            const angle = Math.random() * Math.PI * 2;
-            const dist = Math.random() * 60 + 20;
-            fragment.style.setProperty('--ex', `${Math.cos(angle) * dist}px`);
-            fragment.style.setProperty('--ey', `${Math.sin(angle) * dist}px`);
-            
-            cyberspace.appendChild(fragment);
-            setTimeout(() => fragment.remove(), 800);
-        }
-    }
+        <div class="hero-board" aria-label="Mapa de un despliegue responsable de inteligencia artificial">
+          <div class="board-topline">
+            <span>Ruta de despliegue responsable</span>
+            <span class="status-dot">Sistema supervisado</span>
+          </div>
+          <div class="board-core">
+            <div class="agent-symbol" aria-hidden="true">
+              <span>IA</span>
+              <i class="orbit orbit-one"></i>
+              <i class="orbit orbit-two"></i>
+            </div>
+            <p>Agente de IA</p>
+            <small>Objetivo acotado · control humano</small>
+          </div>
+          <ol class="board-route">
+            <li><span>01</span><b>Finalidad</b><small>Necesidad y límites</small></li>
+            <li><span>02</span><b>Riesgo</b><small>Impacto y normativa</small></li>
+            <li><span>03</span><b>Prueba</b><small>Seguridad y sesgos</small></li>
+            <li><span>04</span><b>Control</b><small>Trazabilidad continua</small></li>
+          </ol>
+          <div class="board-footer">
+            <span>AI ACT · RIA · ENS</span>
+            <span>SEGURIDAD</span>
+            <span>SOBERANÍA</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    setInterval(spawnInterception, 1500);
+    <section id="proposito" class="purpose-band">
+      <div class="container purpose-grid">
+        <p class="section-index">00 / PROPÓSITO</p>
+        <div>
+          <h2>El conocimiento que protege a la sociedad debe ser accesible.</h2>
+          <p>CibersegurIA es un recurso público e independiente para convertir principios éticos, requisitos legales y buenas prácticas de seguridad en decisiones que puedan aplicarse de verdad. Sin venta de servicios, sin barreras de pago y sin promesas grandilocuentes.</p>
+        </div>
+        <div class="purpose-note">
+          <strong>Para quién</strong>
+          <p>Equipos técnicos y jurídicos, responsables públicos, docentes, estudiantes, pymes y cualquier persona que necesite orientar un proyecto de IA.</p>
+        </div>
+      </div>
+    </section>
 
-    // Terminal logic
-    const logs = [
-        "SECURE_KERNEL_INIT... [OK]",
-        "EU_AI_ACT_MODULE: ACTIVE",
-        "ENS_LEVEL_HIGH: COMPLIANT",
-        "SOVEREIGN_SYSTEM_READY >_"
-    ];
+    <section id="agentes" class="agents section-pad">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">01 / LA ERA DE LOS AGENTES</p>
+            <h2>Despliegue de<br>agentes de IA</h2>
+          </div>
+          <p>Los agentes ya no solo responden: deciden, consultan sistemas y ejecutan acciones. Aquí reunimos criterios para desplegarlos con permisos mínimos, supervisión humana y capacidad real de detenerlos.</p>
+        </div>
 
-    async function typeWriter(text, elementId, delay = 40) {
-        const element = document.getElementById(elementId);
-        if(!element) return;
-        for (let i = 0; i < text.length; i++) {
-            element.innerHTML += text.charAt(i);
-            await new Promise(resolve => setTimeout(resolve, delay));
-        }
-    }
+        <div class="agents-panel">
+          <div class="agents-intro">
+            <span class="priority-flag">Próximamente...</span>
+            <h3>Del prototipo a producción, sin perder el control.</h3>
+            <p>Una ruta práctica para definir autonomía, proteger herramientas y datos, validar el comportamiento y mantener evidencia de cada decisión.</p>
+            <a class="button button-light" href="#recursos">Ver herramientas relacionadas</a>
+          </div>
+          <ol class="agent-steps">
+            <li><span>01</span><div><b>Acotar la misión</b><p>Objetivo, prohibiciones, datos autorizados y condiciones de parada.</p></div></li>
+            <li><span>02</span><div><b>Diseñar permisos</b><p>Acceso mínimo a herramientas, identidades y entornos separados.</p></div></li>
+            <li><span>03</span><div><b>Evaluar antes de abrir</b><p>Pruebas adversarias, sesgos, fuga de datos y fallos de razonamiento.</p></div></li>
+            <li><span>04</span><div><b>Supervisar en continuo</b><p>Registros, alertas, revisión humana y respuesta ante incidentes.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-    async function runTerminal() {
-        await typeWriter(logs[0], "terminal-text-1");
-        await new Promise(resolve => setTimeout(resolve, 400));
-        await typeWriter(logs[1], "terminal-text-2");
-        await new Promise(resolve => setTimeout(resolve, 400));
-        await typeWriter(logs[2], "terminal-text-3");
-        await new Promise(resolve => setTimeout(resolve, 400));
-        await typeWriter(logs[3], "terminal-text-4");
-        
-        const cursor = document.createElement('span');
-        cursor.className = 'terminal-cursor';
-        document.getElementById('terminal-text-4').appendChild(cursor);
-    }
+    <section id="areas" class="areas section-pad">
+      <div class="container">
+        <div class="section-kicker">
+          <p class="section-index">02 / MAPA DE CONOCIMIENTO</p>
+          <p>Cinco perspectivas para que una solución de IA sea técnicamente segura, jurídicamente defendible y socialmente útil.</p>
+        </div>
+        <div class="area-grid">
+          <article class="area-card area-ethical">
+            <span class="area-number">A</span>
+            <div class="area-icon" aria-hidden="true">◎</div>
+            <h3>IA ética</h3>
+            <p>Finalidad, transparencia, equidad, control humano y evaluación de impacto.</p>
+            <span class="area-link">Principios que se pueden verificar</span>
+          </article>
+          <article class="area-card">
+            <span class="area-number">B</span>
+            <div class="area-icon" aria-hidden="true">⌁</div>
+            <h3>Despliegue seguro</h3>
+            <p>Gobierno del ciclo de vida, pruebas, monitorización, incidentes y resiliencia.</p>
+            <span class="area-link">Seguridad desde el diseño</span>
+          </article>
+          <article class="area-card area-red">
+            <span class="area-number">C</span>
+            <div class="area-icon" aria-hidden="true">§</div>
+            <h3>Normativa y cumplimiento</h3>
+            <p>AI Act, RIA, ENS, protección de datos, documentación técnica y evidencias de conformidad.</p>
+            <span class="area-link">Del requisito a la evidencia</span>
+          </article>
+          <article class="area-card">
+            <span class="area-number">D</span>
+            <div class="area-icon" aria-hidden="true">EU</div>
+            <h3>Soberanía digital europea</h3>
+            <p>Control sobre datos, modelos, infraestructura, proveedores y conocimiento crítico.</p>
+            <span class="area-link">Autonomía con interoperabilidad</span>
+          </article>
+          <article class="area-card area-wide">
+            <span class="area-number">E</span>
+            <div class="area-icon" aria-hidden="true">⌂</div>
+            <h3>Administración pública</h3>
+            <p>Contratación responsable, explicabilidad, garantías ciudadanas y expedientes auditables para servicios públicos basados en IA.</p>
+            <span class="area-link">Innovar preservando derechos</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    document.addEventListener('DOMContentLoaded', runTerminal);
-</script>
+    <section id="recursos" class="resources section-pad">
+      <div class="container">
+        <div class="resource-heading">
+          <div>
+            <p class="section-index">03 / BIBLIOTECA ABIERTA</p>
+            <h2>Recursos listos<br>para adaptar.</h2>
+          </div>
+          <div class="resource-intro">
+            <p>Todos los documentos son gratuitos. Antes de acceder te pediremos, mediante un formulario breve, que nos cuentes qué recurso necesitas y para qué vas a utilizarlo.</p>
+            <a href="#licencia">Consultar condiciones de uso</a>
+          </div>
+        </div>
 
+        <div class="resource-list">
+          <article class="resource-item">
+            <span class="resource-count">01</span>
+            <div><span class="tag">Gobierno · Documento técnico</span><h3>Procedimiento de gestión del ciclo de vida LLM</h3><p>Proceso operativo para sistemas de alto riesgo, desde la ideación hasta la retirada.</p></div>
+            <button class="resource-button" type="button" data-resource="Procedimiento de gestión del ciclo de vida LLM" data-url="https://docs.google.com/document/d/1eXiimTqXWFPWmSr9HdlonwfPdP9aoFdA/edit">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">02</span>
+            <div><span class="tag">Plantilla · Alto riesgo</span><h3>Modelo de documento técnico LLM</h3><p>Estructura editable para documentar arquitectura, datos, riesgos y controles.</p></div>
+            <button class="resource-button" type="button" data-resource="Modelo de documento técnico LLM" data-url="https://drive.google.com/file/d/1cq2Xw1Fk4AOFyIXjrYoxTp6CTQDm8uPf/view">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">03</span>
+            <div><span class="tag">AI Act · RIA · ENS · Guía</span><h3>Implantación de LLM conforme al AI Act, RIA y ENS</h3><p>Guía regulatoria para traducir obligaciones europeas y nacionales a un plan de implantación.</p></div>
+            <button class="resource-button" type="button" data-resource="Guía de implantación de LLM conforme al AI Act, RIA y ENS" data-url="https://docs.google.com/document/d/1xk42r-Ae0G5LMkTuUCeXqhubycnVYuN-/">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">04</span>
+            <div><span class="tag">Uso interno · Política</span><h3>Manual de uso de LLM para equipos</h3><p>Normas claras para que empleados y colaboradores utilicen IA generativa de forma segura.</p></div>
+            <button class="resource-button" type="button" data-resource="Manual de política de uso de LLM para equipos" data-url="https://docs.google.com/document/d/18KpaBO-408AL-Nb0NeKBhybMH5i13Kui/">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">05</span>
+            <div><span class="tag">Resiliencia · Contingencia</span><h3>Conéctate35: respuesta ante apagón digital</h3><p>Plan de continuidad para mantener coordinación y servicios esenciales.</p></div>
+            <button class="resource-button" type="button" data-resource="Conéctate35: respuesta ante apagón digital" data-url="https://docs.google.com/document/d/1OcVWwLa618jA0rfTL1zIhgUtOqctl409/edit?usp=drive_link">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">06</span>
+            <div><span class="tag">Evaluación · Checklist</span><h3>Evaluación de riesgo de IA</h3><p>Lista de comprobación basada en el AI Act, el RIA y el ENS para identificar obligaciones y controles.</p></div>
+            <button class="resource-button" type="button" data-resource="Checklist de evaluación de riesgo de IA" data-url="https://docs.google.com/document/d/1Dai0gp6JuF6e0t0dZhpUdyZsEwoHdjbY/edit">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">07</span>
+            <div><span class="tag">Derechos · Impacto</span><h3>Modelo de evaluación de impacto algorítmico</h3><p>Marco AIA para analizar afectaciones, mitigaciones y responsabilidades.</p></div>
+            <button class="resource-button" type="button" data-resource="Modelo de evaluación de impacto algorítmico" data-url="https://docs.google.com/document/d/1kDWLJ1p4r5XUcPxftpPwi0NEs9UvrW3P/edit">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">08</span>
+            <div><span class="tag">Sector público · Contratación</span><h3>Cláusulas tipo para licitaciones públicas de IA</h3><p>Requisitos reutilizables sobre datos, control, auditoría y salida del proveedor.</p></div>
+            <button class="resource-button" type="button" data-resource="Cláusulas tipo para licitaciones públicas de IA" data-url="https://docs.google.com/document/d/1YyW43XIcTVPov4Vn8ujNpCLqKQ-iK3hY/edit">Solicitar y acceder <span>↗</span></button>
+          </article>
+          <article class="resource-item">
+            <span class="resource-count">09</span>
+            <div><span class="tag">Proyecto · Dossier</span><h3>Expediente técnico-jurídico de proyecto IA</h3><p>Índice completo para reunir decisiones, evidencias y responsables en un único expediente.</p></div>
+            <button class="resource-button" type="button" data-resource="Expediente técnico-jurídico de proyecto IA" data-url="https://docs.google.com/document/d/12SFLsUOAxlk9QzOdz5egm3luEiiZhg7g/edit">Solicitar y acceder <span>↗</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</body></html>
+    <section id="estandar-nullgen" class="nullgen section-pad">
+      <div class="container nullgen-grid">
+        <div class="nullgen-mark" aria-hidden="true"><span>N</span><i>0</i></div>
+        <div>
+          <p class="section-index">MARCO ABIERTO</p>
+          <h2>Estándar NullGEN</h2>
+          <p>Un marco abierto de certificación sobre procesos libres de IA generativa, diseñado para identificar, evaluar y demostrar su cumplimiento.</p>
+        </div>
+        <a class="button button-dark" href="nullgen.html">Conocer el estándar <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section id="articulos" class="articles section-pad">
+      <div class="container">
+        <div class="articles-heading">
+          <div><p class="section-index">04 / CUADERNO DE CAMPO</p><h2>Últimos artículos</h2></div>
+          <a href="https://ciberseguria.substack.com/" target="_blank" rel="noopener">Ver todo en Substack <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="article-grid">
+          <article class="article-card article-featured">
+            <div class="article-meta"><span>6 julio 2026</span><span>4 min</span></div>
+            <h3>Fable 5: cada vez es más difícil comprender a las IAs y auditarlas se va a poner feo</h3>
+            <p>DATA DATA DATA. GO. Una reflexión sobre modelos cada vez más opacos y el reto de auditarlos con sentido.</p>
+            <a href="https://substack.com/@ciberseguria/p-205494368?utm_source=ciberseguria.com" target="_blank" rel="noopener">Leer en Substack <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="article-card">
+            <div class="article-meta"><span>27 mayo 2026</span><span>4 min</span></div>
+            <h3>GPT-5.5-Cyber: necesidad operativa y dependencia estratégica en la UE</h3>
+            <p>Sobre el modelo Mythos, la seguridad ofensiva asistida por IA y los riesgos de dependencia para Europa.</p>
+            <a href="https://ciberseguria.substack.com/p/gpt-55-cyber-entre-la-necesidad-operativa" target="_blank" rel="noopener">Leer en Substack <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="article-card">
+            <div class="article-meta"><span>29 abril 2026</span><span>4 min</span></div>
+            <h3>Nuestra seguridad digital era un castillo de naipes</h3>
+            <p>La beta de Mythos como señal de que la automatización ofensiva cambia el equilibrio de la seguridad digital.</p>
+            <a href="https://substack.com/@ciberseguria/p-195875280?utm_source=ciberseguria.com" target="_blank" rel="noopener">Leer en Substack <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="licencia" class="license section-pad">
+      <div class="container license-grid">
+        <div>
+          <p class="section-index">05 / CONDICIONES DE USO</p>
+          <h2>Recursos abiertos.<br>Uso responsable.</h2>
+        </div>
+        <div class="license-copy">
+          <p class="license-name">Licencia de Uso Gratuito CibersegurIA v1.0</p>
+          <p>Puedes utilizar y adaptar los recursos sin coste para fines personales, educativos, de investigación, internos o de servicio público. Antes de acceder a cada recurso debes informar de su finalidad mediante el formulario disponible en esta web.</p>
+          <ul>
+            <li><b>Atribución:</b> mantén la referencia a CibersegurIA y a la URL de origen.</li>
+            <li><b>Registro de uso:</b> indica el recurso, el contexto y la finalidad de uso.</li>
+            <li><b>Sin reventa:</b> no vendas, sublicencies ni presentes los materiales como obra propia.</li>
+            <li><b>Adaptaciones:</b> están permitidas si señalas los cambios y conservas estas condiciones.</li>
+          </ul>
+          <p class="license-small">Los materiales se facilitan como apoyo general, sin garantía de adecuación jurídica o técnica a un caso concreto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <img src="logociberseguria.png" alt="CibersegurIA">
+        <p>Conocimiento abierto para una inteligencia artificial que respete derechos, organizaciones y territorio.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#agentes">Agentes de IA</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#articulos">Artículos</a>
+        <a href="mailto:ciberseguria@gmail.com">Contacto</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="current-year">2024</span> CibersegurIA</span>
+      <span>Licencia de Uso Gratuito CibersegurIA v1.0 · Recursos gratuitos con registro de finalidad</span>
+    </div>
+  </footer>
+
+  <dialog id="resource-dialog" class="resource-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="Cerrar formulario">×</button>
+      <p class="section-index">ACCESO A RECURSO</p>
+      <h2 id="dialog-title">Cuéntanos para qué lo necesitas</h2>
+      <p class="dialog-intro">El acceso es gratuito. Esta información nos ayuda a conocer el impacto de la biblioteca y a priorizar nuevos materiales.</p>
+      <p class="selected-resource"><span>Recurso seleccionado</span><strong id="selected-resource-name"></strong></p>
+
+      <form id="resource-form" action="https://formsubmit.co/ajax/ciberseguria@gmail.com" method="post">
+        <input id="resource-name" type="hidden" name="Recurso">
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <label>Nombre o entidad
+            <input type="text" name="Nombre o entidad" autocomplete="organization" required>
+          </label>
+          <label>Correo de contacto
+            <input type="email" name="Correo" autocomplete="email" required>
+          </label>
+        </div>
+        <label>Contexto de uso
+          <select name="Contexto" required>
+            <option value="">Selecciona una opción</option>
+            <option>Administración pública</option>
+            <option>Educación o formación</option>
+            <option>Investigación</option>
+            <option>Uso profesional interno</option>
+            <option>Proyecto social o sin ánimo de lucro</option>
+            <option>Uso personal</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Finalidad concreta
+          <textarea name="Finalidad" rows="4" minlength="20" placeholder="Describe brevemente el proyecto, actividad o problema en el que utilizarás el recurso…" required></textarea>
+        </label>
+        <label class="check-label">
+          <input type="checkbox" name="Condiciones aceptadas" value="Sí" required>
+          <span>He leído y acepto la <a href="#licencia">Licencia de Uso Gratuito CibersegurIA v1.0</a>.</span>
+        </label>
+        <p class="privacy-note">Los datos se enviarán a CibersegurIA mediante FormSubmit y se usarán únicamente para registrar la finalidad declarada y, si fuera necesario, aclarar ese uso.</p>
+        <button class="button button-primary submit-resource" type="submit">Informar y acceder al recurso</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Uso registrado. Abriendo el recurso…</div>
+</body>
+</html>
