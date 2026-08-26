@@ -4,9 +4,16 @@
 
   <url>
     <loc>https://ciberseguria.com/</loc>
-    <lastmod>2025-06-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://ciberseguria.com/nullgen.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

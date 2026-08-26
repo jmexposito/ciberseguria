@@ -1,370 +1,116 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CibersegurIA | Recursos públicos para una IA ética y segura</title>
   <meta name="description" content="Recursos gratuitos sobre IA ética, despliegue seguro, cumplimiento, soberanía digital europea y administración pública.">
-  <meta name="theme-color" content="#064bae">
-  <meta property="og:title" content="CibersegurIA | IA ética y segura">
-  <meta property="og:description" content="Conocimiento abierto para desplegar inteligencia artificial con garantías.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ciberseguria.com/">
-  <meta property="og:image" content="https://ciberseguria.com/logociberseguria.png">
-  <link rel="canonical" href="https://ciberseguria.com/">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta name="theme-color" content="#064bae"><meta property="og:title" content="CibersegurIA | IA ética y segura"><meta property="og:description" content="Conocimiento abierto para desplegar inteligencia artificial con garantías.">
+  <meta property="og:type" content="website"><meta property="og:url" content="https://ciberseguria.com/"><meta property="og:image" content="https://ciberseguria.com/logociberseguria.png">
+  <link rel="canonical" href="https://ciberseguria.com/"><link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="experience.css?v=20260826-cara-b-links"><script src="content-data.js?v=20260826-cara-b-links" defer></script><script src="script.js?v=20260826-cara-b-links" defer></script>
 </head>
-<body>
+<body class="experience-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="CibersegurIA, inicio">
-        <img src="logociberseguria.png" alt="CibersegurIA">
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-        <span class="sr-only">Abrir navegación</span>
-      </button>
-
-      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-        <a href="#agentes">Agentes de IA</a>
-        <a href="#areas">Áreas</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#articulos">Artículos</a>
-        <a href="#licencia">Licencia</a>
-      </nav>
-
-      <a class="header-action" href="#recursos">Explorar recursos</a>
-    </div>
-  </header>
-
+  <header class="site-header experience-header"><div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label="CibersegurIA, inicio"><img src="logociberseguria.png" alt="CibersegurIA"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir navegación</span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="#agentes">Agentes</a><a href="#plantillas">Plantillas</a><a href="#areas">Áreas</a><a href="#recursos">Recursos</a><a href="#chamulleando">Chamulleando</a><a href="#articulos">Artículos</a></nav>
+    <a class="header-action" href="#recursos">Biblioteca <span aria-hidden="true">↘</span></a>
+  </div></header>
+  <aside class="chapter-rail" aria-label="Capítulos de la página">
+    <a href="#inicio" data-rail-target="inicio"><span>00</span><b>Inicio</b></a><a href="#agentes" data-rail-target="agentes"><span>01</span><b>Agentes</b></a><a href="#areas" data-rail-target="areas"><span>02</span><b>Áreas</b></a><a href="#recursos" data-rail-target="recursos"><span>03</span><b>Biblioteca</b></a><a href="#chamulleando" data-rail-target="chamulleando"><span>04</span><b>Ideas</b></a><a href="#licencia" data-rail-target="licencia"><span>05</span><b>Uso</b></a>
+  </aside>
   <main id="contenido">
-    <section id="inicio" class="hero section-pad">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> Biblioteca pública de IA responsable</p>
-          <h1>IA Ética.<br><em>Safety by Design.</em><br>Segura para desplegar.</h1>
-          <p class="hero-lead">Guías, modelos y herramientas gratuitas para personas, organizaciones y administraciones que quieren aplicar inteligencia artificial con garantías.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#recursos">Consultar la biblioteca</a>
-            <a class="button button-text" href="#proposito">Por qué existe este proyecto <span aria-hidden="true">↓</span></a>
-          </div>
-          <ul class="hero-principles" aria-label="Principios del proyecto">
-            <li>Acceso gratuito</li>
-            <li>Aplicación práctica</li>
-            <li>Perspectiva europea</li>
-          </ul>
-        </div>
-
-        <div class="hero-board" aria-label="Mapa de un despliegue responsable de inteligencia artificial">
-          <div class="board-topline">
-            <span>Ruta de despliegue responsable</span>
-            <span class="status-dot">Sistema supervisado</span>
-          </div>
-          <div class="board-core">
-            <div class="agent-symbol" aria-hidden="true">
-              <span>IA</span>
-              <i class="orbit orbit-one"></i>
-              <i class="orbit orbit-two"></i>
-            </div>
-            <p>Agente de IA</p>
-            <small>Objetivo acotado · control humano</small>
-          </div>
-          <ol class="board-route">
-            <li><span>01</span><b>Finalidad</b><small>Necesidad y límites</small></li>
-            <li><span>02</span><b>Riesgo</b><small>Impacto y normativa</small></li>
-            <li><span>03</span><b>Prueba</b><small>Seguridad y sesgos</small></li>
-            <li><span>04</span><b>Control</b><small>Trazabilidad continua</small></li>
-          </ol>
-          <div class="board-footer">
-            <span>AI ACT · RIA · ENS</span>
-            <span>SEGURIDAD</span>
-            <span>SOBERANÍA</span>
-          </div>
-        </div>
+    <section id="inicio" class="hero-experience chapter" data-chapter="Inicio">
+      <div class="hero-field" aria-hidden="true"><i class="field-orbit field-orbit-a"></i><i class="field-orbit field-orbit-b"></i><span class="field-node node-a">ética</span><span class="field-node node-b">control</span><span class="field-node node-c">soberanía</span><span class="field-node node-d">seguridad</span><svg viewBox="0 0 1000 520" preserveAspectRatio="none"><path pathLength="1" d="M-30 420 C170 60 420 550 1030 100"></path><path pathLength="1" d="M40 90 C390 330 670 -10 970 390"></path></svg></div>
+      <div class="container hero-stage">
+        <p class="eyebrow hero-eyebrow"><span></span> Biblioteca pública de IA responsable</p>
+        <h1 aria-label="IA Ética. Safety by Design. Segura para desplegar."><span class="hero-line hero-line-one">IA Ética.</span><span class="hero-line hero-line-two">Safety by Design.</span><span class="hero-line hero-line-three">Segura para desplegar.</span></h1>
+        <div class="hero-deck"><p class="hero-lead">Guías, modelos y herramientas gratuitas para personas, organizaciones y administraciones que quieren aplicar inteligencia artificial con garantías.</p><div class="hero-actions"><a class="button button-primary magnetic" href="#plantillas">Empezar por el sistema</a><a class="button button-text" href="#proposito">Entender el proyecto <span aria-hidden="true">↓</span></a></div><ul class="hero-principles" aria-label="Principios del proyecto"><li>Acceso gratuito</li><li>Aplicación práctica</li><li>Perspectiva europea</li></ul></div>
+        <a class="scroll-cue" href="#proposito"><span>Recorrer</span><i></i></a>
       </div>
     </section>
-
-    <section id="proposito" class="purpose-band">
-      <div class="container purpose-grid">
-        <p class="section-index">00 / PROPÓSITO</p>
-        <div>
-          <h2>El conocimiento que protege a la sociedad debe ser accesible.</h2>
-          <p>CibersegurIA es un recurso público e independiente para convertir principios éticos, requisitos legales y buenas prácticas de seguridad en decisiones que puedan aplicarse de verdad. Sin venta de servicios, sin barreras de pago y sin promesas grandilocuentes.</p>
-        </div>
-        <div class="purpose-note">
-          <strong>Para quién</strong>
-          <p>Equipos técnicos y jurídicos, responsables públicos, docentes, estudiantes, pymes y cualquier persona que necesite orientar un proyecto de IA.</p>
-        </div>
+    <section id="proposito" class="purpose-band chapter" data-chapter="Propósito"><div class="container purpose-grid">
+      <p class="section-index">00 / PROPÓSITO</p>
+      <div><h2>El conocimiento que protege a la sociedad debe ser accesible.</h2><p>CibersegurIA es un recurso público e independiente para convertir principios éticos, requisitos legales y buenas prácticas de seguridad en decisiones que puedan aplicarse de verdad. Sin venta de servicios, sin barreras de pago y sin promesas grandilocuentes.</p></div>
+      <div class="purpose-note"><strong>Para quién</strong><p>Equipos técnicos y jurídicos, responsables públicos, docentes, estudiantes, pymes y cualquier persona que necesite orientar un proyecto de IA.</p></div>
+    </div></section>
+    <section id="agentes" class="agents-opening chapter section-pad" data-chapter="Agentes"><div class="container section-heading">
+      <div><p class="section-index">01 / LA ERA DE LOS AGENTES</p><h2 class="agents-title" aria-label="Agentes de IA"><span class="agents-title-word agents-title-word-one" aria-hidden="true">Agentes</span><span class="agents-title-word agents-title-word-two" aria-hidden="true">de IA</span></h2></div>
+      <p>Los agentes ya no solo responden: deciden, consultan sistemas y ejecutan acciones. Aquí reunimos criterios para desplegarlos con permisos mínimos, supervisión humana y capacidad real de detenerlos.</p>
+    </div></section>
+    <section id="plantillas" class="template-story chapter" data-chapter="Plantillas multiagente"><div class="template-sticky">
+      <div class="container template-heading"><div><p class="section-index">01.1 / ANTES DEL CÓDIGO</p><span class="template-new-badge">NUEVO</span><h2>Plantillas para construir un sistema de agentes de IA</h2></div><p>El paquete documental necesario antes de desplegar un sistema multiagéntico de IA. Gobierno, arquitectura, riesgos, privacidad, controles, trazabilidad e implantación: siete piezas, un solo sistema.</p></div>
+      <div class="preflight-strip" aria-label="Umbral previo al despliegue"><span><b>Finalidad</b> Necesidad y límites</span><span><b>Riesgo</b> Impacto y normativa</span><span><b>Prueba</b> Seguridad y sesgos</span><span><b>Control</b> Trazabilidad continua</span></div>
+      <div class="template-viewport"><div id="template-track" class="template-track"></div></div>
+      <div class="container template-status" aria-hidden="true"><span><b id="template-current">01</b> / 07</span><i><b id="template-progress"></b></i><em>Desliza para construir el sistema</em></div>
+    </div></section>
+    <section id="areas" class="areas section-pad chapter" data-chapter="Valores de CibersegurIA"><div class="container">
+      <div class="values-heading"><div><p class="section-index">02 /</p><h2>Valores de CibersegurIA</h2></div><p>Cinco perspectivas para que una solución de IA sea técnicamente segura, jurídicamente defendible y socialmente útil.</p></div>
+      <div class="area-grid">
+        <article class="area-card area-ethical"><span class="area-number">A</span><div class="area-icon" aria-hidden="true">◎</div><h3>IA ética</h3><p>Finalidad, transparencia, equidad, control humano y evaluación de impacto.</p><span class="area-link">Principios que se pueden verificar</span></article>
+        <article class="area-card"><span class="area-number">B</span><div class="area-icon" aria-hidden="true">⌁</div><h3>Despliegue seguro</h3><p>Gobierno del ciclo de vida, pruebas, monitorización, incidentes y resiliencia.</p><span class="area-link">Seguridad desde el diseño</span></article>
+        <article class="area-card area-red"><span class="area-number">C</span><div class="area-icon" aria-hidden="true">§</div><h3>Normativa y cumplimiento</h3><p>AI Act, RIA, ENS, protección de datos, documentación técnica y evidencias de conformidad.</p><span class="area-link">Del requisito a la evidencia</span></article>
+        <article class="area-card"><span class="area-number">D</span><div class="area-icon" aria-hidden="true">EU</div><h3>Soberanía digital europea</h3><p>Control sobre datos, modelos, infraestructura, proveedores y conocimiento crítico.</p><span class="area-link">Autonomía con interoperabilidad</span></article>
+        <article class="area-card area-wide"><span class="area-number">E</span><div class="area-icon" aria-hidden="true">⌂</div><h3>Administración pública</h3><p>Contratación responsable, explicabilidad, garantías ciudadanas y expedientes auditables para servicios públicos basados en IA.</p><span class="area-link">Innovar preservando derechos</span></article>
       </div>
-    </section>
-
-    <section id="agentes" class="agents section-pad">
-      <div class="container">
-        <div class="section-heading">
+    </div></section>
+    <section id="recursos" class="resources section-pad chapter" data-chapter="Biblioteca abierta"><div class="container">
+      <div class="resource-heading"><div><p class="section-index">03 / BIBLIOTECA ABIERTA</p><h2>Recursos generales de IA<br>listos para adaptar.</h2></div><div class="resource-intro"><p>Todos los documentos son gratuitos. Antes de acceder te pediremos, mediante un formulario breve, que nos cuentes qué recurso necesitas y para qué vas a utilizarlo.</p><a href="#licencia">Consultar condiciones de uso</a></div></div>
+      <div class="resource-list">
+        <article class="resource-item"><span class="resource-count">01</span><div><span class="tag">Gobierno · Documento técnico</span><h3>Procedimiento de gestión del ciclo de vida LLM</h3><p>Proceso operativo para sistemas de alto riesgo, desde la ideación hasta la retirada.</p></div><button class="resource-button" type="button" data-resource="Procedimiento de gestión del ciclo de vida LLM" data-url="https://docs.google.com/document/d/1eXiimTqXWFPWmSr9HdlonwfPdP9aoFdA/edit">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">02</span><div><span class="tag">Plantilla · Alto riesgo</span><h3>Modelo de documento técnico LLM</h3><p>Estructura editable para documentar arquitectura, datos, riesgos y controles.</p></div><button class="resource-button" type="button" data-resource="Modelo de documento técnico LLM" data-url="https://drive.google.com/file/d/1cq2Xw1Fk4AOFyIXjrYoxTp6CTQDm8uPf/view">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">03</span><div><span class="tag">AI Act · RIA · ENS · Guía</span><h3>Implantación de LLM conforme al AI Act, RIA y ENS</h3><p>Guía regulatoria para traducir obligaciones europeas y nacionales a un plan de implantación.</p></div><button class="resource-button" type="button" data-resource="Guía de implantación de LLM conforme al AI Act, RIA y ENS" data-url="https://docs.google.com/document/d/1xk42r-Ae0G5LMkTuUCeXqhubycnVYuN-/">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">04</span><div><span class="tag">Uso interno · Política</span><h3>Manual de uso de LLM para equipos</h3><p>Normas claras para que empleados y colaboradores utilicen IA generativa de forma segura.</p></div><button class="resource-button" type="button" data-resource="Manual de política de uso de LLM para equipos" data-url="https://docs.google.com/document/d/18KpaBO-408AL-Nb0NeKBhybMH5i13Kui/">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">05</span><div><span class="tag">Evaluación · Checklist</span><h3>Evaluación de riesgo de IA</h3><p>Lista de comprobación basada en el AI Act, el RIA y el ENS para identificar obligaciones y controles.</p></div><button class="resource-button" type="button" data-resource="Checklist de evaluación de riesgo de IA" data-url="https://docs.google.com/document/d/1Dai0gp6JuF6e0t0dZhpUdyZsEwoHdjbY/edit">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">06</span><div><span class="tag">Derechos · Impacto</span><h3>Modelo de evaluación de impacto algorítmico</h3><p>Marco AIA para analizar afectaciones, mitigaciones y responsabilidades.</p></div><button class="resource-button" type="button" data-resource="Modelo de evaluación de impacto algorítmico" data-url="https://docs.google.com/document/d/1kDWLJ1p4r5XUcPxftpPwi0NEs9UvrW3P/edit">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">07</span><div><span class="tag">Sector público · Contratación</span><h3>Cláusulas tipo para licitaciones públicas de IA</h3><p>Requisitos reutilizables sobre datos, control, auditoría y salida del proveedor.</p></div><button class="resource-button" type="button" data-resource="Cláusulas tipo para licitaciones públicas de IA" data-url="https://docs.google.com/document/d/1YyW43XIcTVPov4Vn8ujNpCLqKQ-iK3hY/edit">Solicitar y acceder <span>↗</span></button></article>
+        <article class="resource-item"><span class="resource-count">08</span><div><span class="tag">Proyecto · Dossier</span><h3>Expediente técnico-jurídico de proyecto IA</h3><p>Índice completo para reunir decisiones, evidencias y responsables en un único expediente.</p></div><button class="resource-button" type="button" data-resource="Expediente técnico-jurídico de proyecto IA" data-url="https://docs.google.com/document/d/12SFLsUOAxlk9QzOdz5egm3luEiiZhg7g/edit">Solicitar y acceder <span>↗</span></button></article>
+      </div>
+    </div></section>
+    <section id="estandar-nullgen" class="nullgen section-pad chapter" data-chapter="Estándar NullGEN"><div class="container nullgen-grid">
+      <div class="nullgen-mark" aria-hidden="true"><span>N</span><i>0</i></div><div class="nullgen-copy"><p class="section-index">PROYECTO PROPIO · MARCO ABIERTO</p><h2>Estándar NullGEN</h2><p class="nullgen-lead">Un marco abierto de certificación desarrollado por CibersegurIA sobre procesos libres de IA generativa, diseñado para identificar, evaluar y demostrar su cumplimiento.</p><p class="nullgen-detail">Criterios verificables para acreditar procesos, productos, contenidos o servicios realizados sin intervención de IA generativa.</p></div><a class="button button-dark magnetic nullgen-cta" href="nullgen.html">Cómo certificarse <span aria-hidden="true">→</span></a>
+    </div></section>
+    <section id="chamulleando" class="chamulleando section-pad chapter" data-chapter="Chamulleando sobre IA"><div class="container">
+      <div class="chamulleando-heading"><div><p class="section-index">04 / SELECCIÓN EDITORIAL</p><h2>Chamulleando<br>sobre IA</h2></div><p>Artículos de opinión, ideas laterales y algún que otro off-topic sobre IA.</p></div><div id="chamulleando-grid" class="chamulleando-grid"></div>
+    </div></section>
+    <section id="cara-b" class="cara-b chapter" data-chapter="La cara B" aria-describedby="cara-b-intro">
+      <div class="cara-b-sticky">
+        <div class="cara-b-atmosphere" aria-hidden="true"><span>B</span><i></i><i></i></div>
+        <div class="container cara-b-heading">
           <div>
-            <p class="section-index">01 / LA ERA DE LOS AGENTES</p>
-            <h2>Despliegue de<br>agentes de IA</h2>
+            <p class="section-index">IA FUERA DEL TRABAJO</p>
+            <h2 class="cara-b-title" aria-label="La cara B"><span>La cara</span><span class="cara-b-title-turn" aria-hidden="true"><i>A</i><b>B</b></span></h2>
           </div>
-          <p>Los agentes ya no solo responden: deciden, consultan sistemas y ejecutan acciones. Aquí reunimos criterios para desplegarlos con permisos mínimos, supervisión humana y capacidad real de detenerlos.</p>
-        </div>
-
-        <div class="agents-panel">
-          <div class="agents-intro">
-            <span class="priority-flag">Próximamente...</span>
-            <h3>Del prototipo a producción, sin perder el control.</h3>
-            <p>Una ruta práctica para definir autonomía, proteger herramientas y datos, validar el comportamiento y mantener evidencia de cada decisión.</p>
-            <a class="button button-light" href="#recursos">Ver herramientas relacionadas</a>
-          </div>
-          <ol class="agent-steps">
-            <li><span>01</span><div><b>Acotar la misión</b><p>Objetivo, prohibiciones, datos autorizados y condiciones de parada.</p></div></li>
-            <li><span>02</span><div><b>Diseñar permisos</b><p>Acceso mínimo a herramientas, identidades y entornos separados.</p></div></li>
-            <li><span>03</span><div><b>Evaluar antes de abrir</b><p>Pruebas adversarias, sesgos, fuga de datos y fallos de razonamiento.</p></div></li>
-            <li><span>04</span><div><b>Supervisar en continuo</b><p>Registros, alertas, revisión humana y respuesta ante incidentes.</p></div></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section id="areas" class="areas section-pad">
-      <div class="container">
-        <div class="section-kicker">
-          <p class="section-index">02 / MAPA DE CONOCIMIENTO</p>
-          <p>Cinco perspectivas para que una solución de IA sea técnicamente segura, jurídicamente defendible y socialmente útil.</p>
-        </div>
-        <div class="area-grid">
-          <article class="area-card area-ethical">
-            <span class="area-number">A</span>
-            <div class="area-icon" aria-hidden="true">◎</div>
-            <h3>IA ética</h3>
-            <p>Finalidad, transparencia, equidad, control humano y evaluación de impacto.</p>
-            <span class="area-link">Principios que se pueden verificar</span>
-          </article>
-          <article class="area-card">
-            <span class="area-number">B</span>
-            <div class="area-icon" aria-hidden="true">⌁</div>
-            <h3>Despliegue seguro</h3>
-            <p>Gobierno del ciclo de vida, pruebas, monitorización, incidentes y resiliencia.</p>
-            <span class="area-link">Seguridad desde el diseño</span>
-          </article>
-          <article class="area-card area-red">
-            <span class="area-number">C</span>
-            <div class="area-icon" aria-hidden="true">§</div>
-            <h3>Normativa y cumplimiento</h3>
-            <p>AI Act, RIA, ENS, protección de datos, documentación técnica y evidencias de conformidad.</p>
-            <span class="area-link">Del requisito a la evidencia</span>
-          </article>
-          <article class="area-card">
-            <span class="area-number">D</span>
-            <div class="area-icon" aria-hidden="true">EU</div>
-            <h3>Soberanía digital europea</h3>
-            <p>Control sobre datos, modelos, infraestructura, proveedores y conocimiento crítico.</p>
-            <span class="area-link">Autonomía con interoperabilidad</span>
-          </article>
-          <article class="area-card area-wide">
-            <span class="area-number">E</span>
-            <div class="area-icon" aria-hidden="true">⌂</div>
-            <h3>Administración pública</h3>
-            <p>Contratación responsable, explicabilidad, garantías ciudadanas y expedientes auditables para servicios públicos basados en IA.</p>
-            <span class="area-link">Innovar preservando derechos</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="recursos" class="resources section-pad">
-      <div class="container">
-        <div class="resource-heading">
-          <div>
-            <p class="section-index">03 / BIBLIOTECA ABIERTA</p>
-            <h2>Recursos listos<br>para adaptar.</h2>
-          </div>
-          <div class="resource-intro">
-            <p>Todos los documentos son gratuitos. Antes de acceder te pediremos, mediante un formulario breve, que nos cuentes qué recurso necesitas y para qué vas a utilizarlo.</p>
-            <a href="#licencia">Consultar condiciones de uso</a>
+          <div class="cara-b-intro">
+            <p id="cara-b-intro">Proyectos, experimentos y cosas hechas con IA fuera del ámbito laboral.</p>
+            <small>A veces había una necesidad. Otras veces simplemente parecía divertido hacerlo.</small>
           </div>
         </div>
-
-        <div class="resource-list">
-          <article class="resource-item">
-            <span class="resource-count">01</span>
-            <div><span class="tag">Gobierno · Documento técnico</span><h3>Procedimiento de gestión del ciclo de vida LLM</h3><p>Proceso operativo para sistemas de alto riesgo, desde la ideación hasta la retirada.</p></div>
-            <button class="resource-button" type="button" data-resource="Procedimiento de gestión del ciclo de vida LLM" data-url="https://docs.google.com/document/d/1eXiimTqXWFPWmSr9HdlonwfPdP9aoFdA/edit">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">02</span>
-            <div><span class="tag">Plantilla · Alto riesgo</span><h3>Modelo de documento técnico LLM</h3><p>Estructura editable para documentar arquitectura, datos, riesgos y controles.</p></div>
-            <button class="resource-button" type="button" data-resource="Modelo de documento técnico LLM" data-url="https://drive.google.com/file/d/1cq2Xw1Fk4AOFyIXjrYoxTp6CTQDm8uPf/view">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">03</span>
-            <div><span class="tag">AI Act · RIA · ENS · Guía</span><h3>Implantación de LLM conforme al AI Act, RIA y ENS</h3><p>Guía regulatoria para traducir obligaciones europeas y nacionales a un plan de implantación.</p></div>
-            <button class="resource-button" type="button" data-resource="Guía de implantación de LLM conforme al AI Act, RIA y ENS" data-url="https://docs.google.com/document/d/1xk42r-Ae0G5LMkTuUCeXqhubycnVYuN-/">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">04</span>
-            <div><span class="tag">Uso interno · Política</span><h3>Manual de uso de LLM para equipos</h3><p>Normas claras para que empleados y colaboradores utilicen IA generativa de forma segura.</p></div>
-            <button class="resource-button" type="button" data-resource="Manual de política de uso de LLM para equipos" data-url="https://docs.google.com/document/d/18KpaBO-408AL-Nb0NeKBhybMH5i13Kui/">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">05</span>
-            <div><span class="tag">Resiliencia · Contingencia</span><h3>Conéctate35: respuesta ante apagón digital</h3><p>Plan de continuidad para mantener coordinación y servicios esenciales.</p></div>
-            <button class="resource-button" type="button" data-resource="Conéctate35: respuesta ante apagón digital" data-url="https://docs.google.com/document/d/1OcVWwLa618jA0rfTL1zIhgUtOqctl409/edit?usp=drive_link">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">06</span>
-            <div><span class="tag">Evaluación · Checklist</span><h3>Evaluación de riesgo de IA</h3><p>Lista de comprobación basada en el AI Act, el RIA y el ENS para identificar obligaciones y controles.</p></div>
-            <button class="resource-button" type="button" data-resource="Checklist de evaluación de riesgo de IA" data-url="https://docs.google.com/document/d/1Dai0gp6JuF6e0t0dZhpUdyZsEwoHdjbY/edit">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">07</span>
-            <div><span class="tag">Derechos · Impacto</span><h3>Modelo de evaluación de impacto algorítmico</h3><p>Marco AIA para analizar afectaciones, mitigaciones y responsabilidades.</p></div>
-            <button class="resource-button" type="button" data-resource="Modelo de evaluación de impacto algorítmico" data-url="https://docs.google.com/document/d/1kDWLJ1p4r5XUcPxftpPwi0NEs9UvrW3P/edit">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">08</span>
-            <div><span class="tag">Sector público · Contratación</span><h3>Cláusulas tipo para licitaciones públicas de IA</h3><p>Requisitos reutilizables sobre datos, control, auditoría y salida del proveedor.</p></div>
-            <button class="resource-button" type="button" data-resource="Cláusulas tipo para licitaciones públicas de IA" data-url="https://docs.google.com/document/d/1YyW43XIcTVPov4Vn8ujNpCLqKQ-iK3hY/edit">Solicitar y acceder <span>↗</span></button>
-          </article>
-          <article class="resource-item">
-            <span class="resource-count">09</span>
-            <div><span class="tag">Proyecto · Dossier</span><h3>Expediente técnico-jurídico de proyecto IA</h3><p>Índice completo para reunir decisiones, evidencias y responsables en un único expediente.</p></div>
-            <button class="resource-button" type="button" data-resource="Expediente técnico-jurídico de proyecto IA" data-url="https://docs.google.com/document/d/12SFLsUOAxlk9QzOdz5egm3luEiiZhg7g/edit">Solicitar y acceder <span>↗</span></button>
-          </article>
+        <div class="cara-b-scene" aria-label="Colección de proyectos y experimentos">
+          <div id="cara-b-stack" class="cara-b-stack"></div>
         </div>
+        <p class="cara-b-scroll-note" aria-hidden="true"><span>Desmonta la pila</span><i></i><b>Scroll</b></p>
       </div>
     </section>
-
-    <section id="estandar-nullgen" class="nullgen section-pad">
-      <div class="container nullgen-grid">
-        <div class="nullgen-mark" aria-hidden="true"><span>N</span><i>0</i></div>
-        <div>
-          <p class="section-index">MARCO ABIERTO</p>
-          <h2>Estándar NullGEN</h2>
-          <p>Un marco abierto de certificación sobre procesos libres de IA generativa, diseñado para identificar, evaluar y demostrar su cumplimiento.</p>
-        </div>
-        <a class="button button-dark" href="nullgen.html">Conocer el estándar <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <section id="articulos" class="articles section-pad">
-      <div class="container">
-        <div class="articles-heading">
-          <div><p class="section-index">04 / CUADERNO DE CAMPO</p><h2>Últimos artículos</h2></div>
-          <a href="https://ciberseguria.substack.com/" target="_blank" rel="noopener">Ver todo en Substack <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="article-grid">
-          <article class="article-card article-featured">
-            <div class="article-meta"><span>6 julio 2026</span><span>4 min</span></div>
-            <h3>Fable 5: cada vez es más difícil comprender a las IAs y auditarlas se va a poner feo</h3>
-            <p>DATA DATA DATA. GO. Una reflexión sobre modelos cada vez más opacos y el reto de auditarlos con sentido.</p>
-            <a href="https://substack.com/@ciberseguria/p-205494368?utm_source=ciberseguria.com" target="_blank" rel="noopener">Leer en Substack <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="article-card">
-            <div class="article-meta"><span>27 mayo 2026</span><span>4 min</span></div>
-            <h3>GPT-5.5-Cyber: necesidad operativa y dependencia estratégica en la UE</h3>
-            <p>Sobre el modelo Mythos, la seguridad ofensiva asistida por IA y los riesgos de dependencia para Europa.</p>
-            <a href="https://ciberseguria.substack.com/p/gpt-55-cyber-entre-la-necesidad-operativa" target="_blank" rel="noopener">Leer en Substack <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="article-card">
-            <div class="article-meta"><span>29 abril 2026</span><span>4 min</span></div>
-            <h3>Nuestra seguridad digital era un castillo de naipes</h3>
-            <p>La beta de Mythos como señal de que la automatización ofensiva cambia el equilibrio de la seguridad digital.</p>
-            <a href="https://substack.com/@ciberseguria/p-195875280?utm_source=ciberseguria.com" target="_blank" rel="noopener">Leer en Substack <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="licencia" class="license section-pad">
-      <div class="container license-grid">
-        <div>
-          <p class="section-index">05 / CONDICIONES DE USO</p>
-          <h2>Recursos abiertos.<br>Uso responsable.</h2>
-        </div>
-        <div class="license-copy">
-          <p class="license-name">Licencia de Uso Gratuito CibersegurIA v1.0</p>
-          <p>Puedes utilizar y adaptar los recursos sin coste para fines personales, educativos, de investigación, internos o de servicio público. Antes de acceder a cada recurso debes informar de su finalidad mediante el formulario disponible en esta web.</p>
-          <ul>
-            <li><b>Atribución:</b> mantén la referencia a CibersegurIA y a la URL de origen.</li>
-            <li><b>Registro de uso:</b> indica el recurso, el contexto y la finalidad de uso.</li>
-            <li><b>Sin reventa:</b> no vendas, sublicencies ni presentes los materiales como obra propia.</li>
-            <li><b>Adaptaciones:</b> están permitidas si señalas los cambios y conservas estas condiciones.</li>
-          </ul>
-          <p class="license-small">Los materiales se facilitan como apoyo general, sin garantía de adecuación jurídica o técnica a un caso concreto.</p>
-        </div>
-      </div>
-    </section>
+    <section id="articulos" class="articles articles-compact section-pad chapter" data-chapter="Últimos artículos"><div class="container">
+      <div class="articles-heading"><div><p class="section-index">05 / ACTUALIDAD CRONOLÓGICA</p><h2>Últimos artículos</h2></div><a href="https://ciberseguria.substack.com/" target="_blank" rel="noopener noreferrer">Ver todo en Substack <span aria-hidden="true">↗</span></a></div><div id="latest-grid" class="latest-grid"></div>
+    </div></section>
+    <section id="licencia" class="license section-pad chapter" data-chapter="Condiciones de uso"><div class="container license-grid">
+      <div><p class="section-index">06 / CONDICIONES DE USO</p><h2>Recursos abiertos.<br>Uso responsable.</h2></div>
+      <div class="license-copy"><p class="license-name">Licencia de Uso Gratuito CibersegurIA v1.0</p><p>Puedes utilizar y adaptar los recursos sin coste para fines personales, educativos, de investigación, internos o de servicio público. Antes de acceder a cada recurso debes informar de su finalidad mediante el formulario disponible en esta web.</p><ul><li><b>Atribución:</b> mantén la referencia a CibersegurIA y a la URL de origen.</li><li><b>Registro de uso:</b> indica el recurso, el contexto y la finalidad de uso.</li><li><b>Sin reventa:</b> no vendas, sublicencies ni presentes los materiales como obra propia.</li><li><b>Adaptaciones:</b> están permitidas si señalas los cambios y conservas estas condiciones.</li></ul><p class="license-small">Los materiales se facilitan como apoyo general, sin garantía de adecuación jurídica o técnica a un caso concreto.</p></div>
+    </div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <div>
-        <img src="logociberseguria.png" alt="CibersegurIA">
-        <p>Conocimiento abierto para una inteligencia artificial que respete derechos, organizaciones y territorio.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#agentes">Agentes de IA</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#articulos">Artículos</a>
-        <a href="mailto:ciberseguria@gmail.com">Contacto</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="current-year">2024</span> CibersegurIA</span>
-      <span>Licencia de Uso Gratuito CibersegurIA v1.0 · Recursos gratuitos con registro de finalidad</span>
-    </div>
-  </footer>
-
-  <dialog id="resource-dialog" class="resource-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-shell">
-      <button class="dialog-close" type="button" aria-label="Cerrar formulario">×</button>
-      <p class="section-index">ACCESO A RECURSO</p>
-      <h2 id="dialog-title">Cuéntanos para qué lo necesitas</h2>
-      <p class="dialog-intro">El acceso es gratuito. Esta información nos ayuda a conocer el impacto de la biblioteca y a priorizar nuevos materiales.</p>
-      <p class="selected-resource"><span>Recurso seleccionado</span><strong id="selected-resource-name"></strong></p>
-
-      <form id="resource-form" action="https://formsubmit.co/ajax/ciberseguria@gmail.com" method="post">
-        <input id="resource-name" type="hidden" name="Recurso">
-        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="form-grid">
-          <label>Nombre o entidad
-            <input type="text" name="Nombre o entidad" autocomplete="organization" required>
-          </label>
-          <label>Correo de contacto
-            <input type="email" name="Correo" autocomplete="email" required>
-          </label>
-        </div>
-        <label>Contexto de uso
-          <select name="Contexto" required>
-            <option value="">Selecciona una opción</option>
-            <option>Administración pública</option>
-            <option>Educación o formación</option>
-            <option>Investigación</option>
-            <option>Uso profesional interno</option>
-            <option>Proyecto social o sin ánimo de lucro</option>
-            <option>Uso personal</option>
-            <option>Otro</option>
-          </select>
-        </label>
-        <label>Finalidad concreta
-          <textarea name="Finalidad" rows="4" minlength="20" placeholder="Describe brevemente el proyecto, actividad o problema en el que utilizarás el recurso…" required></textarea>
-        </label>
-        <label class="check-label">
-          <input type="checkbox" name="Condiciones aceptadas" value="Sí" required>
-          <span>He leído y acepto la <a href="#licencia">Licencia de Uso Gratuito CibersegurIA v1.0</a>.</span>
-        </label>
-        <p class="privacy-note">Los datos se enviarán a CibersegurIA mediante FormSubmit y se usarán únicamente para registrar la finalidad declarada y, si fuera necesario, aclarar ese uso.</p>
-        <button class="button button-primary submit-resource" type="submit">Informar y acceder al recurso</button>
-        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </dialog>
-
-  <div id="toast" class="toast" role="status" aria-live="polite">Uso registrado. Abriendo el recurso…</div>
+  <footer class="site-footer"><div class="container footer-top"><div><img src="logociberseguria.png" alt="CibersegurIA"><p>Conocimiento abierto para una inteligencia artificial que respete derechos, organizaciones y territorio.</p></div><div class="footer-links"><a href="#agentes">Agentes de IA</a><a href="#plantillas">Plantillas</a><a href="#recursos">Recursos</a><a href="#articulos">Artículos</a><a href="mailto:ciberseguria@gmail.com">Contacto</a></div></div><div class="container footer-bottom"><span>© <span id="current-year">2024</span> CibersegurIA</span><span>Licencia de Uso Gratuito CibersegurIA v1.0 · Recursos gratuitos con registro de finalidad</span></div></footer>
+  <dialog id="resource-dialog" class="resource-dialog" aria-labelledby="dialog-title"><div class="dialog-shell">
+    <button class="dialog-close" type="button" aria-label="Cerrar formulario">×</button><p class="section-index">ACCESO A RECURSO</p><h2 id="dialog-title">Cuéntanos para qué lo necesitas</h2><p class="dialog-intro">El acceso es gratuito. Esta información nos ayuda a conocer el impacto de la biblioteca y a priorizar nuevos materiales.</p><p class="selected-resource"><span>Recurso seleccionado</span><strong id="selected-resource-name"></strong></p>
+    <form id="resource-form" action="https://formsubmit.co/ajax/ciberseguria@gmail.com" method="post">
+      <input id="resource-name" type="hidden" name="Recurso"><input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-grid"><label>Nombre o entidad<input type="text" name="Nombre o entidad" autocomplete="organization" required></label><label>Correo de contacto<input type="email" name="Correo" autocomplete="email" required></label></div>
+      <label>Contexto de uso<select name="Contexto" required><option value="">Selecciona una opción</option><option>Administración pública</option><option>Educación o formación</option><option>Investigación</option><option>Uso profesional interno</option><option>Proyecto social o sin ánimo de lucro</option><option>Uso personal</option><option>Otro</option></select></label>
+      <label>Finalidad concreta<textarea name="Finalidad" rows="4" minlength="20" placeholder="Describe brevemente el proyecto, actividad o problema en el que utilizarás el recurso…" required></textarea></label>
+      <label class="check-label"><input type="checkbox" name="Condiciones aceptadas" value="Sí" required><span>He leído y acepto la <a href="#licencia">Licencia de Uso Gratuito CibersegurIA v1.0</a>.</span></label><p class="privacy-note">Los datos se enviarán a CibersegurIA mediante FormSubmit y se usarán únicamente para registrar la finalidad declarada y, si fuera necesario, aclarar ese uso.</p><button class="button button-primary submit-resource" type="submit">Informar y acceder al recurso</button><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div></dialog><div id="toast" class="toast" role="status" aria-live="polite">Uso registrado. Abriendo el recurso…</div>
 </body>
 </html>

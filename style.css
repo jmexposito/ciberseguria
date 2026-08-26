@@ -866,184 +866,8 @@ h3 {
   font-size: 1.03rem;
 }
 
-.agents-panel {
-  --panel-x: 35%;
-  --panel-y: 35%;
-  display: grid;
-  grid-template-columns: 0.84fr 1.16fr;
-  overflow: hidden;
-  color: var(--white);
-  background: var(--blue);
-  border-radius: 28px 28px 28px 7px;
-  box-shadow: var(--shadow);
-}
-
-.agents-intro {
-  position: relative;
-  padding: 58px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.19) 1px, transparent 1px);
-  background-size: 18px 18px;
-  animation: grid-drift 18s linear infinite;
-}
-
-.agents-intro::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  opacity: 0.72;
-  pointer-events: none;
-  background: radial-gradient(circle at var(--panel-x) var(--panel-y), rgba(255, 229, 0, 0.24), transparent 34%);
-  transition: background-position 160ms ease;
-}
-
-.agents-intro > * {
-  position: relative;
-  z-index: 2;
-}
-
-.agents-intro::after {
-  content: "";
-  position: absolute;
-  width: 125px;
-  height: 20px;
-  right: -30px;
-  bottom: 44px;
-  z-index: 1;
-  background: var(--red);
-  transform: rotate(-7deg);
-  animation: accent-breathe 3.4s ease-in-out infinite;
-}
-
-.priority-flag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 52px;
-  padding: 7px 10px;
-  color: var(--ink);
-  background: var(--yellow);
-  font-family: ui-monospace, monospace;
-  font-size: 0.67rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.priority-flag::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: var(--red);
-  border-radius: 50%;
-  animation: flag-pulse 1.8s ease-in-out infinite;
-}
-
-.agents-intro h3 {
-  max-width: 430px;
-  margin-bottom: 22px;
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  text-transform: uppercase;
-}
-
-.agents-intro p {
-  max-width: 440px;
-  margin-bottom: 30px;
-  color: #dfe9f8;
-}
-
-.agent-steps {
-  margin: 0;
-  padding: 28px;
-  background: var(--blue-dark);
-  list-style: none;
-}
-
-.agent-steps li {
-  display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 22px;
-  padding: 26px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  transition: transform 220ms ease, background 220ms ease;
-}
-
-.agent-steps li:hover {
-  background: rgba(255, 255, 255, 0.075);
-  transform: translateX(8px);
-}
-
-.agent-steps li:last-child {
-  border-bottom: 0;
-}
-
-.agent-steps > li > span {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  color: var(--yellow);
-  border: 1px solid rgba(255, 229, 0, 0.5);
-  border-radius: 50%;
-  font-family: ui-monospace, monospace;
-  font-size: 0.72rem;
-  font-weight: 800;
-  transition: color 200ms ease, background 200ms ease, border-color 200ms ease;
-}
-
-.agent-steps li:hover > span {
-  color: var(--ink);
-  background: var(--yellow);
-  border-color: var(--yellow);
-}
-
-.agent-steps b {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 1rem;
-  transition: color 200ms ease;
-}
-
-.agent-steps li:hover b {
-  color: var(--yellow);
-}
-
-@keyframes grid-drift {
-  to { background-position: 72px 54px; }
-}
-
-@keyframes accent-breathe {
-  0%, 100% { scale: 1; opacity: 1; }
-  50% { scale: 1.12 0.84; opacity: 0.7; }
-}
-
-@keyframes flag-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 23, 56, 0.4); }
-  50% { box-shadow: 0 0 0 6px rgba(255, 23, 56, 0); }
-}
-
-.agent-steps p {
-  margin-bottom: 0;
-  color: #afbed3;
-  font-size: 0.84rem;
-}
-
 .areas {
   background: var(--paper);
-}
-
-.section-kicker {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 46px;
-}
-
-.section-kicker > p:last-child {
-  max-width: 570px;
-  margin-bottom: 0;
-  color: var(--muted);
 }
 
 .area-grid {
@@ -2330,10 +2154,6 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .agents-intro {
-    padding: 44px;
-  }
-
   .article-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -2444,15 +2264,6 @@ textarea:focus {
     grid-column: auto;
   }
 
-  .agents-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .agents-intro::after {
-    display: none;
-  }
-
-  .section-kicker,
   .articles-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -2517,22 +2328,6 @@ textarea:focus {
   .hero-board {
     margin-inline: -5px;
     border-radius: 20px 20px 20px 5px;
-  }
-
-  .agents-intro,
-  .agent-steps {
-    padding: 26px;
-  }
-
-  .agent-steps li {
-    grid-template-columns: 42px 1fr;
-    gap: 14px;
-    padding-inline: 0;
-  }
-
-  .agent-steps > li > span {
-    width: 38px;
-    height: 38px;
   }
 
   .area-card,
