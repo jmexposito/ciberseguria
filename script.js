@@ -71,7 +71,7 @@
       const art = project.featured
         ? `<div class="cara-b-live-art" aria-hidden="true"><span>90:00</span><div><i></i><i></i><i></i><i></i><i></i></div><b>▶</b></div>`
         : `<div class="cara-b-placeholder-art" aria-hidden="true"><span>${number}</span><i></i><i></i><b>${escapeHTML(project.type)}</b></div>`;
-      const actionLabel = project.featured ? 'Abrir 90 Minutos' : 'Abrir ejemplo';
+      const actionLabel = project.featured ? 'Abrir 90 Minutos' : project.placeholder ? 'Abrir ejemplo' : 'Abrir proyecto';
       return `
         <div class="cara-b-positioner${project.featured ? ' is-featured' : ''}" data-cara-b-index="${index}" data-stack-x="${stackX}" data-stack-y="${stackY}" data-open-x="${openX.toFixed(2)}" data-open-y="${openY.toFixed(2)}" data-open-z="${20 + (index % 4) * 12}" data-initial-rotation="${initialRotation}" data-final-rotation="${finalRotation}" data-scale="${project.featured ? '1.08' : '1'}">
           <a class="cara-b-object cara-b-object-${(index % 4) + 1} ${statusClass}${project.featured ? ' is-featured' : ''}" href="${escapeHTML(project.url)}" target="_blank" rel="noopener noreferrer" aria-labelledby="${escapeHTML(project.id)}-title">

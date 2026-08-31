@@ -15,12 +15,9 @@ window.CIBERSEGURIA_CONTENT = Object.freeze({
   ],
   caraB: [
     { id: 'cara-b-01', title: '90 Minutos de Ventaja', type: 'Ficción interactiva', description: 'Una ficción interactiva cyberpunk de fútbol, robos y burocracia automatizada.', url: 'https://noventa-minutos.jmexposito.chatgpt.site', status: 'live', statusLabel: 'Disponible', featured: true, placeholder: false },
-    // PLACEHOLDER: sustituir por un proyecto real cuando esté disponible.
-    { id: 'cara-b-02', title: '#promptParaMiPadre', type: 'Experimento', description: 'Una colección de prompts pensados para explicar y utilizar IA sin tener que hablar como una IA.', url: 'https://www.google.com/', status: 'coming-soon', statusLabel: 'Próximamente', featured: false, placeholder: true },
-    // PLACEHOLDER: sustituir por un proyecto real cuando esté disponible.
-    { id: 'cara-b-03', title: 'Mi reproductor imposible', type: 'Música + IA', description: 'Un reproductor musical construido alrededor de una necesidad absurdamente específica.', url: 'https://www.google.com/', status: 'experiment', statusLabel: 'Experimento', featured: false, placeholder: true },
-    // PLACEHOLDER: sustituir por un proyecto real cuando esté disponible.
-    { id: 'cara-b-04', title: 'Un juego que todavía no existe', type: 'Juego + IA', description: 'Porque utilizar inteligencia artificial para resolver problemas importantes estaba demasiado visto.', url: 'https://www.google.com/', status: 'coming-soon', statusLabel: 'Próximamente', featured: false, placeholder: true }
+    { id: 'cara-b-02', title: '#promptParaMiPadre', type: 'Experimento', description: 'Una colección de prompts pensados para explicar y utilizar IA sin tener que hablar como una IA.', url: 'https://el-elegido-la-cadena.jmexposito.chatgpt.site', status: 'live', statusLabel: 'Disponible', featured: false, placeholder: false },
+    { id: 'cara-b-03', title: 'Mi reproductor imposible', type: 'Música + IA', description: 'Un reproductor musical construido alrededor de una necesidad absurdamente específica.', url: 'https://chema-pelis.jmexposito.chatgpt.site', status: 'live', statusLabel: 'Disponible', featured: false, placeholder: false },
+    { id: 'cara-b-04', title: 'Un juego que todavía no existe', type: 'Juego + IA', description: 'Porque utilizar inteligencia artificial para resolver problemas importantes estaba demasiado visto.', url: 'https://pepi-exe.jmexposito.chatgpt.site', status: 'live', statusLabel: 'Disponible', featured: false, placeholder: false }
   ],
   latest: [
     { id: 'ARTICLE_05', title: 'GOVERNANCE BY DESIGN. CÓMO CONSTRUIR UN ECOSISTEMA DE AGENTES DE IA (II)', description: 'Sobre mi experiencia implementando un laboratorio de agentes de IA (segunda parte).', date: '30 julio 2026', dateTime: '2026-07-30T09:02:37+00:00', image: 'https://substackcdn.com/image/fetch/$s_!lOt0!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd3f9c87-72dd-4b35-9dc7-07d83bec0093_1448x1086.png', url: 'https://ciberseguria.substack.com/p/governance-by-design-como-construir-742' },
