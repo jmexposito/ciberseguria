@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alfabetización en IA | CibersegurIA</title>
+  <meta name="description" content="Vídeos formativos sobre los riesgos de usar IA en el ámbito laboral.">
+  <meta name="theme-color" content="#064bae">
+  <meta property="og:title" content="Alfabetización en IA | CibersegurIA">
+  <meta property="og:description" content="Vídeos formativos sobre los riesgos de usar IA en el ámbito laboral.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciberseguria.com/alfabetizacion-ia">
+  <meta property="og:image" content="https://ciberseguria.com/logociberseguria.png">
+  <link rel="canonical" href="https://ciberseguria.com/alfabetizacion-ia">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="alfabetizacion/alfabetizacion.css?v=20261019-alfabetizacion">
+  <script src="script.js" defer></script>
+  <script src="alfabetizacion/mundo.js?v=20261019-alfabetizacion" defer></script>
+  <script src="alfabetizacion/alfabetizacion.js?v=20261019-alfabetizacion" defer></script>
+</head>
+<body class="alfabetizacion-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CibersegurIA, volver al inicio">
+        <img src="logociberseguria.png" alt="CibersegurIA">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir navegación</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="#mundo">Recorrido</a>
+        <a href="index.html#agentes">Agentes de IA</a>
+        <a href="index.html#recursos">Biblioteca</a>
+        <a href="index.html#articulos">Artículos</a>
+        <a href="index.html#licencia">Licencia</a>
+      </nav>
+      <a class="header-action" href="index.html#recursos">Biblioteca abierta</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="alfa-hero" aria-labelledby="alfa-titulo">
+      <div class="container alfa-hero-grid">
+        <div>
+          <p class="eyebrow"><span></span> <b id="alfa-cuenta"></b></p>
+          <h1 id="alfa-titulo"><span>Alfabetización</span><span>en IA</span></h1>
+          <p class="alfa-lead">vídeos formativos sobre los riesgos de usar IA en el ámbito laboral</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#mundo" id="alfa-empezar" data-magnetic>Adentrarse <span aria-hidden="true">↓</span></a>
+            <a class="button button-text" href="index.html">Volver a CibersegurIA <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <nav class="alfa-indice" aria-label="Secciones del recorrido">
+          <div class="alfa-indice-bar" aria-hidden="true"><span>CIBERSEGURIA:/ALFABETIZACION_IA</span><b id="alfa-indice-total"></b></div>
+          <ol id="alfa-indice"></ol>
+        </nav>
+      </div>
+    </section>
+
+    <section id="mundo" class="lit-world" aria-labelledby="lit-title">
+      <div class="lit-sticky">
+        <canvas id="lit-canvas" class="lit-canvas" aria-hidden="true"></canvas>
+        <div class="lit-bar">
+          <div class="container">
+            <nav class="lit-steps" aria-label="Secciones del recorrido">
+              <div id="lit-steps" class="lit-steps-track"></div>
+              <i class="lit-steps-thumb" aria-hidden="true"></i>
+            </nav>
+          </div>
+        </div>
+        <div class="container lit-copy-wrap">
+          <article id="lit-copy" class="lit-copy">
+            <p class="section-index lit-index"><i></i><span id="lit-seccion"></span><em id="lit-count"></em></p>
+            <h2 id="lit-title" class="lit-title"><span class="lit-title-pre"></span><span class="lit-title-main"></span></h2>
+            <p id="lit-lead" class="lit-lead"></p>
+            <div id="lit-media" class="lit-media"></div>
+            <button id="lit-cta" class="button button-primary lit-cta" type="button" data-magnetic><b></b><span class="lit-cta-arrow" aria-hidden="true">→</span></button>
+          </article>
+        </div>
+        <div class="container lit-status" aria-hidden="true">
+          <span><b id="lit-current">01</b> / <span id="lit-total">07</span></span>
+          <i><b></b></i>
+          <em id="lit-cue"></em>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div><img src="logociberseguria.png" alt="CibersegurIA"><p>Conocimiento abierto para una inteligencia artificial que respete derechos, organizaciones y territorio.</p></div>
+      <div class="footer-links"><a href="index.html">Inicio</a><a href="#mundo">Recorrido</a><a href="index.html#recursos">Biblioteca</a><a href="mailto:ciberseguria@gmail.com">Contacto</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2024</span> CibersegurIA</span><span>Alfabetización en IA · Vídeos formativos</span></div>
+  </footer>
+
+  <!-- Sala de proyección: los dos vídeos de cada sección -->
+  <dialog id="sala" class="sala" aria-labelledby="sala-titulo">
+    <div class="sala-fondo" aria-hidden="true"></div>
+    <div class="sala-shell">
+      <header class="sala-top">
+        <p class="section-index sala-index"><i></i><span id="sala-seccion"></span></p>
+        <button class="sala-cerrar" type="button" id="sala-cerrar"><span class="sr-only"></span><i aria-hidden="true"></i></button>
+      </header>
+      <div class="sala-grid">
+        <div class="sala-escena">
+          <div id="player" class="player" data-estado="pausa">
+            <video id="video" playsinline preload="metadata"></video>
+            <div class="player-capa" aria-hidden="true"></div>
+            <p id="player-capitulo" class="player-capitulo" aria-live="polite"></p>
+            <button id="player-grande" class="player-grande" type="button"><span class="sr-only"></span><i aria-hidden="true"></i></button>
+            <div id="player-fin" class="player-fin" hidden>
+              <p class="section-index" id="fin-etiqueta"></p>
+              <button id="fin-siguiente" class="fin-siguiente" type="button">
+                <img alt="" id="fin-img"><span><b id="fin-num"></b><strong id="fin-titulo"></strong></span>
+                <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle id="fin-anillo" cx="20" cy="20" r="17"/></svg>
+              </button>
+              <button id="fin-cancelar" class="fin-cancelar" type="button"></button>
+            </div>
+            <div class="player-barra">
+              <div id="pista" class="pista" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0">
+                <div id="pista-tramos" class="pista-tramos"></div>
+                <span id="pista-cabeza" class="pista-cabeza"></span>
+                <span id="pista-tip" class="pista-tip" hidden><b></b><em></em></span>
+              </div>
+              <div class="player-botones">
+                <button id="b-play" class="pb" type="button"><span class="sr-only"></span><i class="ico ico-play" aria-hidden="true"></i></button>
+                <button id="b-mute" class="pb" type="button"><span class="sr-only"></span><i class="ico ico-vol" aria-hidden="true"></i></button>
+                <span id="tiempo" class="player-tiempo">0:00 / 0:00</span>
+                <span class="player-hueco"></span>
+                <button id="b-cc" class="pb pb-texto" type="button" aria-pressed="false">CC</button>
+                <button id="b-vel" class="pb pb-texto" type="button">1×</button>
+                <button id="b-full" class="pb" type="button"><span class="sr-only"></span><i class="ico ico-full" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="sala-pie">
+            <p class="sala-num" id="sala-num"></p>
+            <h2 id="sala-titulo" class="sala-titulo"></h2>
+            <p class="sala-teclas" id="sala-teclas"></p>
+          </div>
+        </div>
+        <aside class="sala-lado">
+          <div class="sala-cabeza">
+            <h3 id="sala-nombre" class="sala-nombre"><span class="lit-title-pre"></span><span class="sala-nombre-main"></span></h3>
+            <p id="sala-sub" class="sala-sub"></p>
+          </div>
+          <p class="section-index" id="sala-l-videos"></p>
+          <ol id="sala-videos" class="sala-videos"></ol>
+          <p class="section-index" id="sala-l-capitulos"></p>
+          <ol id="sala-capitulos" class="sala-capitulos"></ol>
+          <nav class="sala-nav">
+            <button id="sala-prev" class="sala-salto" type="button" data-magnetic><span></span><b></b></button>
+            <button id="sala-next" class="sala-salto sala-salto-next" type="button" data-magnetic><span></span><b></b></button>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

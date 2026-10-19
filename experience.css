@@ -372,3 +372,36 @@
 }
 
 @media (prefers-reduced-motion:reduce) and (max-width:680px) { .cara-b-stack { grid-template-columns:1fr; width:min(100% - 32px,620px); }.cara-b-positioner,.cara-b-positioner.is-featured { height:auto; min-height:320px; }.cara-b-positioner.is-featured { min-height:430px; } }
+
+/* 01 / Alfabetización en IA — portada (enlaza con /alfabetizacion-ia) */
+.alfa-home { position:relative; z-index:3; overflow:hidden; padding:88px 0 104px; color:var(--white); background:radial-gradient(circle at 88% 12%,rgba(255,229,0,.12),transparent 28%),linear-gradient(135deg,#052f70,#031d47 72%); }
+.alfa-home::before { content:""; position:absolute; inset:0; opacity:.1; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px); background-size:42px 42px; transform:translate3d(calc(var(--page-y,0px) * .15),0,0); }
+.alfa-home .container { position:relative; z-index:1; }
+.alfa-home-heading { padding-top:0; padding-bottom:46px; }
+.alfa-home-intro p { margin:0 0 20px; color:#c8d6e9; font-size:1.02rem; }
+.alfa-home-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin:0; padding:0; list-style:none; }
+.alfa-home-card { display:grid; grid-template-rows:auto auto auto 1fr; gap:14px; height:100%; padding:18px 18px 22px; color:var(--ink); background:var(--white); border-radius:5px 24px 24px; text-decoration:none; box-shadow:0 24px 50px rgba(0,0,0,.24); transition:box-shadow .35s var(--ease-out); }
+.alfa-home-card:hover,.alfa-home-card:focus-visible { box-shadow:0 30px 64px rgba(0,0,0,.34),0 0 0 3px var(--yellow); }
+.alfa-home-top { display:flex; justify-content:space-between; gap:10px; font:800 .64rem/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.1em; text-transform:uppercase; }
+.alfa-home-top b { color:var(--blue); }
+.alfa-home-top em { color:var(--muted); font-style:normal; }
+.alfa-home-stack { position:relative; display:block; aspect-ratio:16/10; }
+.alfa-home-stack img { position:absolute; width:86%; height:auto; aspect-ratio:16/9; object-fit:cover; background:var(--blue-dark); border:1px solid rgba(17,24,32,.14); border-radius:3px 14px 14px; box-shadow:0 12px 26px rgba(20,45,78,.22); transition:transform .7s var(--ease-out); }
+.alfa-home-stack img:first-child { top:0; right:0; transform:rotate(3deg); }
+.alfa-home-stack img:nth-child(2) { bottom:0; left:0; transform:rotate(-2deg); }
+.alfa-home-stack i { position:absolute; left:43%; top:61%; width:50px; height:50px; background:var(--yellow); border-radius:50%; box-shadow:0 8px 20px rgba(3,29,71,.35); transform:translate(-50%,-50%) scale(.82); transition:transform .5s var(--ease-out); }
+.alfa-home-stack i::after { content:""; position:absolute; left:20px; top:15px; border-left:14px solid var(--blue-dark); border-top:10px solid transparent; border-bottom:10px solid transparent; }
+.alfa-home-card:hover .alfa-home-stack img:first-child,.alfa-home-card:focus-visible .alfa-home-stack img:first-child { transform:translate(10px,-8px) rotate(6deg); }
+.alfa-home-card:hover .alfa-home-stack img:nth-child(2),.alfa-home-card:focus-visible .alfa-home-stack img:nth-child(2) { transform:translate(-8px,6px) rotate(-4deg); }
+.alfa-home-card:hover .alfa-home-stack i,.alfa-home-card:focus-visible .alfa-home-stack i { transform:translate(-50%,-50%) scale(1); }
+.alfa-home-name { display:grid; font-family:"Arial Narrow","Roboto Condensed",Impact,sans-serif; font-size:1.75rem; font-weight:700; line-height:.92; letter-spacing:-.04em; text-transform:uppercase; }
+.alfa-home-name small { color:var(--blue); font-size:.62em; letter-spacing:-.02em; }
+.alfa-home-sub { color:var(--muted); font-size:.9rem; line-height:1.5; }
+@media (max-width:1020px) { .alfa-home-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:780px) {
+  .alfa-home { padding:72px 0 78px; }
+  .alfa-home-heading { grid-template-columns:1fr; gap:22px; }
+  .alfa-home-heading h2 { font-size:clamp(2.5rem,10vw,4.5rem); }
+}
+@media (max-width:580px) { .alfa-home-grid { grid-template-columns:1fr; } }
+@media (prefers-reduced-motion:reduce) { .alfa-home::before { transform:none!important; } .alfa-home-stack img,.alfa-home-stack i,.alfa-home-card { transition:none; } }

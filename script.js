@@ -325,7 +325,7 @@
   const requestScrollUpdate = () => { if (!frame) frame = window.requestAnimationFrame(updateScroll); };
   window.addEventListener('scroll', requestScrollUpdate, { passive: true }); window.addEventListener('resize', requestScrollUpdate); reducedMotionQuery.addEventListener?.('change', requestScrollUpdate); updateScroll();
 
-  const revealTargets = document.querySelectorAll('.section-heading,.template-heading,.preflight-strip,.values-heading,.area-card,.resource-heading,.nullgen-grid,.chamulleando-heading,.cham-card,.articles-heading,.latest-card,.license-grid,.ng-definition-grid,.ng-control-card,.ng-maturity-heading,.ng-matrix,.ng-level,.ng-application-grid,.ng-open-note .container');
+  const revealTargets = document.querySelectorAll('.section-heading,.template-heading,.preflight-strip,.values-heading,.area-card,.resource-heading,.nullgen-grid,.chamulleando-heading,.cham-card,.articles-heading,.latest-card,.license-grid,.ng-definition-grid,.ng-control-card,.ng-maturity-heading,.ng-matrix,.ng-level,.ng-application-grid,.ng-open-note .container,.alfa-home-card');
   document.body.classList.add('motion-ready');
   revealTargets.forEach((target, index) => { target.classList.add('reveal-target'); target.style.setProperty('--reveal-delay', `${(index % 4) * 70}ms`); });
   if (!reducedMotionQuery.matches && 'IntersectionObserver' in window) {
