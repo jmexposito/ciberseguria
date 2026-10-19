@@ -21,7 +21,7 @@ html.sala-abierta body { padding-right: var(--barra, 0px); }
 .alfa-hero::after { content: ""; position: absolute; z-index: 0; right: -14vw; top: -30%; width: 58vw; aspect-ratio: 1; border: 70px solid rgba(6, 75, 174, .05); border-radius: 50%; pointer-events: none; }
 .alfa-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; }
 .alfa-hero-grid > * { min-width: 0; }
-.alfa-hero h1 { display: grid; margin: 0 0 30px; font-size: clamp(3.2rem, 5.6vw, 6rem); font-weight: 900; line-height: .8; letter-spacing: -.065em; text-transform: uppercase; }
+.alfa-hero h1 { display: grid; margin: 0 0 30px; font-size: var(--h1-size, clamp(3rem, 5vw, 5.4rem)); font-weight: 900; line-height: .8; letter-spacing: -.065em; text-transform: uppercase; }
 .alfa-hero h1 span { display: block; width: max-content; max-width: 100%; animation: alfa-linea .9s .1s both var(--ease-out); }
 .alfa-hero h1 span + span { position: relative; z-index: 1; margin-left: 8%; color: var(--blue); font-size: .7em; letter-spacing: -.04em; animation-delay: .22s; }
 .alfa-hero h1 span + span::after { content: ""; position: absolute; z-index: -1; left: -1%; right: -1%; bottom: -.03em; height: .12em; background: var(--yellow); transform-origin: left; animation: alfa-subrayado 1s .65s both var(--ease-out); }

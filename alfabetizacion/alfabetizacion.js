@@ -80,6 +80,16 @@
     actualizarVistos();
   }
 
+  // El titular de la entrada se reduce hasta caber en su columna (la tarjeta no lo tapa)
+  function ajustarTitular() {
+    const h1 = $("alfa-titulo"); if (!h1) return;
+    h1.style.removeProperty("--h1-size");
+    let size = parseFloat(getComputedStyle(h1).fontSize);
+    const ancho = h1.clientWidth;
+    const mas = () => Math.max(...[...h1.children].map((s) => s.scrollWidth));
+    while (mas() > ancho + 1 && size > 28) { size -= 2; h1.style.setProperty("--h1-size", size + "px"); }
+  }
+
   // Índice de la cabecera de la página: una fila por sección
   function construirIndice() {
     const total = DATA.secciones.reduce((n, s) => n + (s.videos ? s.videos.length : 0), 0);
@@ -708,6 +718,8 @@
       construir();
       LitMundo.iniciar(DATA, canvas, { alCargar: pedir });
       medir(); leerScroll(); tActual = tObjetivo;
+      ajustarTitular();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajustarTitular);
       eventosMundo(); eventosSala(); iman();
       $("lit-cta").addEventListener("click", () => {
         const i = copiaIndice, s = DATA.secciones[i];
@@ -718,7 +730,7 @@
       });
       pedir();
       window.addEventListener("scroll", () => { leerScroll(); pedir(); }, { passive: true });
-      window.addEventListener("resize", () => { medir(); leerScroll(); copiaIndice = -1; pedir(); });
+      window.addEventListener("resize", () => { ajustarTitular(); medir(); leerScroll(); copiaIndice = -1; pedir(); });
       mq.addEventListener && mq.addEventListener("change", () => { medir(); copiaIndice = -1; pedir(); });
       if ("IntersectionObserver" in window) {
         new IntersectionObserver((e) => { mundoVisible = e[0].isIntersecting; if (mundoVisible) pedir(); }).observe(seccionEl);
