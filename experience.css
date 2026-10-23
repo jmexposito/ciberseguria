@@ -405,3 +405,23 @@
 }
 @media (max-width:580px) { .alfa-home-grid { grid-template-columns:1fr; } }
 @media (prefers-reduced-motion:reduce) { .alfa-home::before { transform:none!important; } .alfa-home-stack img,.alfa-home-stack i,.alfa-home-card { transition:none; } }
+
+/* eunomIA · capítulo de portada (01.1) */
+.eunomia-home { position:relative; z-index:3; overflow:hidden; padding:96px 0 104px; background:linear-gradient(180deg,var(--white),var(--paper) 70%); border-bottom:1px solid var(--line); }
+.eunomia-home-grid { display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:clamp(32px,5vw,70px); align-items:center; }
+.eunomia-home .section-index { margin-bottom:10px; }
+.eunomia-home-title { margin:4px 0 18px; font-size:clamp(4rem,7.4vw,7.2rem); font-weight:900; line-height:.8; letter-spacing:-.06em; }
+.eunomia-home-title b { color:var(--red); font-weight:900; }
+.eunomia-home-lead { max-width:520px; margin:0 0 26px; color:var(--muted); font-size:1.06rem; }
+.eunomia-home-tools { display:grid; gap:10px; margin:0 0 30px; padding:0; list-style:none; }
+.eunomia-home-tools a { display:grid; grid-template-columns:34px 120px minmax(0,1fr); align-items:center; gap:14px; padding:13px 16px; color:var(--ink); background:var(--white); border:1px solid rgba(6,75,174,.28); border-radius:3px 16px 16px; text-decoration:none; transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .2s; }
+.eunomia-home-tools a:hover,.eunomia-home-tools a:focus-visible { border-color:var(--blue); transform:translateX(6px); box-shadow:0 14px 30px rgba(20,45,78,.12); }
+.eunomia-home-tools b { display:grid; place-items:center; height:28px; color:var(--blue-dark); background:var(--yellow); border-radius:2px 8px 8px; font:800 .7rem/1 ui-monospace,monospace; }
+.eunomia-home-tools span { font-family:"Arial Narrow","Roboto Condensed",Impact,sans-serif; font-size:1.55rem; font-weight:900; line-height:1; letter-spacing:-.03em; text-transform:uppercase; }
+.eunomia-home-tools em { color:var(--muted); font-size:.88rem; font-style:normal; line-height:1.4; }
+.eunomia-home-postal { position:relative; display:block; aspect-ratio:1.18; overflow:hidden; background:var(--paper); border:1px solid rgba(6,75,174,.5); border-radius:4px 26px 26px; box-shadow:var(--shadow); }
+.eunomia-home-postal canvas { position:absolute; inset:0; width:100%; height:100%; }
+.eunomia-home-postal span { position:absolute; left:0; right:0; top:0; padding:10px 16px; color:#c7d3e6; background:var(--blue-dark); font:800 .6rem/1 ui-monospace,monospace; letter-spacing:.1em; }
+@media (max-width:1020px) { .eunomia-home-grid { grid-template-columns:1fr; } .eunomia-home-postal { order:-1; max-width:640px; } }
+@media (max-width:580px) { .eunomia-home { padding:72px 0 78px; } .eunomia-home-tools a { grid-template-columns:30px minmax(0,1fr); } .eunomia-home-tools em { grid-column:2; } .eunomia-home-postal { aspect-ratio:1; } }
+@media (prefers-reduced-motion:reduce) { .eunomia-home-tools a { transition:none; } }

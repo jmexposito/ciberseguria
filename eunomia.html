@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eunomIA - CibersegurIA | Herramientas para cumplir el RIA</title>
+  <meta name="description" content="Herramientas gratuitas para cumplir el Reglamento europeo de IA: clasificador de riesgo y rol, avisos de transparencia y cláusulas para contratar IA. Funcionan en tu navegador, sin registro y sin enviar datos.">
+  <meta name="theme-color" content="#064bae">
+  <meta property="og:title" content="eunomIA - CibersegurIA">
+  <meta property="og:description" content="Del Reglamento europeo de IA a la práctica: clasificador, avisos de transparencia y cláusulas de contratación. En tu navegador, sin enviar datos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciberseguria.com/eunomia.html">
+  <meta property="og:image" content="https://ciberseguria.com/logociberseguria.png">
+  <link rel="canonical" href="https://ciberseguria.com/eunomia.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="eunomia/eunomia.css?v=20261023-eunomia">
+  <script src="script.js" defer></script>
+  <script src="eunomia/exportar.js?v=20261023-eunomia" defer></script>
+  <script src="eunomia/mundo.js?v=20261023-eunomia" defer></script>
+  <script src="eunomia/balanza.js?v=20261023-eunomia" defer></script>
+  <script src="eunomia/faro.js?v=20261023-eunomia" defer></script>
+  <script src="eunomia/pliego.js?v=20261023-eunomia" defer></script>
+  <script src="eunomia/app.js?v=20261023-eunomia" defer></script>
+</head>
+<body class="eunomia-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CibersegurIA, volver al inicio">
+        <img src="logociberseguria.png" alt="CibersegurIA">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir navegación</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="#polis">Recorrido</a>
+        <a href="#balanza">Balanza</a>
+        <a href="#faro">Faro</a>
+        <a href="#pliego">Pliego</a>
+        <a href="#garantias">Garantías</a>
+      </nav>
+      <a class="header-action" href="index.html">CibersegurIA <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ 00 · La polis: vuelo guiado por el scroll ============ -->
+    <section id="polis" class="eu-polis chapter" data-chapter="Recorrido" aria-labelledby="eu-titulo">
+      <div class="eu-sticky">
+        <canvas id="eu-canvas" class="eu-canvas" aria-hidden="true"></canvas>
+
+        <div class="container eu-entrada" id="eu-entrada">
+          <p class="eyebrow"><span></span> Reglamento europeo de IA · Herramientas abiertas</p>
+          <h1 id="eu-titulo" class="eu-wordmark" aria-label="eunomIA">
+            <span class="eu-glifo" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#eu-glifo"/></svg></span>
+            <span class="eu-wordmark-texto" aria-hidden="true">eunom<b>IA</b></span>
+          </h1>
+          <p class="eu-entrada-lead">Del Reglamento a la práctica. Tres herramientas para clasificar tu sistema, avisar a quien lo usa y contratar IA con garantías.</p>
+          <ul class="eu-sellos" aria-label="Cómo funciona">
+            <li>En tu navegador</li><li>Sin registro</li><li>Sin enviar datos</li>
+          </ul>
+          <nav class="eu-atajos" aria-label="Ir directo a una herramienta">
+            <span>Ir directo</span>
+            <a href="#balanza">Balanza <i aria-hidden="true">↓</i></a>
+            <a href="#faro">Faro <i aria-hidden="true">↓</i></a>
+            <a href="#pliego">Pliego <i aria-hidden="true">↓</i></a>
+          </nav>
+        </div>
+
+        <div class="container eu-paradas-wrap">
+          <article class="eu-parada" data-parada="1" aria-labelledby="eu-p1">
+            <p class="section-index"><i></i>01 / BALANZA · CLASIFICADOR</p>
+            <h2 id="eu-p1" class="eu-parada-titulo"><span>¿Qué riesgo</span><span>tiene tu sistema?</span></h2>
+            <p class="eu-parada-lead">Responde unas preguntas y sabrás si tu sistema está prohibido, es de alto riesgo, tiene deberes de transparencia o queda en riesgo mínimo. Y qué papel juegas tú: proveedor, responsable del despliegue, importador o distribuidor.</p>
+            <ul class="eu-parada-lista"><li>Nivel de riesgo con los artículos aplicables</li><li>Obligaciones según tu rol y desde cuándo</li><li>Informe descargable en PDF o Word</li></ul>
+            <a class="button button-primary" href="#balanza">Entrar en la Balanza <span aria-hidden="true">↓</span></a>
+          </article>
+          <article class="eu-parada" data-parada="2" aria-labelledby="eu-p2">
+            <p class="section-index"><i></i>02 / FARO · TRANSPARENCIA</p>
+            <h2 id="eu-p2" class="eu-parada-titulo"><span>Que se sepa</span><span>que es IA.</span></h2>
+            <p class="eu-parada-lead">Desde el 2 de agosto de 2026 hay que avisar cuando alguien habla con una IA o ve contenido generado con ella. El Faro te prepara los avisos para tu web, tu chat, tus redes o un cartel.</p>
+            <ul class="eu-parada-lista"><li>Chatbots, contenido sintético y ultrasuplantaciones</li><li>Versión breve, completa, locución y código HTML</li><li>Tú o usted, según tu organización</li></ul>
+            <a class="button button-primary" href="#faro">Encender el Faro <span aria-hidden="true">↓</span></a>
+          </article>
+          <article class="eu-parada" data-parada="3" aria-labelledby="eu-p3">
+            <p class="section-index"><i></i>03 / PLIEGO · CONTRATACIÓN</p>
+            <h2 id="eu-p3" class="eu-parada-titulo"><span>Contratar IA</span><span>con garantías.</span></h2>
+            <p class="eu-parada-lead">Cláusulas listas para un pliego público o un contrato privado: documentación, registros, supervisión humana, ubicación de los datos, salida del proveedor y penalidades.</p>
+            <ul class="eu-parada-lista"><li>Sector público (LCSP) o privado</li><li>Bloques a medida del tipo de sistema</li><li>Documento editable en Word</li></ul>
+            <a class="button button-primary" href="#pliego">Abrir el Pliego <span aria-hidden="true">↓</span></a>
+          </article>
+          <article class="eu-parada eu-parada-final" data-parada="4" aria-labelledby="eu-p4">
+            <p class="section-index"><i></i>EUNOMÍA · EL BUEN ORDEN</p>
+            <h2 id="eu-p4" class="eu-parada-titulo"><span>Elige por</span><span>dónde empezar.</span></h2>
+            <p class="eu-parada-lead">Eunomía era la diosa griega del buen orden y de las leyes justas. Aquí, tres herramientas pequeñas para poner orden en la IA de tu organización.</p>
+            <div class="eu-final-accesos">
+              <a href="#balanza"><b>01</b><span>Balanza</span><em>Clasificar</em></a>
+              <a href="#faro"><b>02</b><span>Faro</span><em>Avisar</em></a>
+              <a href="#pliego"><b>03</b><span>Pliego</span><em>Contratar</em></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="container eu-estado" aria-hidden="true">
+          <span><b id="eu-actual">00</b> / 04</span>
+          <i><b id="eu-progreso"></b></i>
+          <em id="eu-pista">Desliza para recorrer la polis</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 01 · Balanza ============ -->
+    <section id="balanza" class="eu-mod eu-mod-claro chapter" data-chapter="Balanza" aria-labelledby="balanza-titulo">
+      <div class="container">
+        <div class="eu-mod-cabecera">
+          <div>
+            <p class="section-index">01 / BALANZA · CLASIFICADOR DE RIESGO Y ROL</p>
+            <h2 id="balanza-titulo">¿Qué riesgo tiene tu sistema de IA?</h2>
+          </div>
+          <p>Un recorrido de unas diez preguntas por el Reglamento (UE) 2024/1689, ya con los cambios del Ómnibus. Si dudas en alguna, marca «No lo sé»: el informe te dirá qué comprobar.</p>
+        </div>
+        <div id="balanza-app" class="eu-app eu-balanza" data-modulo="balanza">
+          <noscript><p class="eu-noscript">Esta herramienta necesita JavaScript. Todo se ejecuta en tu navegador.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · Faro ============ -->
+    <section id="faro" class="eu-mod eu-mod-oscuro chapter" data-chapter="Faro" aria-labelledby="faro-titulo">
+      <div class="container">
+        <div class="eu-mod-cabecera">
+          <div>
+            <p class="section-index">02 / FARO · AVISOS DE TRANSPARENCIA</p>
+            <h2 id="faro-titulo">Avisos de IA listos para pegar.</h2>
+          </div>
+          <p>Elige el caso, el canal y el tono. El Faro escribe el aviso, te enseña cómo queda y te recuerda qué exige el artículo 50 del RIA.</p>
+        </div>
+        <div id="faro-app" class="eu-app eu-faro" data-modulo="faro">
+          <noscript><p class="eu-noscript">Esta herramienta necesita JavaScript. Todo se ejecuta en tu navegador.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · Pliego ============ -->
+    <section id="pliego" class="eu-mod eu-mod-claro chapter" data-chapter="Pliego" aria-labelledby="pliego-titulo">
+      <div class="container">
+        <div class="eu-mod-cabecera">
+          <div>
+            <p class="section-index">03 / PLIEGO · CLÁUSULAS DE CONTRATACIÓN</p>
+            <h2 id="pliego-titulo">Cláusulas para contratar IA.</h2>
+          </div>
+          <p>Configura el contrato y obtén un clausulado numerado, con los huecos marcados para completar. Pensado para pliegos públicos (LCSP) y adaptable a contratos entre empresas.</p>
+        </div>
+        <div id="pliego-app" class="eu-app eu-pliego" data-modulo="pliego">
+          <noscript><p class="eu-noscript">Esta herramienta necesita JavaScript. Todo se ejecuta en tu navegador.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · Garantías ============ -->
+    <section id="garantias" class="eu-garantias chapter" data-chapter="Garantías" aria-labelledby="garantias-titulo">
+      <div class="container">
+        <div class="eu-mod-cabecera">
+          <div>
+            <p class="section-index">04 / CÓMO FUNCIONA</p>
+            <h2 id="garantias-titulo">Hecho para que confíes. Y para que lo compruebes.</h2>
+          </div>
+          <p>eunomIA es una página web estática más de CibersegurIA. No se instala nada y no hay servidor que reciba tus respuestas.</p>
+        </div>
+        <ol class="eu-garantias-grid">
+          <li><span class="eu-garantia-glifo" aria-hidden="true">⌂</span><h3>Tus datos no salen de aquí</h3><p>Las respuestas viven en la memoria de esta pestaña. No se envían, no se guardan y no hay cookies. Si recargas, empiezas de cero.</p></li>
+          <li><span class="eu-garantia-glifo" aria-hidden="true">◎</span><h3>Código abierto</h3><p>HTML, CSS y JavaScript sin librerías externas ni servicios de terceros. Cualquiera puede leer qué hace cada línea.</p></li>
+          <li><span class="eu-garantia-glifo" aria-hidden="true">§</span><h3>Normativa revisada</h3><p>Reglamento (UE) 2024/1689 con las modificaciones del Reglamento (UE) 2026/1744 (Ómnibus), en vigor desde el 27 de julio de 2026. Revisión: <b id="eu-revision">23/10/2026</b>.</p></li>
+          <li><span class="eu-garantia-glifo" aria-hidden="true">EU</span><h3>Orientativo, no vinculante</h3><p>Ayuda a ordenar el análisis, pero no sustituye al asesoramiento jurídico ni a las guías de la Comisión y de la autoridad de supervisión (en España, AESIA).</p></li>
+        </ol>
+        <div class="eu-fuentes">
+          <p class="section-index">FUENTES</p>
+          <ul>
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es" target="_blank" rel="noopener noreferrer">Reglamento (UE) 2024/1689 de Inteligencia Artificial (RIA) <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj?locale=es" target="_blank" rel="noopener noreferrer">Reglamento (UE) 2026/1744, Ómnibus digital sobre IA <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902" target="_blank" rel="noopener noreferrer">Ley 9/2017 de Contratos del Sector Público (LCSP) <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://public-buyers-community.ec.europa.eu/communities/procurement-ai/resources/updated-eu-ai-model-contractual-clauses" target="_blank" rel="noopener noreferrer">Cláusulas contractuales tipo de la UE para contratar IA <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div><img src="logociberseguria.png" alt="CibersegurIA"><p>Conocimiento abierto para una inteligencia artificial que respete derechos, organizaciones y territorio.</p></div>
+      <div class="footer-links"><a href="index.html">Inicio</a><a href="#balanza">Balanza</a><a href="#faro">Faro</a><a href="#pliego">Pliego</a><a href="alfabetizacion-ia.html">Alfabetización en IA</a><a href="mailto:ciberseguria@gmail.com">Contacto</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2024</span> CibersegurIA</span><span>eunomIA · Herramientas orientativas para el cumplimiento del RIA</span></div>
+  </footer>
+
+  <!-- documento que se imprime (PDF) — se rellena al pulsar «Descargar PDF» -->
+  <div id="eu-impresion" class="eu-impresion" aria-hidden="true"></div>
+  <div id="eu-aviso" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- glifo de eunomIA: columna, astil y dos platillos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="eu-glifo" viewBox="0 0 64 64">
+      <path d="M32 10v40" stroke="currentColor" stroke-width="5" stroke-linecap="square"/>
+      <path d="M12 18h40" stroke="currentColor" stroke-width="5" stroke-linecap="square"/>
+      <path d="M22 50h20" stroke="currentColor" stroke-width="5" stroke-linecap="square"/>
+      <path d="M14 18 7 34M14 18l7 16M50 18l-7 16M50 18l7 16" stroke="currentColor" stroke-width="2.5" fill="none"/>
+      <path d="M5 34h18a9 6 0 0 1-18 0zM41 34h18a9 6 0 0 1-18 0z" fill="currentColor"/>
+      <circle cx="32" cy="10" r="4.5" fill="#ff1738"/>
+    </symbol>
+  </svg>
+</body>
+</html>
