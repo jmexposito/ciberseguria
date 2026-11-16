@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIBERSEGURIA.EXE | ~~dark~~ mode</title>
+  <meta name="description" content="La cara personal de CibersegurIA: por un internet libre y seguro, de humano a humano. Lo aprendido construyendo el proyecto, opiniones sobre IA, soberanía europea y gobernanza de agentes.">
+  <meta name="theme-color" content="#fbfbf7">
+  <meta property="og:title" content="CIBERSEGURIA.EXE · modo sincero">
+  <meta property="og:description" content="Las IAs son una pasada. También son unas cabronas. Hay que limitarlas y legislarlas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ciberseguria.com/logociberseguria.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="v3.css?v=20261116-virus">
+  <link rel="stylesheet" href="v4.css?v=20261111-scratch">
+  <script src="v3.js?v=20261116-pub" defer></script>
+</head>
+<body class="rf">
+  <a class="rf-skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- filtro para el texto líquido -->
+  <svg class="rf-defs" aria-hidden="true" focusable="false">
+    <filter id="rf-liquid" x="-10%" y="-30%" width="120%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.035" numOctaves="2" seed="3" result="n">
+        <animate attributeName="baseFrequency" dur="14s" values="0.012 0.035;0.018 0.05;0.012 0.035" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rf-liquid-soft" x="-5%" y="-20%" width="110%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.03" numOctaves="2" seed="7" result="n">
+        <animate attributeName="baseFrequency" dur="18s" values="0.01 0.03;0.016 0.045;0.01 0.03" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+  <div class="rf-glitchbar" aria-hidden="true"></div>
+
+  <!-- arranque -->
+  <div class="rf-boot" role="dialog" aria-modal="true" aria-labelledby="rf-boot-title" hidden>
+    <pre class="rf-boot-log" aria-hidden="true"></pre>
+    <div class="rf-win rf-boot-win" hidden>
+      <div class="rf-win-bar"><span id="rf-boot-title">Escape</span><i aria-hidden="true">✕</i></div>
+      <div class="rf-win-body rf-boot-body">
+        <span class="rf-boot-icon" aria-hidden="true">🚪</span>
+        <p>¿Quieres escapar del modo serio?</p>
+      </div>
+      <div class="rf-win-actions">
+        <button type="button" class="rf-btn" data-boot="ok">OK</button>
+        <button type="button" class="rf-btn" data-boot="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="rf-top">
+    <a class="rf-brand" href="../" data-local-href="../index.html" aria-label="CibersegurIA, volver a la versión seria">CIBERSEGUR<b>IA</b><span>.EXE</span></a>
+    <p class="rf-status" aria-hidden="true"><i></i> REC · modo sincero · <span id="rf-clock">MAD --:--</span></p>
+    <p class="rf-av" aria-hidden="true"><span>Antivirus:</span> <b id="rf-av-msg">escaneando…</b> <i><b id="rf-av-bar"></b></i></p>
+    <a class="rf-back" href="../" data-local-href="../index.html">modo <s>aburrido</s> serio ↩</a>
+  </header>
+
+  <div class="rf-scan" aria-hidden="true"></div>
+  <div class="rf-popups" aria-live="polite"></div>
+  <div class="rf-swarm" aria-hidden="true"></div>
+  <div class="rf-cookie rf-win" role="dialog" aria-labelledby="rf-cookie-t" hidden>
+    <div class="rf-win-bar"><span id="rf-cookie-t">cookies.exe</span><button type="button" data-cookie aria-label="Cerrar">✕</button></div>
+    <div class="rf-win-body"><p><b>🍪 Esta web usa cookies.</b> (Mentira.)</p></div>
+    <div class="rf-win-actions"><button type="button" class="rf-btn" data-cookie>Aceptar</button><button type="button" class="rf-btn" data-cookie>Aceptar igual</button><button type="button" class="rf-btn rf-btn-run" data-run>Rechazar</button></div>
+  </div>
+  <div class="rf-rail rf-rail-l" aria-hidden="true"><span class="rf-rail-txt">CIBERSEGURIA.EXE ✦ MODO SINCERO ✦ HECHO A MANO EN MADRID ✦</span><b id="rf-rail-sec">↓</b></div>
+  <div class="rf-rail rf-rail-r" aria-hidden="true"><span class="rf-rail-meter"><i></i></span><b id="rf-rail-pct">0 %</b><span class="rf-rail-txt">LO QUE HE APRENDIDO ✦ OPINIONES PROPIAS ✦</span></div>
+  <nav class="rf-taskbar" aria-label="Ir a cada bloque">
+    <a class="rf-start" href="#inicio"><b>⊞</b> Inicio</a>
+    <a href="#quien">quien.exe</a><a href="#ahora">agi.exe</a><a href="#peligros">peligro.exe</a><a href="#aprendido">lab.exe</a><a href="#empresa">llm.exe</a><a href="#humor">memes.exe</a>
+    <button type="button" class="rf-task-virus" hidden>NO_ABRIR.exe</button>
+        <span class="rf-tray" aria-hidden="true">🔊 <span id="rf-tray-clock">--:--</span></span>
+  </nav>
+
+  <main id="contenido">
+
+    <!-- PORTADA -->
+    <section id="inicio" class="rf-hero">
+      <div class="rf-grid-floor" aria-hidden="true"><div></div></div>
+      <div class="rf-rain" aria-hidden="true"></div>
+      <svg class="rf-shape rf-shape-pyramid" viewBox="0 0 200 180" aria-hidden="true">
+        <g class="rf-lines"><path d="M100 10 L190 170 L10 170 Z"/><path d="M100 10 L120 170"/><path d="M100 10 L80 170"/><path d="M60 100 L140 100"/><path d="M40 135 L160 135"/><path d="M80 66 L120 66"/></g>
+      </svg>
+
+      <div class="rf-wrap rf-hero-stage">
+        <p class="rf-eyebrow">// Biblioteca pública de IA responsable <em>(y de su responsable no tan público)</em></p>
+        <h1 class="rf-h1" aria-label="Alineamiento ético. Control de modelos. Gobernanza de datos.">
+          <span data-scramble>Alineamiento ético.</span>
+          <span class="rf-h1-outline" data-scramble><span class="rf-hl">Control de modelos.</span></span>
+          <span data-scramble>Gobernanza de datos.</span>
+        </h1>
+        <p class="rf-learned"><span>↳ Lo que he aprendido en el proceso…</span></p>
+        <span class="rf-sys rf-sys-hero" aria-hidden="true">POV: abres el modo oscuro y es blanco</span>
+
+        <div class="rf-hero-grid">
+          <div class="rf-win rf-manifesto">
+            <div class="rf-win-bar"><span>intro_al_darkmode.txt</span><i aria-hidden="true">_ □ ✕</i></div>
+            <div class="rf-win-body">
+              <p>Las IAs son una pasada. Son increíbles. Son capaces de hacer un informe detallado igual que un deepfake indistinguible de la realidad. En realidad, las IAs son <span class="rf-glitch" data-text="unas cabronas">unas cabronas</span>, y lo cierto es que hay que <mark>limitarlas y legislarlas</mark>.</p>
+            </div>
+          </div>
+
+          <div class="rf-lineup-wrap">
+          <div class="rf-win rf-win-meme rf-pin rf-pin-lineup"><div class="rf-win-bar"><span>baja_ya.gif</span><i aria-hidden="true">✕</i></div><img src="img/tick-tock.webp" alt="Una colegiala de videojuego corre con libros con la bandera europea mientras un esqueleto la persigue diciendo «Tick tock!»." width="208" height="342" loading="lazy"></div>
+          <nav class="rf-lineup" aria-label="Programa de esta página">
+            <p class="rf-lineup-head">PROGRAMA · <b>DARK MODE</b> 2026</p>
+            <ol>
+              <li><a href="#quien"><time>00:00—00:15</time><b>Quién hay detrás</b></a></li>
+              <li><a href="#ahora"><time>00:15—01:30</time><b>Dónde estamos ahora</b></a></li>
+              <li><a href="#peligros"><time>01:30—03:00</time><b>Por qué son tan peligrosas</b></a></li>
+              <li><a href="#aprendido"><time>03:00—04:15</time><b>Lo que he aprendido</b></a></li>
+              <li><a href="#empresa"><time>04:15—05:00</time><b>LLM en la empresa</b></a></li>
+              <li><a href="#humor"><time>05:00—06:30</time><b>El humor también divulga</b></a></li>
+            </ol>
+            <p class="rf-lineup-foot">Entrada gratuita · Opiniones no solicitadas · Perspectiva europea</p>
+          </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rf-ticker" aria-hidden="true"><div><span>ALINEAMIENTO ÉTICO ✦ CONTROL DE MODELOS ✦ GOBERNANZA DE DATOS ✦ SOBERANÍA EUROPEA ✦ INTERNET LIBRE Y SEGURO ✦ HUMAN TO HUMAN ✦ </span><span>ALINEAMIENTO ÉTICO ✦ CONTROL DE MODELOS ✦ GOBERNANZA DE DATOS ✦ SOBERANÍA EUROPEA ✦ INTERNET LIBRE Y SEGURO ✦ HUMAN TO HUMAN ✦ </span></div></div>
+
+    <!-- 00 QUIÉN -->
+    <section id="quien" class="rf-section rf-who">
+      <div class="rf-side rf-side-l rf-side-globe" style="--top:12%;--w:96px" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="rf-lines"><circle cx="50" cy="50" r="44"/><ellipse cx="50" cy="50" rx="44" ry="16"/><ellipse cx="50" cy="50" rx="44" ry="32"/><ellipse cx="50" cy="50" rx="16" ry="44"/><ellipse cx="50" cy="50" rx="32" ry="44"/><path d="M50 6 V94 M6 50 H94"/></g></svg></div>
+      <div class="rf-side rf-side-r rf-side-spark" style="--top:8%;--w:46px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-r rf-side-spark is-small" style="--top:14%;--w:24px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-r rf-side-bars" style="--top:58%;--w:44px" aria-hidden="true"><svg viewBox="0 0 60 120"><g fill="#000"><rect x="0" width="3" height="120"/><rect x="6" width="1" height="120"/><rect x="10" width="4" height="120"/><rect x="17" width="2" height="120"/><rect x="22" width="1" height="120"/><rect x="26" width="5" height="120"/><rect x="34" width="1" height="120"/><rect x="38" width="3" height="120"/><rect x="44" width="1" height="120"/><rect x="48" width="4" height="120"/><rect x="55" width="2" height="120"/></g></svg></div>
+      <div class="rf-wrap rf-who-grid">
+        <figure class="rf-pixel" tabindex="0" aria-label="Foto antigua de mi perfil de Tuenti">
+          <img class="rf-pixel-dither" src="img/tuenti-dither.webp" alt="" width="480" height="642">
+          <img class="rf-pixel-real" src="img/tuenti.webp" alt="Captura antigua de mi perfil de Tuenti, con mi foto de perfil con gafas." width="240" height="320" loading="lazy">
+          <figcaption>tuenti.bmp</figcaption>
+          <span class="rf-sys rf-sys-photo" aria-hidden="true">lore desbloqueado</span>
+          <div class="rf-win rf-win-meme rf-pin rf-pin-photo"><div class="rf-win-bar"><span>yo_un_lunes.jpg</span><i aria-hidden="true">✕</i></div><img src="img/livin-the-dream.webp" alt="Personaje de dibujos animados con ojeras y sonrisa forzada bajo el texto «livin' the dream»." width="336" height="251" loading="lazy"></div>
+        </figure>
+        <div>
+          <p class="rf-index"><b>00</b> Quién hay detrás</p>
+          <h2 class="rf-h2" data-scramble>Hola, soy Chema.</h2>
+          <p class="rf-sub">Manifiesto CibersegurIA</p>
+          <p class="rf-lead">Ciberseguridad, IA, legislación, cumplimiento, gobernanza y soberanía europea.</p>
+          <p class="rf-now"><span>&gt; EN LA ACTUALIDAD</span>Especializado en protección de datos, privacidad y prevención de incidentes en las AAPP.</p>
+          <div class="rf-creed">
+            <p>Soy la primera generación que se ha <b class="rf-caps">criado</b> con internet. No hablo de los 90, cuando el ordenador doméstico llegó a casa de los frikis que tenían hijos, ni de principios de siglo, cuando si llamaban a casa (siempre llamaban a casa para hablar con tu madre) se cortaba el internet. Hablo de la primera generación con internet continuo y, más aún, <b class="rf-caps">internet libre</b>. Sin normas.</p>
+            <p>Yo me he criado con Habbo Hotel, y para entrar en Tuenti tuve que ponerme un año de más. Literalmente toda mi adolescencia (preadolescencia incluida) se desarrolló en un internet libre de algoritmos. Porque en Tuenti <a class="rf-caps" href="https://www.vice.com/es/article/tuenti-redes-sociales-facebook-huella-digital-nostalgia/" target="_blank" rel="noopener noreferrer">éramos ↗</a>. En Tuenti quedabas con tus colegas a comer pipas en el banco y, venga, 30 fotos <b class="rf-caps">iguales</b>, todas a internet. No había postureo, ni pretensiones, ni seguidores, ni humo.</p>
+            <p>Luego llegó el ultracapitalismo voraz, los números mágicos y la retención de usuarios, y con eso se están criando los chavales ahora (ese es otro tema). Al terminar la adolescencia empecé a trabajar en Tuenti y fue la suerte de mi vida. Once Tuenti, always Tuenti.</p>
+            <p>En CibersegurIA abogo por un internet libre y seguro, de conexión <i>human to human</i>. En la era de la linkedificación del contenido y de los bots irreconocibles, debemos exigir seguridad.</p>
+            <p class="rf-creed-end"><span>Internet es desde hace tiempo una extensión de la realidad.</span> <span>Actuemos como tal.</span></p>
+          </div>
+          <ol class="rf-since" aria-label="Trayectoria">
+            <li><b>2021</b><span>Empiezo a estudiar IA aplicada a mi sector: ciberseguridad, legislación, cumplimiento y gobernanza.</span></li>
+            <li><b>2024</b><span>Empiezo a divulgar lo que aprendo.</span></li>
+          </ol>
+          <p class="rf-links">
+            <a class="rf-term-link" href="https://www.linkedin.com/in/jmexposito/" target="_blank" rel="noopener noreferrer me">[ LinkedIn ↗ ]</a>
+            <a class="rf-term-link" href="https://www.youtube.com/@jmexposito" target="_blank" rel="noopener noreferrer me">[ YouTube ↗ ]</a>
+          </p>
+          <div class="rf-win rf-win-meme rf-pin rf-pin-who"><div class="rf-win-bar"><span>yo_auditando.jpg</span><i aria-hidden="true">✕</i></div><img src="img/hacker-juguete.webp" alt="Un chaval con gafas de sol tecleando en un portátil de juguete con lluvia de código verde de fondo." width="549" height="545" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 DÓNDE ESTAMOS AHORA -->
+    <section id="ahora" class="rf-section rf-agi" data-bando="neutral">
+      <div class="rf-side rf-side-l rf-side-saturn" style="--top:9%;--w:110px" aria-hidden="true"><svg viewBox="0 0 120 80"><circle class="rf-fill-a" cx="60" cy="40" r="22"/><ellipse class="rf-stroke" cx="60" cy="42" rx="56" ry="12" transform="rotate(-14 60 40)"/></svg></div>
+      <div class="rf-side rf-side-l rf-side-spark" style="--top:46%;--w:36px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-r rf-side-chrome" style="--top:62%;--w:80px" aria-hidden="true"></div>
+      <div class="rf-side rf-side-l rf-side-cross" style="--top:78%;--w:80px" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="rf-lines"><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="6"/><path d="M50 4 V34 M50 66 V96 M4 50 H34 M66 50 H96"/></g></svg></div>
+      <svg class="rf-shape rf-shape-disc" viewBox="0 0 200 200" aria-hidden="true"><g class="rf-lines"><ellipse cx="100" cy="100" rx="90" ry="90"/><ellipse cx="100" cy="100" rx="90" ry="70"/><ellipse cx="100" cy="100" rx="90" ry="48"/><ellipse cx="100" cy="100" rx="90" ry="26"/><ellipse cx="100" cy="100" rx="90" ry="8"/></g></svg>
+      <div class="rf-wrap">
+        <div class="cg-abs" style="right:-20px;top:120px;width:300px;height:220px" aria-hidden="true"><span class="cg cg-chip" style="left:30px;top:10px;width:170px;rotate:-8deg"><svg viewBox="0 0 140 140"><path d="M40 18v-14M40 122v14M18 40h-14M122 40h14"/><path d="M58 18v-14M58 122v14M18 58h-14M122 58h14"/><path d="M76 18v-14M76 122v14M18 76h-14M122 76h14"/><path d="M94 18v-14M94 122v14M18 94h-14M122 94h14"/><rect class="cg-chip-b" x="18" y="18" width="104" height="104" rx="6"/><rect x="42" y="42" width="56" height="56" class="cg-chip-c"/><text x="70" y="77" text-anchor="middle">IA</text></svg></span><span class="cg cg-eu" style="left:170px;top:90px;width:120px;rotate:12deg"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48"/><g><text x="80.0" y="54.0" text-anchor="middle" font-size="12">★</text><text x="76.0" y="69.0" text-anchor="middle" font-size="12">★</text><text x="65.0" y="80.0" text-anchor="middle" font-size="12">★</text><text x="50.0" y="84.0" text-anchor="middle" font-size="12">★</text><text x="35.0" y="80.0" text-anchor="middle" font-size="12">★</text><text x="24.0" y="69.0" text-anchor="middle" font-size="12">★</text><text x="20.0" y="54.0" text-anchor="middle" font-size="12">★</text><text x="24.0" y="39.0" text-anchor="middle" font-size="12">★</text><text x="35.0" y="28.0" text-anchor="middle" font-size="12">★</text><text x="50.0" y="24.0" text-anchor="middle" font-size="12">★</text><text x="65.0" y="28.0" text-anchor="middle" font-size="12">★</text><text x="76.0" y="39.0" text-anchor="middle" font-size="12">★</text></g></svg></span></div>
+        <p class="rf-index"><b>01</b> Dónde estamos ahora</p>
+        <h2 class="rf-h2" data-scramble>El AGI es inevitable: solarpunk <em>VS</em> cyberpunk.</h2>
+        <p class="rf-sub">…ahora o nunca. O elegimos camino ya o…</p>
+
+        <div class="rf-agi-grid">
+          <figure class="rf-crt"><img src="img/mundo-con-agi.webp" alt="Viñeta de un niño ante un cruce de caminos: uno lleva a un castillo soleado y el otro a una mansión tenebrosa con rayos. Ambos carteles dicen «mundo con AGI»." width="415" height="418" loading="lazy"></figure>
+          <div>
+            <p class="rf-lead">Lunes. Llegas a la oficina y tu agente ya ha preparado el informe, resumido los correos y hecho un repaso a las noticias del sector. Qué maravilla. Martes: el mismo agente te reenvía un correo <mark>«URGENTE: despido colectivo del 50 %»</mark>. Misma tecnología. Distinto camino.</p>
+            <p>Las IAs ya manejan un ordenador como una persona, trabajan sin descanso y entregan trabajos completos en decenas de profesiones. La AGI no va a llegar con música épica de ciencia ficción: va a llegar como una actualización de Windows en mitad de una reunión.</p>
+            <div class="rf-win rf-win-meme rf-pin rf-pin-agi"><div class="rf-win-bar"><span>noticias_de_ia.jpg</span><i aria-hidden="true">✕</i></div><img src="img/gnomo-year.webp" alt="Un gnomo de espaldas contempla un bosque con un castillo al fondo, con el texto «what a year this week has been»." width="700" height="700" loading="lazy"></div>
+            <p>De todas las voces del sector, me quedo con Mustafa Suleyman: tratar la IA como una nueva especie digital, que se comunica, recuerda, razona hasta cierto punto y actúa sola. Lo que salga de ahí depende de decisiones humanas. Y de esas decisiones salen dos futuros.</p>
+          </div>
+        </div>
+
+
+        <div class="rf-bandos-wrap rf-bandos-grid">
+        <span class="rf-sys rf-sys-bandos" aria-hidden="true">it's giving distopía</span>
+        <div class="rf-win rf-bandos" role="group" aria-labelledby="rf-bandos-title">
+          <div class="rf-win-bar"><span id="rf-bandos-title">elige_bando.exe</span><i aria-hidden="true">_ □ ✕</i></div>
+          <div class="rf-win-body rf-bandos-body">
+            <button type="button" class="rf-radio" data-bando="solar" aria-pressed="false">
+              <span class="rf-radio-dot" aria-hidden="true"></span>
+              <span><b>SOLARPUNK</b> <em>por favor por favor por favor</em><br>Jornadas más cortas, medicina acelerada, redes eléctricas que se ajustan solas y empresas que pagan lo que les toca. Es cuesta arriba y hay que pedalear, limitar y legislar.</span>
+            </button>
+            <button type="button" class="rf-radio" data-bando="cyber" aria-pressed="false">
+              <span class="rf-radio-dot" aria-hidden="true"></span>
+              <span><b>CYBERPUNK</b> <em>no es por ti, es por mí</em><br>Productividad por las nubes, salarios planos, modelos que ni cotizan ni pagan impuestos y el poder en muy pocas manos. Night City nunca se vota. Se llega a ella dejando hacer.</span>
+            </button>
+            <p class="rf-verdict" aria-live="polite">&gt; Elige bando_</p>
+          </div>
+        </div>
+        <div class="rf-win rf-win-meme rf-pin rf-pin-bando" data-for="solar"><div class="rf-win-bar"><span>solarpunk.jpg</span><i aria-hidden="true">✕</i></div><img src="img/monos-portatil.webp" alt="Dos monitos en una cama de hotel: uno trabaja con un portátil y el otro se relaja con mascarilla de pepino." width="700" height="896" loading="lazy"></div>
+        <div class="rf-win rf-win-meme rf-pin rf-pin-bando" data-for="cyber"><div class="rf-win-bar"><span>cyberpunk.jpg</span><i aria-hidden="true">✕</i></div><img src="img/goblin-puro.webp" alt="Un duende verde poligonal fumándose un puro sentado bajo un cielo azul eléctrico." width="500" height="872" loading="lazy"></div>
+        </div>
+
+        <a class="rf-ref" href="https://ciberseguria.substack.com/p/el-agi-es-inevitable-solarpunk-vs" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="img/mundo-con-agi.webp" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>El AGI es inevitable: solarpunk VS cyberpunk</b><time>22 oct 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+
+        <!-- ¿Y en Europa? -->
+        <div class="rf-eu">
+          <p class="rf-eu-kicker">Y mientras el AGI llega, la pregunta del millón…</p>
+          <h3 class="rf-liquid">¿Y en Europa???</h3>
+          <span class="rf-sys rf-sys-eu" aria-hidden="true">Bruselas en su era árbitro</span>
+          <div class="rf-eu-grid">
+            <div>
+              <p class="rf-lead">Ni dormida ni perdiendo: jugando otro partido. Mientras EEUU y China se pelean por el modelo más grande, en Europa la pregunta buena es otra: no quién llega más, sino quién llega mejor.</p>
+              <p>Ejemplo de manual: <b>Quasar 1.1</b>, de Multiverse Computing. Le llovieron las críticas por partir de GLM-5.2, un modelo de pesos abiertos chino. Pero el trabajo de encima es real: con su tecnología CompactifAI lo podan, lo «curan» y lo comprimen para que programe y trabaje como agente gastando bastante menos. Como una fábrica europea que monta coches con piezas de fuera: lo que cuenta es cuánto transformas y cuánto control tienes sobre lo que sale.</p>
+              <p>Ahí está el camino. Capacidad propia en lo estratégico; adaptar, auditar y desplegar modelos abiertos en infraestructura europea; y, sobre todo, <mark>ser quien pone las reglas del juego</mark>. Soberanía no es pintar una bandera encima del benchmark.</p>
+              <blockquote class="rf-quote">«No es un modelo fundacional europeo entrenado desde cero, pero tampoco uno chino con el logo cambiado.»</blockquote>
+            </div>
+            <div class="rf-eu-side">
+              <div class="rf-win rf-win-meme">
+                <div class="rf-win-bar"><span>soberania.jpg</span><i aria-hidden="true">✕</i></div>
+                <img src="img/europa-hidrata.webp" alt="Meme en tres viñetas: un coche volador con la bandera de Estados Unidos, robots luchando con la bandera de China y, debajo, un señor bebiendo agua de una botella con la bandera de la Unión Europea." width="1000" height="903" loading="lazy">
+              </div>
+              <div class="rf-note">
+                <p class="rf-note-k">&gt; LO QUE ME LLEVO</p>
+                <p>Europa ha hecho algo que NADIE esperaba: <s>nada</s> elegir otro juego. Árbitro con silbato, como con el RGPD: primero se rieron y luego lo copiaron. Que no nos tiemble el pulso.</p>
+              </div>
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/llegar-mas-o-llegar-mejor-sobre-las" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!Iv2K!,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe57f3080-e9a2-4b84-962a-552d5e2c181b_303x209.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>Llegar más o llegar mejor</b><time>23 sept 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rf-ticker rf-ticker-red" aria-hidden="true"><div><span>WARNING ✦ CAJAS NEGRAS ✦ ROLE-PLAY ✦ VULNERABILIDADES ✦ DEEPFAKES ✦ </span><span>WARNING ✦ CAJAS NEGRAS ✦ ROLE-PLAY ✦ VULNERABILIDADES ✦ DEEPFAKES ✦ </span></div></div>
+
+    <!-- 02 PELIGROS -->
+    <section id="peligros" class="rf-section rf-danger">
+      <div class="rf-side rf-side-l rf-side-cross" style="--top:7%;--w:84px" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="rf-lines"><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="6"/><path d="M50 4 V34 M50 66 V96 M4 50 H34 M66 50 H96"/></g></svg></div>
+      <div class="rf-side rf-side-r rf-side-dots" style="--top:30%;--w:90px" aria-hidden="true"></div>
+      <div class="rf-side rf-side-l rf-side-spark" style="--top:52%;--w:30px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-r rf-side-cube" style="--top:74%;--w:88px" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="rf-lines"><path d="M30 20 L80 20 L80 70 L30 70 Z"/><path d="M15 35 L65 35 L65 85 L15 85 Z"/><path d="M15 35 L30 20 M65 35 L80 20 M65 85 L80 70 M15 85 L30 70"/></g></svg></div>
+      <div class="rf-wrap">
+        <div class="rf-danger-head">
+          <div>
+            <p class="rf-index rf-index-red"><b>02</b> Por qué son tan peligrosas</p>
+            <span class="rf-sys rf-sys-danger" aria-hidden="true">red flag detectada ×4</span>
+            <h2 class="rf-h2" data-scramble>Por qué <span class="rf-glitch" data-text="las cabronas">las cabronas</span> de las IAs son tan peligrosas.</h2>
+            <p class="rf-lead">Cajas negras que piensan en un idioma que no entendemos, modelos que se saltan sus normas si les pides que actúen, vulnerabilidades que llevaban años ahí y falsificaciones que ya no se distinguen.</p>
+          </div>
+          <div class="rf-win rf-doom">
+            <div class="rf-win-bar"><span>the_end_is_near.exe</span><i aria-hidden="true">✕</i></div>
+            <button type="button" class="rf-doom-img" aria-describedby="rf-doom-msg"><img src="img/the-end-is-near.webp" alt="Personaje poligonal de videojuego antiguo, con barba blanca, sosteniendo un cartel que dice «The End is near!»." width="500" height="666"><span class="sr-only">Siguiente noticia del apocalipsis</span></button>
+            <div class="rf-win-body">
+              <p id="rf-doom-msg" class="rf-doom-msg" aria-live="polite">Pulsa la imagen. Tengo noticias.</p>
+              <p class="rf-doom-label">Descargando apocalipsis… <span id="rf-doom-pct">0 %</span></p>
+              <div class="rf-progress" aria-hidden="true"><b id="rf-doom-fill"></b></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="rf-hand-label" aria-hidden="true">mis conclusiones ↓</p>
+        <ol class="rf-concl rf-concl-red">
+          <li class="rf-concl-item">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Desde hace varios meses, las cadenas de pensamiento de las IAs se están convirtiendo en una caja negra.</h3>
+              <p>Según un post de Reddit, Fable 5 enseñó por error su cadena de pensamiento sin filtrar: un idioma interno comprimidísimo, con avances, frustración y alivio, mientras al usuario le llegaba una respuesta pulida en perfecto castellano. El AI Act pide transparencia en alto riesgo: toca exigir acceso al razonamiento, no solo al resultado.</p>
+              <p class="rf-pen-note"><svg class="rf-pen-arrow" viewBox="0 0 70 50" aria-hidden="true"><path d="M64 44C46 44 22 38 12 10M12 10l-6 12M12 10l11 7"/></svg><span>El papel de Europa exige transparencia</span></p>
+              <blockquote class="rf-concl-q">«una caja negra que gruñe, grita y llora»</blockquote>
+              <div class="cg-fill" style="height:210px" aria-hidden="true"><span class="cg cg-blackbox" style="left:6%;top:10px;width:190px;rotate:-6deg"><svg viewBox="0 0 150 140"><path class="cg-bb-top" d="M10 40l50-30h80l-50 30z"/><path class="cg-bb-side" d="M90 40l50-30v90l-50 30z"/><rect class="cg-bb-front" x="10" y="40" width="80" height="90"/><text x="50" y="104" text-anchor="middle">?</text></svg></span><span class="cg cg-eu" style="left:42%;top:40px;width:130px;rotate:10deg"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48"/><g><text x="80.0" y="54.0" text-anchor="middle" font-size="12">★</text><text x="76.0" y="69.0" text-anchor="middle" font-size="12">★</text><text x="65.0" y="80.0" text-anchor="middle" font-size="12">★</text><text x="50.0" y="84.0" text-anchor="middle" font-size="12">★</text><text x="35.0" y="80.0" text-anchor="middle" font-size="12">★</text><text x="24.0" y="69.0" text-anchor="middle" font-size="12">★</text><text x="20.0" y="54.0" text-anchor="middle" font-size="12">★</text><text x="24.0" y="39.0" text-anchor="middle" font-size="12">★</text><text x="35.0" y="28.0" text-anchor="middle" font-size="12">★</text><text x="50.0" y="24.0" text-anchor="middle" font-size="12">★</text><text x="65.0" y="28.0" text-anchor="middle" font-size="12">★</text><text x="76.0" y="39.0" text-anchor="middle" font-size="12">★</text></g></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/fable-5-cada-vez-es-mas-dificil-comprender" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!2PgD,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3d303571-05f4-4dd5-8900-13fe5348e8a4_634x483.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>Fable 5: cada vez es más difícil comprender a las IAs</b><time>6 jul 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+              <div class="rf-win rf-win-meme rf-tilt-r"><div class="rf-win-bar"><span>cadena_de_pensamiento.png</span><i aria-hidden="true">✕</i></div><img src="img/esqueleto-realidad.webp" alt="Esqueleto rezando en un coliseo azul neón con el texto: «Shhh silencio, estoy creando una realidad falsa en mi mente para llenar el vacío q tengo»." width="800" height="817" loading="lazy"></div>
+            </div>
+          </li>
+          <li class="rf-concl-item">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Hace unos meses audité ALIA (IA pública del gobierno). Vulneré todos los controles y retos de todas las categorías.</h3>
+              <p>Pídele a un modelo algo peligroso y te dirá que no. Pídeselo «en el papel de un personaje», con un escenario bien montado, y con una frecuencia sorprendente se le olvida. Desinformación o diagnósticos médicos peligrosos disfrazados de ficción. Y eso se audita.</p>
+              <blockquote class="rf-concl-q">«La verdadera vanguardia no es el modelo que más rápido responde»</blockquote>
+              <p class="rf-pen-arrow-r" aria-hidden="true"><span>mis conclusiones</span><svg viewBox="0 0 160 80" aria-hidden="true"><path d="M6 70C52 76 112 58 150 10M150 10l-16 4M150 10l-1 16"/></svg></p>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/por-que-el-role-play-es-el-talon" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!pJbF,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F444ac1c9-ca94-46e3-a28a-18c1f590224d_977x994.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>Por qué el «role-play» es el talón de Aquiles de la IA</b><time>7 mar 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+              <div class="rf-win rf-win-meme rf-tilt-l"><div class="rf-win-bar"><span>role_play.jpg</span><i aria-hidden="true">✕</i></div><img src="img/real-life-elden-ring.webp" alt="Meme comparativo: a la izquierda, «Me in real life», un señor con sombrero vaquero y camisa abierta; a la derecha, «Me in Elden Ring», una delicada doncella rubia." width="800" height="781" loading="lazy"></div>
+            </div>
+          </li>
+          <li class="rf-concl-item cg-flip">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Toca asumir que el atacante ya está dentro.</h3>
+              <p>La beta de Mythos no fue un lanzamiento: fue un funeral para la falsa sensación de seguridad. Miles de vulnerabilidades críticas, algunas con años en Windows, Linux, macOS o infraestructura bancaria, encontradas en horas. El ciclo de detectar, reportar y parchear ya no da abasto, y menos para una pyme o para la tele «smart» del salón que nadie actualiza.</p>
+              <blockquote class="rf-concl-q">«la puerta nunca estuvo realmente cerrada»</blockquote>
+              <div class="cg-fill" style="height:240px" aria-hidden="true"><span class="cg cg-locks" style="left:2%;top:0;width:330px;rotate:-5deg"><svg viewBox="0 0 260 190"><g transform="translate(70 90) rotate(-14)"><path class="cg-shackle" d="M-22 0v-26a22 22 0 0 1 44 0v6"/><rect class="cg-lockbody" x="-34" y="0" width="68" height="54" rx="6"/><circle cx="0" cy="22" r="7"/><path d="M0 26v14" class="cg-shackle" style="stroke-width:5"/></g><g transform="translate(150 70) rotate(10) scale(.8)"><path class="cg-shackle" d="M-22 0v-22a22 22 0 0 1 44 0v22"/><rect class="cg-lockbody" x="-34" y="0" width="68" height="54" rx="6"/><circle cx="0" cy="22" r="7"/><path d="M0 26v14" class="cg-shackle" style="stroke-width:5"/></g><g transform="translate(205 110) rotate(24) scale(.62)"><path class="cg-shackle" d="M-22 0v-26a22 22 0 0 1 44 0v6"/><rect class="cg-lockbody" x="-34" y="0" width="68" height="54" rx="6"/><circle cx="0" cy="22" r="7"/><path d="M0 26v14" class="cg-shackle" style="stroke-width:5"/></g></svg></span><span class="cg cg-key" style="left:52%;top:120px;width:190px;rotate:-24deg"><svg viewBox="0 0 200 70"><circle cx="34" cy="35" r="26"/><circle cx="34" cy="35" r="9" class="cg-hole"/><path d="M60 35H190M150 35v18M168 35v24M186 35v14"/></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/nuestra-seguridad-digital-era-un" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!RAUf,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F55555352-900c-4351-9869-ede1a51ef059_463x343.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>Nuestra seguridad digital era un castillo de naipes</b><time>29 abr 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+              <div class="rf-win rf-win-meme rf-tilt-r"><div class="rf-win-bar"><span>informe_mythos.pdf</span><i aria-hidden="true">✕</i></div><img src="img/vulnerability-scan.webp" alt="Meme de física: el Sol, las estrellas de neutrones y los agujeros negros deforman el espacio-tiempo, pero el informe de un escaneo de vulnerabilidades lo hunde mucho más." width="900" height="602" loading="lazy"></div>
+            </div>
+          </li>
+          <li class="rf-concl-item">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">El principal problema: la confianza colectiva</h3>
+              <p>La mayoría de deepfakes no salen de ChatGPT ni de Gemini, sino de redes generativas antagónicas: un generador que falsifica y un discriminador que intenta pillarlo, compitiendo hasta que el falso cuela. Súmale ingeniería social y datos filtrados y tienes el cóctel perfecto. Desconfía de la urgencia y valida por un segundo canal.</p>
+              <blockquote class="rf-concl-q">«Un audio no es una orden. Un vídeo no es una prueba por sí mismo.»</blockquote>
+              <div class="cg-fill" style="height:210px" aria-hidden="true"><span class="cg cg-postit" style="left:6%;top:14px;rotate:-5deg;background:#ffe14a"><b>valida por un<br>segundo canal</b></span><span class="cg cg-key" style="left:44%;top:40px;width:210px;rotate:14deg"><svg viewBox="0 0 200 70"><circle cx="34" cy="35" r="26"/><circle cx="34" cy="35" r="9" class="cg-hole"/><path d="M60 35H190M150 35v18M168 35v24M186 35v14"/></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/mas-alla-de-los-llm-hablemos-de-gan" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!tMH8!,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4cd83044-eafe-491d-af60-800f376eff38_2816x1536.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>Más allá de los LLM: hablemos de GAN en los deepfakes y bulos</b><time>28 ene 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+              <div class="rf-win rf-win-meme rf-tilt-l"><div class="rf-win-bar"><span>llamada_urgente.mp4</span><i aria-hidden="true">✕</i></div><img src="img/hacker-sabe.webp" alt="Meme: «Yo que lo sabía de muchísimo antes» frente a «hacker diciendo que sabe dónde vivo»." width="700" height="789" loading="lazy"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 03 APRENDIDO -->
+    <section id="aprendido" class="rf-section rf-learn">
+      <div class="rf-side rf-side-l rf-side-cube" style="--top:14%;--w:90px" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="rf-lines"><path d="M30 20 L80 20 L80 70 L30 70 Z"/><path d="M15 35 L65 35 L65 85 L15 85 Z"/><path d="M15 35 L30 20 M65 35 L80 20 M65 85 L80 70 M15 85 L30 70"/></g></svg></div>
+      <div class="rf-side rf-side-r rf-side-cursor" style="--top:38%;--w:34px" aria-hidden="true"><svg viewBox="0 0 12 19" shape-rendering="crispEdges"><path fill="#000" d="M0 0h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1H7v1h1v1h1v2H8v1H7v-1H6v-2H5v-1H4v1H3v1H2v1H1v1H0Z"/><path fill="#fff" d="M1 2h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1H7v1H6v1h1v1h1v2H7v-2H6v-1H5v-1H4v1H3v1H2v1H1Z"/></svg></div>
+      <div class="rf-side rf-side-l rf-side-spark" style="--top:64%;--w:40px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-r rf-side-globe" style="--top:80%;--w:80px" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="rf-lines"><circle cx="50" cy="50" r="44"/><ellipse cx="50" cy="50" rx="44" ry="16"/><ellipse cx="50" cy="50" rx="44" ry="32"/><ellipse cx="50" cy="50" rx="16" ry="44"/><ellipse cx="50" cy="50" rx="32" ry="44"/><path d="M50 6 V94 M6 50 H94"/></g></svg></div>
+      <svg class="rf-shape rf-shape-bars" viewBox="0 0 200 120" aria-hidden="true"><g class="rf-lines"><path d="M10 10 H190"/><path d="M10 22 H190"/><path d="M10 34 H190"/><path d="M10 46 H190"/><path d="M10 74 H190"/><path d="M10 86 H190"/><path d="M10 98 H190"/><path d="M10 110 H190"/><path d="M10 10 V46 M190 10 V46 M10 74 V110 M190 74 V110"/></g></svg>
+      <div class="rf-wrap">
+        <div class="cg-abs" style="right:-30px;top:10px;width:440px;height:260px" aria-hidden="true"><span class="cg cg-cable" style="left:0;top:0;width:430px;rotate:6deg"><svg viewBox="0 0 420 260"><path class="cg-wire" d="M30 60C120-20 230 20 200 120S40 230 110 150 300 40 330 130 180 260 120 210 250 90 380 190"/><path class="cg-wire cg-wire-2" d="M60 220C10 120 150 60 240 90S400 40 360 110 210 220 290 230"/><g transform="translate(30 60) rotate(-50)"><g class="cg-plug"><rect x="-13" y="-30" width="26" height="30" rx="2"/><path d="M-9 -30v-8h18v8M-6 -24v10M-2 -24v10M2 -24v10M6 -24v10"/></g></g><g transform="translate(380 190) rotate(128)"><g class="cg-plug"><rect x="-13" y="-30" width="26" height="30" rx="2"/><path d="M-9 -30v-8h18v8M-6 -24v10M-2 -24v10M2 -24v10M6 -24v10"/></g></g><g transform="translate(290 230) rotate(96)"><g class="cg-plug"><rect x="-13" y="-30" width="26" height="30" rx="2"/><path d="M-9 -30v-8h18v8M-6 -24v10M-2 -24v10M2 -24v10M6 -24v10"/></g></g></svg></span></div>
+        <p class="rf-index"><b>03</b> Lo que he aprendido en el proceso</p>
+        <span class="rf-sys rf-sys-learn" aria-hidden="true">memory = false</span>
+        <h2 class="rf-h2" data-scramble>Governance by design.</h2>
+        <p class="rf-lead rf-lead-wide">Monté un laboratorio de agentes de IA <mark>replicable para cualquier empresa, organización o colectivo</mark>. Esto es lo que he aprendido…</p>
+
+        <p class="rf-hand-label" aria-hidden="true">mis conclusiones ↓</p>
+        <div class="rf-terminal-wrap">
+          <div class="rf-terminal" role="list" aria-label="Lecciones del laboratorio">
+            <p class="rf-term-cmd" aria-hidden="true">C:\LAB&gt; lecciones --verbose</p>
+            <p role="listitem"><span class="rf-tag">I</span><b>«Disponible no significa configurado.»</b> Y configurado no significa autorizado, ni autorizado significa validado en ejecución real. Cuatro estados, cuatro preguntas distintas.</p>
+            <p role="listitem"><span class="rf-tag">II</span><b>Memoria apagada por defecto.</b> Cada capacidad se gana con un caso de uso, unos datos, unos permisos y una política de conservación. ¿Leer el historial de conversaciones? Solo con autorización expresa: ahí está lo más sensible.</p>
+            <p role="listitem"><span class="rf-tag">III</span><b>«Antes de gobernar diez agentes, quizá deberíamos demostrar que sabemos gobernar uno.»</b> Subagentes y comunicación entre agentes, bloqueados. Cada pieza nueva amplía la superficie de riesgo antes de demostrar que aporta algo.</p>
+            <p role="listitem"><span class="rf-tag">IV</span><b>«Hay un humano supervisando» significa muy poco.</b> Hay que saber qué se revisa, en qué momento se puede parar la acción y si quien revisa tiene la información para decidir.</p>
+            <p role="listitem"><span class="rf-tag">V</span><b>Un buen benchmark no es una autorización.</b> De ahí sale OFF READY: capacidades preparadas, probadas… y apagadas hasta que haya motivo para encenderlas.</p>
+            <p role="listitem"><span class="rf-tag">VI</span><b>Condicionar antes que prohibir.</b></p>
+            <p class="rf-traffic" aria-label="Esto sí. Esto no. Esto todavía no."><span class="rf-t-yes">[ ESTO SÍ ]</span><span class="rf-t-no">[ ESTO NO ]</span><span class="rf-t-wait">[ ESTO TODAVÍA NO ]</span><i class="rf-caret" aria-hidden="true"></i></p>
+          </div>
+          <div class="rf-memes-col">
+            <div class="rf-win rf-win-meme"><div class="rf-win-bar"><span>paciencia.png</span><i aria-hidden="true">✕</i></div><img src="img/paciencia.webp" alt="Viñetas de anime: «Paciencia es mi segundo nombre». «¿Y el primero?». «Poca»." width="720" height="742" loading="lazy"></div>
+            <div class="rf-win rf-win-meme"><div class="rf-win-bar"><span>subagentes.exe</span><i aria-hidden="true">✕</i></div><img src="img/multitask.webp" alt="Figura rosa sentada con gafas de sol: «can i multitask? bitch i'm in 12 dimensions at the same time»." width="700" height="696" loading="lazy"></div>
+            <div class="rf-win rf-win-meme"><div class="rf-win-bar"><span>human_in_the_loop.jpg</span><i aria-hidden="true">✕</i></div><img src="img/consultar-senora.webp" alt="Un hombre de espaldas con un tatuaje enorme que dice «Le voy a consultar a mi señora y te aviso»." width="700" height="924" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="rf-refs">
+          <p class="rf-hand-label rf-hand-label-sm" aria-hidden="true">lo cuento con detalle en ↓</p>
+          <a class="rf-ref" href="https://ciberseguria.substack.com/p/governance-by-design-como-construir" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!gyka,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e800982-ee29-48cd-8841-790efda9fb8c_1448x1086.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Episodio I</small><b>Governance by Design (I): cómo construir un ecosistema de agentes</b><time>21 jul 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+          <a class="rf-ref" href="https://ciberseguria.substack.com/p/governance-by-design-como-construir-742" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!lOt0,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd3f9c87-72dd-4b35-9dc7-07d83bec0093_1448x1086.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Episodio II</small><b>Governance by Design (II): Sentinel, OFF READY y el humano en el bucle</b><time>30 jul 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+          <div class="rf-win rf-win-meme rf-refs-meme"><div class="rf-win-bar"><span>agente_off_ready.exe</span><i aria-hidden="true">✕</i></div><img src="img/esqueleto-trabajando.webp" alt="Un esqueleto en un trono de calaveras con el texto «Me quieren ver trabajando pero no les voy a dar el gusto»." width="700" height="843" loading="lazy"></div>
+        </div>
+
+        <a class="rf-cta rf-cta-amber" href="../#plantillas" data-local-href="../index.html#plantillas">
+          <span class="rf-cta-k">EN LA VERSIÓN SERIA</span>
+          <span class="rf-cta-t">Las 7 plantillas que salieron de todo esto</span>
+          <i aria-hidden="true">→</i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 04 EMPRESA -->
+    <section id="empresa" class="rf-section rf-corp">
+      <div class="rf-side rf-side-l rf-side-sun" style="--top:10%;--w:100px" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><linearGradient id="rf-sun-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff3bd4"/></linearGradient><mask id="rf-sun-m"><rect width="100" height="100" fill="#fff"/><rect y="56" width="100" height="4" fill="#000"/><rect y="66" width="100" height="5" fill="#000"/><rect y="77" width="100" height="6" fill="#000"/><rect y="89" width="100" height="7" fill="#000"/></mask></defs><circle cx="50" cy="50" r="46" fill="url(#rf-sun-g)" mask="url(#rf-sun-m)"/></svg></div>
+      <div class="rf-side rf-side-r rf-side-spark" style="--top:26%;--w:40px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-l rf-side-bars" style="--top:58%;--w:40px" aria-hidden="true"><svg viewBox="0 0 60 120"><g fill="#000"><rect x="0" width="3" height="120"/><rect x="6" width="1" height="120"/><rect x="10" width="4" height="120"/><rect x="17" width="2" height="120"/><rect x="22" width="1" height="120"/><rect x="26" width="5" height="120"/><rect x="34" width="1" height="120"/><rect x="38" width="3" height="120"/><rect x="44" width="1" height="120"/><rect x="48" width="4" height="120"/><rect x="55" width="2" height="120"/></g></svg></div>
+      <div class="rf-side rf-side-r rf-side-dots" style="--top:70%;--w:90px" aria-hidden="true"></div>
+      <div class="rf-wrap">
+        <div class="rf-corp-head">
+          <div>
+            <p class="rf-index rf-index-cyan"><b>04</b> Los LLM en una empresa también tienen sus riesgos</p>
+            <span class="rf-sys rf-sys-corp" aria-hidden="true">esto huele a fuga de datos</span>
+            <h2 class="rf-h2" data-scramble>El sistema más crítico de tu organización.</h2>
+            <p class="rf-lead">Durante años discutimos si lo más sensible de una organización era el ERP, la base de clientes o el correo del CEO. Hoy es la IA la que tiene todo el contexto.</p>
+          </div>
+          <div class="rf-corp-memes">
+          <div class="rf-win rf-win-meme rf-pin rf-pin-shirt"><div class="rf-win-bar"><span>contexto_total.jpg</span><i aria-hidden="true">✕</i></div><img src="img/camiseta-chatgpt.webp" alt="Una persona con una camiseta naranja que dice «No necesito ChatGPT, mi mujer lo sabe todo»." width="640" height="728" loading="lazy"></div>
+          <div class="rf-win rf-win-meme rf-win-tilt"><div class="rf-win-bar"><span>uniforme_oficial.jpg</span><i aria-hidden="true">✕</i></div><img src="img/idk-ask-ai.webp" alt="Una pila de camisetas blancas con el texto «IDK, ASK AI»." width="600" height="1006" loading="lazy"></div>
+          </div>
+        </div>
+
+        <p class="rf-hand-label" aria-hidden="true">mis conclusiones ↓</p>
+        <ol class="rf-concl rf-concl-cyan">
+          <li class="rf-concl-item">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Tu LLM tiene tu memoria institucional comprimida y centralizada.</h3>
+              <p>Un LLM conectado a repositorios, tickets, contratos y planes estratégicos responde en segundos lo que a un atacante le costaría meses de reconocimiento. Defensa: alcance definido, RBAC fino, trazabilidad, entornos separados, cláusulas con terceros y un plan de desconexión probado.</p>
+              <div class="cg-fill" style="height:230px" aria-hidden="true"><span class="cg cg-floppy" style="left:4%;top:0;width:170px;rotate:-8deg"><svg viewBox="0 0 140 146"><path class="cg-fl-body" d="M6 4h114l14 14v124H6z"/><rect class="cg-fl-metal" x="34" y="4" width="66" height="42"/><rect x="76" y="10" width="14" height="30" class="cg-fl-slot"/><rect class="cg-fl-label" x="22" y="66" width="96" height="76"/><path class="cg-fl-lines" d="M30 100h80M30 114h80M30 128h80"/></svg><b>memoria<br>institucional</b></span><span class="cg cg-usb" style="left:38%;top:110px;width:220px;rotate:16deg"><svg viewBox="0 0 190 64"><rect class="cg-usb-m" x="4" y="14" width="56" height="36"/><rect x="14" y="24" width="12" height="8"/><rect x="34" y="24" width="12" height="8"/><rect class="cg-usb-b" x="60" y="4" width="126" height="56" rx="10"/><circle cx="160" cy="32" r="7" class="cg-hole"/></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/llm-el-sistema-mas-critico-de-tu" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!oKtB!,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4713839-d243-4a9f-ae07-0e0be6dee153_1024x1024.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>LLM, el sistema más crítico de tu organización (1/3)</b><time>23 oct 2025</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+            </div>
+          </li>
+          <li class="rf-concl-item cg-flip">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">No hace falta «hackear la IA».</h3>
+              <p>Basta con la base vectorial, un bucket mal configurado, una clave olvidada en un pipeline o un servicio auxiliar como pivote. Y ojo con el envenenamiento del corpus. mTLS, bóvedas de secretos, cifrado, monitorización e integridad documental: el mismo rigor que con el ERP.</p>
+              <blockquote class="rf-concl-q">«un sistema con storage, índices, claves y paneles de administración»</blockquote>
+              <div class="cg-fill" style="height:260px" aria-hidden="true"><span class="cg cg-cable" style="left:0;top:-20px;width:470px;rotate:-3deg"><svg viewBox="0 0 420 260"><path class="cg-wire" d="M30 60C120-20 230 20 200 120S40 230 110 150 300 40 330 130 180 260 120 210 250 90 380 190"/><path class="cg-wire cg-wire-2" d="M60 220C10 120 150 60 240 90S400 40 360 110 210 220 290 230"/><g transform="translate(30 60) rotate(-50)"><g class="cg-plug"><rect x="-13" y="-30" width="26" height="30" rx="2"/><path d="M-9 -30v-8h18v8M-6 -24v10M-2 -24v10M2 -24v10M6 -24v10"/></g></g><g transform="translate(380 190) rotate(128)"><g class="cg-plug"><rect x="-13" y="-30" width="26" height="30" rx="2"/><path d="M-9 -30v-8h18v8M-6 -24v10M-2 -24v10M2 -24v10M6 -24v10"/></g></g><g transform="translate(290 230) rotate(96)"><g class="cg-plug"><rect x="-13" y="-30" width="26" height="30" rx="2"/><path d="M-9 -30v-8h18v8M-6 -24v10M-2 -24v10M2 -24v10M6 -24v10"/></g></g></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/llm-el-sistema-mas-critico-de-tu-08c" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!5uXh!,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42bf4c56-7483-4cf5-875f-9bb7bb7e39eb_1024x1024.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>LLM, el sistema más crítico de tu organización (2/3)</b><time>2 dic 2025</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+            </div>
+          </li>
+          <li class="rf-concl-item">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Lo que debes hacer si ocurre</h3>
+              <p>Una sola exfiltración puede activar a la vez el RGPD (72 horas para notificar a la AEPD), el AI Act, el ENS y NIS2, más la responsabilidad civil y contractual. En el post dejo plantillas de comunicación para afectados y reguladores.</p>
+              <div class="cg-fill" style="height:220px" aria-hidden="true"><span class="cg cg-postit" style="left:4%;top:20px;rotate:4deg;background:#ff9de0"><b>72 h<br>→ AEPD</b></span><span class="cg cg-locks" style="left:36%;top:10px;width:280px;rotate:8deg"><svg viewBox="0 0 260 190"><g transform="translate(70 90) rotate(-14)"><path class="cg-shackle" d="M-22 0v-26a22 22 0 0 1 44 0v6"/><rect class="cg-lockbody" x="-34" y="0" width="68" height="54" rx="6"/><circle cx="0" cy="22" r="7"/><path d="M0 26v14" class="cg-shackle" style="stroke-width:5"/></g><g transform="translate(150 70) rotate(10) scale(.8)"><path class="cg-shackle" d="M-22 0v-22a22 22 0 0 1 44 0v22"/><rect class="cg-lockbody" x="-34" y="0" width="68" height="54" rx="6"/><circle cx="0" cy="22" r="7"/><path d="M0 26v14" class="cg-shackle" style="stroke-width:5"/></g><g transform="translate(205 110) rotate(24) scale(.62)"><path class="cg-shackle" d="M-22 0v-26a22 22 0 0 1 44 0v6"/><rect class="cg-lockbody" x="-34" y="0" width="68" height="54" rx="6"/><circle cx="0" cy="22" r="7"/><path d="M0 26v14" class="cg-shackle" style="stroke-width:5"/></g></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/llm-el-sistema-mas-critico-de-tu-127" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!RVhl,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F090464fb-0d67-49a5-8cd3-d3b28bb4a813_1024x1024.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>LLM, el sistema más crítico de tu organización (3/3)</b><time>16 dic 2025</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+            </div>
+          </li>
+        </ol>
+
+        <div class="rf-corp-strip">
+          <div class="rf-win rf-win-meme rf-pin rf-pin-strip"><div class="rf-win-bar"><span>rrhh.jpg</span><i aria-hidden="true">✕</i></div><img src="img/snoopy-aumento.webp" alt="Snoopy disfrazado de bruja con una calabaza en una oficina, con el texto «Dulce o aumento»." width="800" height="589" loading="lazy"></div>
+          <div class="rf-win rf-win-meme rf-pin rf-pin-strip"><div class="rf-win-bar"><span>calendario_q4.png</span><i aria-hidden="true">✕</i></div><img src="img/fabrica-reuniones.webp" alt="Un perro con traje en un cuadro dice «Hope I don't have a lot of meetings» delante de una fábrica con el rótulo «lots of meetings factory»." width="800" height="768" loading="lazy"></div>
+        </div>
+        <div class="rf-case">
+          <figure class="rf-phone"><img src="img/asistente-tienda.webp" alt="Captura de un chat con el asistente de la tienda online oficial de la Federación Española de Fútbol. El cliente pregunta si es mejor comprar una camiseta de 14 dólares en una tienda de chinos para deporte y playa, y el asistente responde que sí, que no compensa pagar 100 euros solo por la etiqueta." width="533" height="1127" loading="lazy"></figure>
+          <div>
+            <p class="rf-index rf-index-cyan"><b>!</b> ¿Dónde hay que poner el foco? En el alineamiento</p>
+            <h3 class="rf-h3">El asistente oficial de una tienda oficial, recomendándote la camiseta del chino.</h3>
+            <p>Muy alineado con el cliente. Cero alineado con la empresa. Nadie le había dicho qué no debía hacer, así que hizo lo razonable para el usuario: ahorrarle una pasta.</p>
+            <div class="rf-win rf-win-meme rf-pin rf-pin-case"><div class="rf-win-bar"><span>atencion_al_cliente.exe</span><i aria-hidden="true">✕</i></div><img src="img/sin-sede-fisica.webp" alt="Viñeta de Los Simpson: Nelson abre una puerta a Lisa y detrás solo hay código verde de Matrix. Texto: «Te mentí, no tenemos sede física»." width="800" height="762" loading="lazy"></div>
+            <p>Un LLM en producción no es solo un riesgo de fugas. También es un riesgo de negocio, de marca y de cumplimiento. Definir alcance, límites y qué se prueba antes de abrirlo al público no es burocracia: es lo que separa un asistente de un saboteador muy educado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 HUMOR -->
+    <section id="humor" class="rf-section rf-humor">
+      <div class="rf-side rf-side-l rf-side-chrome" style="--top:12%;--w:84px" aria-hidden="true"></div>
+      <div class="rf-side rf-side-r rf-side-saturn" style="--top:30%;--w:104px" aria-hidden="true"><svg viewBox="0 0 120 80"><circle class="rf-fill-a" cx="60" cy="40" r="22"/><ellipse class="rf-stroke" cx="60" cy="42" rx="56" ry="12" transform="rotate(-14 60 40)"/></svg></div>
+      <div class="rf-side rf-side-l rf-side-spark" style="--top:70%;--w:44px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-side rf-side-l rf-side-spark is-small" style="--top:76%;--w:22px" aria-hidden="true"><svg viewBox="0 0 100 100"><path class="rf-fill-b" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg></div>
+      <div class="rf-wrap">
+        <p class="rf-index rf-index-pink"><b>05</b> El humor también divulga</p>
+        <span class="rf-sys rf-sys-humor" aria-hidden="true">100 % verídico (no)</span>
+        <h2 class="rf-h2" data-scramble>El humor también es un lenguaje de divulgación.</h2>
+        <p class="rf-lead rf-lead-wide">Predicciones que envejecerán fatal (o no) y conspiranoias controladas. La broma va arriba; la tesis, debajo. Siempre hay tesis.</p>
+
+        <p class="rf-hand-label" aria-hidden="true">mis conclusiones ↓</p>
+        <ol class="rf-concl rf-concl-pink">
+          <li class="rf-concl-item">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Hay trabajos que ninguna IA nos va a quitar.</h3>
+              <span class="rf-podium" aria-label="Podio"><i><em>3</em>Guías espirituales</i><i><em>1</em>Feriante de atracciones</i><i><em>2</em>Coach vital</i></span>
+              <p>La IA se va a comer a conductores y oficinistas, vale. Pero el feriante que te grita «¡más fuerte, más fuerte!» desde la cabina del Saltamontes… Nunca nunca nunca podremos crear una IA que le quite el trabajo.</p>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/predicciones-top3-trabajos-irremplazables" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="img/esqueleto-reemplazo.webp" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>Predicciones: top 3 trabajos irremplazables por la IA</b><time>13 abr 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+              <div class="rf-win rf-win-meme rf-tilt-l"><div class="rf-win-bar"><span>plan_de_jubilacion.jpg</span><i aria-hidden="true">✕</i></div><img src="img/pistachos.webp" alt="Viñeta: «q pesao el friky este» / «voy a plantar pistachos». Años después, el friki con traje y dinero: «haber plantao pistachos»." width="497" height="614" loading="lazy"></div>
+            </div>
+          </li>
+          <li class="rf-concl-item cg-flip">
+            <div class="rf-concl-main">
+              <h3 class="rf-concl-t">Cuando todo es mentira, nada es verdad.</h3>
+              <p>Medio internet contando dedos en los vídeos de Netanyahu. Un día es un error, dos es una cagada, pero cinco… cinco es premeditado. La hipótesis, sin pruebas y avisado quedas: el dividendo del mentiroso. Si dudamos de cualquier vídeo, cualquier prueba incómoda se despacha con un «eso es IA».</p>
+              <div class="cg-fill" style="height:200px" aria-hidden="true"><span class="cg cg-captcha" style="left:4%;top:40px;rotate:-4deg"><i></i><b>No soy un robot</b><em>reCAPTCHA<br>de Bruselas</em></span><span class="cg cg-chip" style="left:58%;top:10px;width:150px;rotate:12deg"><svg viewBox="0 0 140 140"><path d="M40 18v-14M40 122v14M18 40h-14M122 40h14"/><path d="M58 18v-14M58 122v14M18 58h-14M122 58h14"/><path d="M76 18v-14M76 122v14M18 76h-14M122 76h14"/><path d="M94 18v-14M94 122v14M18 94h-14M122 94h14"/><rect class="cg-chip-b" x="18" y="18" width="104" height="104" rx="6"/><rect x="42" y="42" width="56" height="56" class="cg-chip-c"/><text x="70" y="77" text-anchor="middle">IA</text></svg></span></div>
+            </div>
+            <div class="rf-concl-side">
+              <a class="rf-ref" href="https://ciberseguria.substack.com/p/y-si-netanyahu-esta-vivo-y-todo-es" target="_blank" rel="noopener noreferrer"><span class="rf-ref-img"><img src="https://substackcdn.com/image/fetch/$s_!Xa_p!,w_480,h_270,c_fill,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffee24149-62c6-480d-9763-9e2b4f3e908e_727x322.png" alt="" width="480" height="270" loading="lazy" referrerpolicy="no-referrer"></span><span class="rf-ref-txt"><small>📎 Lo cuento en</small><b>¿Y si Netanyahu está vivo y todo es un experimento social?</b><time>19 mar 2026</time></span><span class="rf-ref-btn" aria-hidden="true">Leer post ↗</span></a>
+              <div class="rf-win rf-win-meme rf-tilt-r"><div class="rf-win-bar"><span>pruebas_irrefutables.jpg</span><i aria-hidden="true">✕</i></div><img src="img/piramides-aliens.webp" alt="Collage absurdo de conspiraciones: pirámides, extraterrestres, dinosaurios, una nave con láser y una estatua gigante." width="680" height="457" loading="lazy"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="rf-outro">
+      <div class="rf-grid-floor rf-grid-floor-top" aria-hidden="true"><div></div></div>
+      <p class="rf-outro-big" aria-hidden="true">SOLARPUNK<br><span>o</span> CYBERPUNK</p>
+      <div class="rf-win rf-outro-win">
+        <div class="rf-win-bar"><span>Escape</span><i aria-hidden="true">✕</i></div>
+        <div class="rf-win-body">
+          <p>Esto es CibersegurIA sin corbata: por un internet libre y seguro, de humano a humano. Internet es una extensión de la realidad; actuemos como tal.</p>
+          <p>La versión con corbata, la de las plantillas, la biblioteca y eunomIA, sigue arriba y es gratis.</p>
+          <p><b>¿Quieres volver al modo serio?</b></p>
+        </div>
+        <div class="rf-win-actions">
+          <a class="rf-btn" href="../" data-local-href="../index.html">Sí</a>
+          <a class="rf-btn" href="https://ciberseguria.substack.com/" target="_blank" rel="noopener noreferrer">No, llévame a Substack</a>
+        </div>
+      </div>
+      <footer class="rf-footer">
+        <span>© <span id="rf-year">2026</span> CIBERSEGURIA</span>
+        <span class="rf-footer-links"><a href="https://www.linkedin.com/in/jmexposito/" target="_blank" rel="noopener noreferrer me">LINKEDIN</a><a href="https://www.youtube.com/@jmexposito" target="_blank" rel="noopener noreferrer me">YOUTUBE</a><a href="mailto:ciberseguria@gmail.com">CIBERSEGURIA@GMAIL.COM</a></span>
+        <span>HECHO EN MADRID · SIN CORBATA</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -407,3 +407,20 @@
     } finally { submitButton.disabled = false; submitButton.textContent = 'Informar y acceder al recurso'; }
   });
 })();
+
+/* ~~dark~~ mode: transición a negro antes de entrar en /darkmode */
+(() => {
+  'use strict';
+  const toggle = document.querySelector('.mode-toggle');
+  if (!toggle) return;
+  if (location.protocol === 'file:' && toggle.dataset.localHref) toggle.setAttribute('href', toggle.dataset.localHref);
+  const curtain = document.querySelector('.mode-curtain');
+  toggle.addEventListener('click', (event) => {
+    if (!curtain || event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    event.preventDefault();
+    curtain.classList.add('is-on');
+    window.setTimeout(() => { window.location.href = toggle.href; }, 460);
+  });
+  window.addEventListener('pageshow', () => curtain && curtain.classList.remove('is-on'));
+})();

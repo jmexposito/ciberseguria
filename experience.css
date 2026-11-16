@@ -3,7 +3,7 @@
 .experience-page .container { width: min(1180px, calc(100% - 48px)); }
 .experience-page .section-pad { padding: clamp(92px,10vw,150px) 0; }
 .experience-header { background: rgba(246,248,251,.86); border-bottom-color: rgba(6,75,174,.12); }
-.experience-header .header-inner { grid-template-columns: 180px 1fr auto; min-height: 76px; }
+.experience-header .header-inner { grid-template-columns: 180px 1fr auto auto; min-height: 76px; }
 .experience-header .main-nav { gap: clamp(12px,1.6vw,25px); }
 .experience-header .main-nav a { position: relative; font-size: .76rem; }
 .experience-header .main-nav a::after { content:""; position:absolute; left:0; right:100%; bottom:-8px; height:2px; background:var(--red); transition:right .25s var(--ease-out); }
@@ -315,7 +315,7 @@
 .experience-page .site-footer { background:var(--paper); }
 
 @media (max-width:1100px) {
-  .experience-header .header-inner { grid-template-columns:170px 1fr; }.experience-header .header-action { display:none; }.experience-header .main-nav { justify-content:flex-end; gap:14px; }
+  .experience-header .header-inner { grid-template-columns:170px 1fr auto; }.experience-header .header-action { display:none; }.experience-header .main-nav { justify-content:flex-end; gap:14px; }
   .chapter-rail { display:none; }.hero-stage h1 { font-size:clamp(4rem,10.5vw,7.3rem); }.hero-line-two { margin-left:4%; }
   .experience-page .area-grid { grid-template-columns:repeat(2,1fr); }.experience-page .area-card:nth-child(2),.experience-page .area-card:nth-child(4) { margin-top:0; }.experience-page .area-wide { grid-column:1 / 3; }
   .experience-page .nullgen-grid { grid-template-columns:140px minmax(0,1fr); gap:38px; }.experience-page .nullgen-mark { width:128px; height:128px; }.experience-page .nullgen-cta { grid-column:2; justify-self:start; align-self:start; }
@@ -324,7 +324,7 @@
 
 @media (max-width:899px) {
   .experience-page .container { width:min(100% - 32px,1180px); }.experience-page .section-pad { padding:82px 0; }
-  .experience-header .header-inner { grid-template-columns:1fr auto; min-height:70px; }.experience-header .menu-toggle { display:block; }.experience-header .main-nav { position:absolute; top:69px; left:0; right:0; display:none; padding:14px 18px 24px; background:rgba(246,248,251,.98); border-bottom:1px solid var(--line); }.experience-header .main-nav.is-open { display:flex; }.experience-header .main-nav a { padding:12px 4px; }
+  .experience-header .header-inner { grid-template-columns:1fr auto auto; min-height:70px; }.experience-header .menu-toggle { display:block; order:3; }.experience-header .main-nav { position:absolute; top:69px; left:0; right:0; display:none; padding:14px 18px 24px; background:rgba(246,248,251,.98); border-bottom:1px solid var(--line); }.experience-header .main-nav.is-open { display:flex; }.experience-header .main-nav a { padding:12px 4px; }
   .menu-open { overflow:hidden; }.hero-experience,.hero-stage { min-height:auto; }.hero-stage { padding-top:80px; padding-bottom:90px; }.hero-stage h1 { font-size:clamp(3.6rem,13vw,6rem); line-height:.82; }.hero-line-two { margin:0; font-size:.72em; }.hero-line-three { justify-self:start; max-width:9ch; font-size:.68em; }
   .hero-deck { grid-template-columns:1fr; margin-top:55px; }.hero-deck .hero-principles { grid-column:auto; }.scroll-cue { display:none; }.field-node { display:none; }
   .experience-page .purpose-band { clip-path:none; padding:64px 0; }.experience-page .purpose-grid { grid-template-columns:1fr; gap:28px; }.experience-page .purpose-note { grid-column:auto; }
@@ -425,3 +425,14 @@
 @media (max-width:1020px) { .eunomia-home-grid { grid-template-columns:1fr; } .eunomia-home-postal { order:-1; max-width:640px; } }
 @media (max-width:580px) { .eunomia-home { padding:72px 0 78px; } .eunomia-home-tools a { grid-template-columns:30px minmax(0,1fr); } .eunomia-home-tools em { grid-column:2; } .eunomia-home-postal { aspect-ratio:1; } }
 @media (prefers-reduced-motion:reduce) { .eunomia-home-tools a { transition:none; } }
+
+/* ~~dark~~ mode: interruptor discreto que lleva a la versión personal (/darkmode) */
+.mode-toggle { display:inline-flex; align-items:center; gap:6px; margin-left:-12px; padding:8px 4px; color:var(--muted); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.68rem; font-weight:700; letter-spacing:.04em; white-space:nowrap; text-decoration:none; opacity:.8; transition:color .25s,opacity .25s; }
+.mode-toggle s { text-decoration-thickness:1px; text-decoration-color:rgba(255,23,56,.55); }
+.mode-toggle-icon { display:inline-block; font-size:.95rem; line-height:1; transition:transform .6s cubic-bezier(.215,.61,.355,1); }
+.mode-toggle:hover,.mode-toggle:focus-visible { color:var(--ink); opacity:1; }
+.mode-toggle:hover .mode-toggle-icon,.mode-toggle:focus-visible .mode-toggle-icon { transform:rotate(180deg); }
+.mode-curtain { position:fixed; inset:0; z-index:1000; background:#000; opacity:0; pointer-events:none; transition:opacity .45s ease; }
+.mode-curtain.is-on { opacity:1; pointer-events:auto; }
+@media (max-width:1100px) { .mode-toggle { margin-left:0; } }
+@media (prefers-reduced-motion: reduce) { .mode-curtain { transition:none; } .mode-toggle-icon { transition:none; } }
